@@ -7,7 +7,7 @@ import { Fragment, useState } from 'react';
 import countriesData from '@/data/countriesData';
 
 const CountriesMobile = () => {
-  const [activeCountryCode, setActiveCountryCode] = useState('CA');
+  const [activeCountryCode, setActiveCountryCode] = useState('UA');
 
   const activeCountry = countriesData.find(
     (country) => country.code === activeCountryCode,

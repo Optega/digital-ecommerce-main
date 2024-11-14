@@ -66,29 +66,29 @@ export const headerNavData = {
   mainNavLinks: [
     {
       id: 'ee46t',
-      name: 'Catalog',
+      name: 'Каталог',
       href: '/collections',
     },
     {
       id: 'eerrrt',
-      name: 'Journal',
+      name: 'Новини',
       href: '/blogs/news',
     },
     {
       id: 'eexct',
-      name: 'About',
+      name: 'Контакти',
       href: '/contact',
     },
   ],
   bottomNavLinks: [
     {
       id: 'ee46t',
-      name: 'Phones',
+      name: 'Телефони',
       href: '/collections/phones',
       megaMenuData: {
-        title: 'PHONES & SMART WATCHES',
+        title: 'ТЕЛЕФОНИ & СМАРТ ГОДИННИКИ',
         menu1Data: {
-          title: 'Phones',
+          title: 'Телефони',
           links: [
             { href: '/collections/phones', name: 'Fusion F-22' },
             { href: '/collections/phones', name: 'Hyperion HX-1' },
@@ -99,7 +99,7 @@ export const headerNavData = {
           ],
         },
         menu2Data: {
-          title: 'Smart Watches',
+          title: 'Смарт Годинники',
           links: [
             { href: '/collections/smart-watches', name: 'Apex Fitness Watch' },
             { href: '/collections/smart-watches', name: 'Horizon Smart Watch' },
@@ -112,7 +112,7 @@ export const headerNavData = {
     },
     {
       id: 'eerrrt',
-      name: 'Laptops',
+      name: 'Ноутбуки',
       href: 'collections/Laptops',
       type: 'dropdown',
       dropDownMenuData: [
@@ -136,27 +136,27 @@ export const headerNavData = {
     },
     {
       id: 'eexct',
-      name: 'Headphones',
+      name: 'Навушники',
       href: '/collections/headphones',
     },
     {
       id: 'h6ii8g',
-      name: 'Speakers',
+      name: 'Колонки',
       href: '/collections/speakers',
     },
     {
       id: 'h678ty',
-      name: 'Smart Watches',
+      name: 'Смарт годинники',
       href: '/collections/smart-watches',
     },
     {
       id: 'h6i78g',
-      name: 'Gaming',
+      name: 'Геймінг',
       href: '/collections/gaming',
     },
     {
       id: 'f678ty',
-      name: 'Features',
+      name: 'Особливе',
       href: '/collections/features',
     },
   ],
@@ -166,17 +166,17 @@ export const headerNavData = {
 export const topNavLinks2: NavItemType[] = [
   {
     id: 'ee46t',
-    name: 'Catalog',
+    name: 'Каталог',
     href: '/collections',
   },
   {
     id: 'eerrrt',
-    name: 'Journal',
+    name: 'Новини',
     href: '/blogs/news',
   },
   {
     id: 'eexct',
-    name: 'About',
+    name: 'Контакти',
     href: '/contact',
   },
 ];
@@ -184,37 +184,37 @@ export const topNavLinks2: NavItemType[] = [
 export const catalogNavLinks: NavItemType[] = [
   {
     id: 'ee46t',
-    name: 'Phones',
+    name: 'Телефони',
     href: '/phones',
   },
   {
     id: 'eerrrt',
-    name: 'Laptops',
+    name: 'Ноутбуки',
     href: '/Laptops',
   },
   {
     id: 'eexct',
-    name: 'Headphones',
+    name: 'Навушники',
     href: '/headphones',
   },
   {
     id: 'h6ii8g',
-    name: 'Speakers',
+    name: 'Колонки',
     href: '/speakers',
   },
   {
     id: 'h678ty',
-    name: 'Smart Watches',
+    name: 'Смарт годинники',
     href: '/smart-watches',
   },
   {
     id: 'h6i78g',
-    name: 'Gaming',
+    name: 'Геймінг',
     href: '/gaming',
   },
   {
     id: 'f678ty',
-    name: 'Features',
+    name: 'Особливе',
     href: '/features',
   },
 ];
@@ -254,42 +254,42 @@ export const guideData = [
 
 export const categoriesData = [
   {
-    title: 'Headphones',
+    title: 'Навушники',
     slug: generateSlug('Headphones'),
     imgUrl: headphonesCat,
     bannerUrl: headphonesBanner,
     href: '/collections/headphones',
   },
   {
-    title: 'Phones',
+    title: 'Телефони',
     slug: generateSlug('Phones'),
     imgUrl: phonesCat,
     bannerUrl: phonesBanner,
     href: '/collections/phones',
   },
   {
-    title: 'Speakers',
+    title: 'Колонки',
     slug: generateSlug('Speakers'),
     imgUrl: speakersCat,
     bannerUrl: speakersBanner,
     href: '/collections/speakers',
   },
   {
-    title: 'Smart Watches',
+    title: 'Смарт годинники',
     slug: generateSlug('Smart Watches'),
     imgUrl: smartWatchCat,
     bannerUrl: smartWatchBanner,
     href: '/collections/smart-watches',
   },
   {
-    title: 'Gaming',
+    title: 'Геймінг',
     slug: generateSlug('Gaming'),
     imgUrl: gamingCat,
     bannerUrl: gamingBanner,
     href: '/collections/gaming',
   },
   {
-    title: 'Laptops',
+    title: 'Ноутбуки',
     slug: generateSlug('Laptops'),
     imgUrl: laptopCat,
     bannerUrl: laptopBanner,
@@ -338,10 +338,10 @@ export const FAQsData = {
 };
 
 export const socialLinks = [
-  { href: '#', Icon: <IoLogoFacebook /> },
-  { href: '#', Icon: <FaXTwitter /> },
-  { href: '#', Icon: <FaPinterest /> },
-  { href: '#', Icon: <AiOutlineLink /> },
+  { title: 'facebook', href: '#', Icon: <IoLogoFacebook /> },
+  { title: 'twitter', href: '#', Icon: <FaXTwitter /> },
+  { title: 'pinterest', href: '#', Icon: <FaPinterest /> },
+  { title: 'link', href: '#', Icon: <AiOutlineLink /> },
 ];
 
 export const landingPageHeaderData = [
@@ -416,23 +416,23 @@ export const newArrivalsData = [
 export const NavLinks: NavItemType[] = [
   {
     id: 'ee46t',
-    name: 'Home',
+    name: 'Домашня',
     href: '/home',
   },
   {
     id: 'eerrrt',
-    name: 'Blog',
+    name: 'Блог',
     href: '/blog',
   },
   {
     id: 'eexct',
-    name: 'Collection',
+    name: 'Колекція',
     href: '/products',
   },
 
   {
     id: 'h6ii8g',
-    name: 'Contact',
+    name: 'Контакти',
     href: '/contact',
   },
   {
@@ -442,12 +442,12 @@ export const NavLinks: NavItemType[] = [
   },
   {
     id: 'h6i78g',
-    name: 'Checkout',
+    name: 'Оплата',
     href: '/checkout',
   },
   {
     id: 'f678ty',
-    name: 'Cart',
+    name: 'Кошик',
     href: '/cart',
   },
 ];
@@ -666,7 +666,6 @@ export const paymentsData = [
   { title: 'ae', href: '/#', Icon: ae },
   { title: 'dc', href: '/#', Icon: dc },
   { title: 'pp', href: '/#', Icon: pp },
-  { title: 'visa', href: '/#', Icon: visa },
   { title: 'mc', href: '/#', Icon: mc },
   { title: 'dic', href: '/#', Icon: dic },
 ];

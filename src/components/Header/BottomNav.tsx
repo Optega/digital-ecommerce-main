@@ -44,14 +44,14 @@ const BottomNav = () => {
             ))}
           </div>
 
-          <div>
+          {/* <div>
             <p className="text-neutral-500 dark:text-neutral-200">
-              Need help? Call Us:{' '}
+              Потрібна допомога?{' '}
               <span className="font-semibold text-black dark:text-white">
                 +84 1234 555 77
               </span>
             </p>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

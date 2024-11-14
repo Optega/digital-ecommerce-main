@@ -1,13 +1,17 @@
 'use client';
 
 import { Popover, Transition } from '@headlessui/react';
+import Image from 'next/image';
 import { Fragment, useState } from 'react';
 import { MdKeyboardArrowDown } from 'react-icons/md';
 
 const languages = [
-  { key: 1, value: 'English', label: 'EN' },
-  { key: 2, value: 'Francias', label: 'FR' },
-  { key: 3, value: 'Espanol', label: 'ES' },
+  {
+    key: 1,
+    value: 'Українська',
+    label: 'UA',
+    flagUrl: 'https://flagcdn.com/ua.svg',
+  },
 ];
 
 const LanguageMobile = () => {
@@ -17,10 +21,21 @@ const LanguageMobile = () => {
     <div className="pxl-3 pr-5 font-medium">
       <Popover as="div" className="relative inline-block">
         <Popover.Button className="flex items-center gap-2 text-sm">
+          <span className="relative inline-block size-4 overflow-hidden rounded-full">
+            <Image
+              src={
+                languages.find((language) => language.key === activeLanguageKey)
+                  ?.flagUrl || ''
+              }
+              fill
+              alt="country flag"
+              className="object-cover"
+            />
+          </span>
           <span>
             {
               languages.find((language) => language.key === activeLanguageKey)
-                ?.label
+                ?.value
             }
           </span>
           <span className="flex size-4 items-center justify-center">

@@ -1,14 +1,11 @@
 import Link from 'next/link';
-import { pathOr } from 'ramda';
 import React from 'react';
 import { MdClose } from 'react-icons/md';
 
-import { catalogNavLinks, socialLinks } from '@/data/content';
-import ButtonPrimary from '@/shared/Button/ButtonPrimary';
+import { catalogNavLinks } from '@/data/content';
 import ToggleSwitch from '@/shared/Button/ToggleSwitch';
 import Logo from '@/shared/Logo/Logo';
 
-import CountriesMobile from '../CountriesMobile';
 import LanguageMobile from '../LanguageMobile';
 
 export interface NavMobileProps {
@@ -17,7 +14,7 @@ export interface NavMobileProps {
 
 const NavMobile: React.FC<NavMobileProps> = ({ onClickClose }) => {
   return (
-    <div className="h-screen w-full overflow-y-auto bg-white px-5 py-2 shadow-lg ring-1 transition dark:bg-gray">
+    <div className="h-screen w-full min-w-64 overflow-y-auto bg-white px-5 py-2 shadow-lg ring-1 transition dark:bg-gray">
       <div className=" border-b border-neutral-300 py-2 dark:border-neutral-600">
         <Logo className="block" />
         {/* eslint-disable */}
@@ -44,11 +41,11 @@ const NavMobile: React.FC<NavMobileProps> = ({ onClickClose }) => {
       </div>
 
       <div className="mt-5 flex lg:hidden">
-        <CountriesMobile />
+        {/* <CountriesMobile /> */}
         <LanguageMobile />
       </div>
 
-      <div className="py-10">
+      {/* <div className="py-10">
         <ButtonPrimary className="w-full">Log in</ButtonPrimary>
         <p className="mt-4 text-center">
           No account yet?{" "}
@@ -65,7 +62,7 @@ const NavMobile: React.FC<NavMobileProps> = ({ onClickClose }) => {
             </li>
           ))}
         </ul>
-      </div>
+      </div> */}
     </div>
   );
 };

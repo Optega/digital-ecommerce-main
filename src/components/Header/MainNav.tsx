@@ -9,7 +9,6 @@ import Input from '@/shared/Input/Input';
 import Logo from '@/shared/Logo/Logo';
 
 import CartSideBar from '../CartSideBar';
-import Countries from '../Countries';
 import Language from '../Language';
 import type { NavItemType } from '../NavItem';
 import UserAccount from '../UserAccount';
@@ -31,7 +30,7 @@ const MainNav = () => {
             <Input
               type="text"
               className="border-transparent placeholder:text-neutral-500 focus:border-transparent"
-              placeholder="What are you looking for ..."
+              placeholder="Пошук"
             />
             <RiSearch2Line className="text-2xl text-neutral-500" />
           </div>
@@ -55,9 +54,9 @@ const MainNav = () => {
             <div className="hidden xl:inline-block">
               <ToggleSwitch />
             </div>
-            <div className="hidden lg:inline-block">
+            {/* <div className="hidden lg:inline-block">
               <Countries />
-            </div>
+            </div> */}
             <div className="hidden lg:inline-block">
               <Language />
             </div>
@@ -73,7 +72,7 @@ const MainNav = () => {
           <Input
             type="text"
             className="border-transparent placeholder:text-neutral-500 focus:border-transparent"
-            placeholder="What are you looking for ..."
+            placeholder="Пошук"
           />
           <RiSearch2Line className="text-2xl text-neutral-500" />
         </div>

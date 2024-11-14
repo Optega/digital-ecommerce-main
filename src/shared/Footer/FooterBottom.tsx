@@ -4,7 +4,7 @@ import { pathOr } from 'ramda';
 import React from 'react';
 
 import LanguageLarge from '@/components/LanguageLarge';
-import { paymentsData, socialLinks } from '@/data/content';
+import { paymentsData } from '@/data/content';
 
 import Subscribe from './Subscribe';
 
@@ -17,7 +17,7 @@ const FooterBottom = () => {
             <LanguageLarge />
           </div>
           <div className="lg:pl-9">
-            <h4 className="text-sm dark:text-neutral-300">We accept:</h4>
+            <h4 className="text-sm dark:text-neutral-300">Ми приймаємо:</h4>
             <ul className="flex gap-4">
               {paymentsData.map((listItem) => (
                 <li key={listItem.title}>
@@ -28,7 +28,6 @@ const FooterBottom = () => {
                     <Image
                       src={listItem.Icon}
                       alt="payement logo"
-                      height={12}
                       width={24}
                       className="object-contain"
                     />
@@ -37,11 +36,11 @@ const FooterBottom = () => {
               ))}
             </ul>
           </div>
-          <div className="mt-4 lg:mt-0 lg:pl-9">
+          {/* <div className="mt-4 lg:mt-0 lg:pl-9">
             <h4 className="text-sm dark:text-neutral-300">Follow Us</h4>
             <ul className="flex gap-4">
               {socialLinks.map((listItem) => (
-                <li key={listItem.href}>
+                <li key={listItem.title}>
                   <Link
                     className="text-lg"
                     href={pathOr('#', ['href'], listItem)}
@@ -51,7 +50,7 @@ const FooterBottom = () => {
                 </li>
               ))}
             </ul>
-          </div>
+          </div> */}
         </div>
         <div className="lg:w-1/2 xl:w-2/5">
           <Subscribe />

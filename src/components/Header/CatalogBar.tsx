@@ -6,7 +6,7 @@ import Link from 'next/link';
 import React, { Fragment, useState } from 'react';
 import { RiMenu2Line } from 'react-icons/ri';
 
-import { footerData } from '@/data/content';
+import { catalogNavLinks, NavLinks } from '@/data/content';
 import banner_1 from '@/images/banner-1_3.webp';
 import banner_2 from '@/images/banner-1_4.webp';
 import ButtonPrimary from '@/shared/Button/ButtonPrimary';
@@ -46,9 +46,9 @@ const CatalogBar: React.FC<CatalogBarProps> = ({ className }) => {
                     <div className="hiddenScrollbar overflow-y-auto py-5">
                       <div className="grid grid-cols-12 gap-3">
                         <div className="col-span-2">
-                          <h4 className="mb-2 font-medium">Starter Sites</h4>
+                          <h4 className="mb-2 font-medium">Каталог</h4>
                           <div className="space-y-2 text-neutral-500 dark:text-neutral-300">
-                            {footerData.footerLinks[0]?.links.map((link) => (
+                            {catalogNavLinks.map((link) => (
                               <div key={link.name} className="text-sm">
                                 <Link href="/#" className="">
                                   {link.name}
@@ -59,9 +59,9 @@ const CatalogBar: React.FC<CatalogBarProps> = ({ className }) => {
                         </div>
 
                         <div className="col-span-2">
-                          <h4 className="mb-2 font-medium">Collections</h4>
+                          <h4 className="mb-2 font-medium">Сторінки</h4>
                           <div className="space-y-2 text-neutral-500 dark:text-neutral-300">
-                            {footerData.footerLinks[0]?.links.map((link) => (
+                            {NavLinks.map((link) => (
                               <div key={link.name} className="text-sm">
                                 <Link href={link.href} className="">
                                   {link.name}
@@ -83,16 +83,16 @@ const CatalogBar: React.FC<CatalogBarProps> = ({ className }) => {
                             </div>
                             <div className="relative z-20 flex flex-col justify-center">
                               <h4 className="w-3/5 font-semibold ">
-                                Stay Ahead with Our New Tech
+                                Будьте попереду з нашою новою технікою
                               </h4>
                               <div className="mt-8">
                                 <p className="mb-3">
-                                  from:{' '}
+                                  від:{' '}
                                   <span className="text-lg font-semibold text-primary dark:text-white">
-                                    $15
+                                    ₴500
                                   </span>
                                 </p>
-                                <ButtonPrimary>Shop Now</ButtonPrimary>
+                                <ButtonPrimary>Переглянути</ButtonPrimary>
                               </div>
                             </div>
                           </div>
@@ -110,16 +110,16 @@ const CatalogBar: React.FC<CatalogBarProps> = ({ className }) => {
                             </div>
                             <div className="relative z-20 flex h-full flex-col justify-center">
                               <h4 className="w-3/5 font-semibold">
-                                Check Out for new Speakers
+                                Перегляньте наявність нових колонок
                               </h4>
                               <div className="mt-8">
                                 <p className="mb-3">
-                                  from:{' '}
+                                  від:{' '}
                                   <span className="text-lg font-semibold text-primary dark:text-white">
-                                    $15
+                                    ₴500
                                   </span>
                                 </p>
-                                <ButtonPrimary>Shop Now</ButtonPrimary>
+                                <ButtonPrimary>Переглянути</ButtonPrimary>
                               </div>
                             </div>
                           </div>
@@ -151,7 +151,7 @@ const CatalogBar: React.FC<CatalogBarProps> = ({ className }) => {
   return (
     <div className={className}>
       <ButtonSecondary2 sizeClass="py-[11px] px-4" onClick={handleOpenMenu}>
-        <RiMenu2Line /> Shop Now
+        <RiMenu2Line /> Меню
       </ButtonSecondary2>
 
       {renderContent()}

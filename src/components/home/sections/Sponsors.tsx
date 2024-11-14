@@ -16,7 +16,7 @@ const SponsorsSection = () => {
                 className="relative h-full min-w-[100px] shrink-0 xl:basis-auto"
               >
                 <Link href="/collections/">
-                  <div className="dark:hidden">
+                  <div className="relative dark:hidden">
                     <Image
                       src={listItem.svg_white}
                       fill
@@ -24,7 +24,7 @@ const SponsorsSection = () => {
                       className="object-contain"
                     />
                   </div>
-                  <div className="hidden dark:inline-block">
+                  <div className="relative hidden dark:inline-block">
                     <Image
                       src={listItem.svg_dark}
                       fill

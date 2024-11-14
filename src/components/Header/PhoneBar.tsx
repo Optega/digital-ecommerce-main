@@ -90,8 +90,8 @@ const PhoneBar: React.FC<CartSideBarProps> = () => {
                         <div className="col-span-2">
                           <h4 className="mb-2 font-semibold">{watchTitle}</h4>
                           <div className="space-y-2 text-neutral-500 dark:text-neutral-300">
-                            {menu2.map((link) => (
-                              <div key={link.name} className="">
+                            {menu2.map((link, index) => (
+                              <div key={`${link.name}-${index}`} className="">
                                 <Link
                                   href={link.href}
                                   className="font-medium hover:text-primary"
@@ -197,7 +197,7 @@ const PhoneBar: React.FC<CartSideBarProps> = () => {
         sizeClass=""
         className="text-base hover:text-primary"
       >
-        Phones
+        Телефони
         <IoMdArrowDropdown />
       </Button>
 
