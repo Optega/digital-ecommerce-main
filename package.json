@@ -41,7 +41,8 @@
     "react-swipeable": "^7.0.1",
     "react-use": "^17.4.0",
     "sharp": "^0.32.6",
-    "zod": "^3.22.2"
+    "zod": "^3.22.2",
+    "zustand": "^5.0.1"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.7.2",
@@ -120,6 +121,10 @@
       "@semantic-release/git",
       "@semantic-release/github"
     ]
+  },
+  "prettier": {
+    "singleQuote": true,
+    "endOfLine": "auto"
   },
   "author": "Devspherelabs | ThemeAlchemy (https://www.themealchemy.com)"
 }
