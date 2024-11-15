@@ -19,8 +19,6 @@ interface Props {
 const ShippingAddress: FC<Props> = () => {
   const [shipMethod, setShipMethod] = useState<'Ship' | 'Pickup'>('Ship');
   const [postType, setPostType] = useState<'NovaPost' | 'UkrPost'>('NovaPost');
-  console.log('shipMethod', shipMethod);
-  console.log('postType', postType);
 
   return (
     <div className=" ">

@@ -23,6 +23,7 @@ interface SectionProductHeaderProps {
   name: string;
   prevPrice: number;
   currentPrice: number;
+  handleAddToCart?: (quantity: number) => void;
 }
 
 const SectionProduct: FC<SectionProductHeaderProps> = ({
@@ -30,7 +31,10 @@ const SectionProduct: FC<SectionProductHeaderProps> = ({
   name,
   prevPrice,
   currentPrice,
+  handleAddToCart = () => {},
 }) => {
+  const [quantity, setQuantity] = React.useState(1);
+
   return (
     <div className="grid grid-cols-12 gap-4 lg:gap-6">
       <div className="col-span-12 md:col-span-6 lg:col-span-8">
@@ -79,8 +83,18 @@ const SectionProduct: FC<SectionProductHeaderProps> = ({
         <div className="">
           <h4 className="text-sm">Quantity:</h4>
           <div className="flex gap-2">
-            <InputNumber />
-            <ButtonSecondary className="w-full">Add to cart</ButtonSecondary>
+            <InputNumber
+              defaultValue={quantity}
+              onChange={(q) => setQuantity(q)}
+            />
+            <ButtonSecondary
+              className="w-full"
+              onClick={() => {
+                handleAddToCart(quantity);
+              }}
+            >
+              Add to cart
+            </ButtonSecondary>
           </div>
         </div>
 
@@ -187,8 +201,18 @@ const SectionProduct: FC<SectionProductHeaderProps> = ({
           <div className="">
             <h4 className="text-sm">Quantity:</h4>
             <div className="flex gap-2">
-              <InputNumber />
-              <ButtonSecondary className="w-full">Add to cart</ButtonSecondary>
+              <InputNumber
+                defaultValue={quantity}
+                onChange={(q) => setQuantity(q)}
+              />
+              <ButtonSecondary
+                className="w-full"
+                onClick={() => {
+                  handleAddToCart(quantity);
+                }}
+              >
+                Add to cart
+              </ButtonSecondary>
             </div>
           </div>
           <div className="mb-5 mt-2 flex items-center gap-5">
