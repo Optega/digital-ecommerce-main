@@ -14,6 +14,11 @@ export type ProductType = {
   colorOptions?: string[];
 };
 
+export type ProductCartType = {
+  product: ProductType;
+  quantity: number;
+};
+
 export type BlogData = {
   sectionOne: {
     title: string;

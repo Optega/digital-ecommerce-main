@@ -4,15 +4,17 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 
-import { products } from '@/data/content';
-import type { ProductType } from '@/data/types';
+import type { ProductCartType } from '@/data/types';
 import ButtonPrimary from '@/shared/Button/ButtonPrimary';
+import { useCartStore } from '@/stores/useCartStore';
 
 import ContactInfo from '../../components/checkout/ContactInfo';
-import PaymentMethod from '../../components/checkout/PaymentMethod';
 import ShippingAddress from '../../components/checkout/ShippingAddress';
 
 const CheckoutPage = () => {
+  const { items } = useCartStore();
+  const shippingCost = 0;
+
   const [tabActive, setTabActive] = useState<
     'ContactInfo' | 'ShippingAddress' | 'PaymentMethod'
   >('ShippingAddress');
@@ -24,8 +26,15 @@ const CheckoutPage = () => {
     }, 80);
   };
 
-  const renderProduct = (item: ProductType) => {
-    const { name, coverImage, currentPrice, slug, category } = item;
+  const getSubTotal = () => {
+    return items.reduce(
+      (acc, item) => acc + item.product.currentPrice * item.quantity,
+      0,
+    );
+  };
+
+  const renderProduct = (item: ProductCartType) => {
+    const { name, coverImage, currentPrice, slug, category } = item.product;
 
     return (
       <div key={name} className="flex gap-2">
@@ -47,7 +56,7 @@ const CheckoutPage = () => {
             <span className="text-xs text-neutral-500">{category}</span>
           </div>
           <div>
-            <span className="text-sm">${currentPrice}</span>
+            <span className="text-sm">₴{currentPrice}</span>
           </div>
         </div>
       </div>
@@ -75,7 +84,7 @@ const CheckoutPage = () => {
           />
         </div>
 
-        <div id="PaymentMethod" className="scroll-mt-24">
+        {/* <div id="PaymentMethod" className="scroll-mt-24">
           <PaymentMethod
             isActive={tabActive === 'PaymentMethod'}
             onOpenActive={() => {
@@ -84,15 +93,15 @@ const CheckoutPage = () => {
             }}
             onCloseActive={() => setTabActive('PaymentMethod')}
           />
-        </div>
+        </div> */}
 
         <div className="hidden pt-6 lg:block">
-          <ButtonPrimary className="w-full">Pay Now</ButtonPrimary>
+          <ButtonPrimary className="w-full">Оплатити</ButtonPrimary>
         </div>
 
         <div className="hidden border-t border-neutral-300  pt-4 dark:border-neutral-600 lg:block">
           <p className="text-sm text-neutral-500">
-            All rights reserved Stock Mordern
+            Усі права захищені TechMark
           </p>
         </div>
       </div>
@@ -109,32 +118,32 @@ const CheckoutPage = () => {
           <div className="relative w-full lg:basis-1/2">
             <div className="sticky top-0 pt-4 lg:p-9">
               <div className="space-y-2">
-                {products.slice(0, 3).map((item) => renderProduct(item))}
+                {items.map((item) => renderProduct(item))}
               </div>
 
               <div className="mt-10 border-t border-neutral-300 pt-6 text-sm dark:border-neutral-600">
-                <div className="mt-4 flex justify-between">
-                  <span>Subtotal</span>
-                  <span className="font-semibold">$249.00</span>
-                </div>
-                <div className="mt-2 flex justify-between">
-                  <span>Shipping</span>
-                  <span className="font-semibold">$24.90</span>
-                </div>
+                {/* <div className="mt-4 flex justify-between">
+                  <span>Сума</span>
+                  <span className="font-semibold">₴{getSubTotal()}</span>
+                </div> */}
+                {/* <div className="mt-2 flex justify-between">
+                  <span>Доставка</span>
+                  <span className="font-semibold">₴{shippingCost}</span>
+                </div> */}
                 <div className="mt-2 flex justify-between text-lg font-semibold">
-                  <span>Total</span>
-                  <span>$276.00</span>
+                  <span>Всього</span>
+                  <span>₴{getSubTotal() + shippingCost}</span>
                 </div>
               </div>
               <ButtonPrimary className="mt-8 w-full lg:hidden">
-                Pay Now
+                Оплатити
               </ButtonPrimary>
             </div>
           </div>
         </div>
         <div className="mt-4 border-t border-neutral-300 pt-4  dark:border-neutral-600 lg:hidden">
           <p className="text-sm text-neutral-500">
-            All rights reserved Stock Mordern
+            Усі права захищені TechMark
           </p>
         </div>
       </main>

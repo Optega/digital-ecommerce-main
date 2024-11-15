@@ -8,16 +8,6 @@ import { Providers } from './providers';
 
 export const metadata: Metadata = {
   title: 'TechMark',
-  icons: [
-    {
-      rel: 'apple-touch-icon',
-      url: '/apple-touch-icon.png',
-    },
-    {
-      rel: 'icon',
-      url: '/favicon.ico',
-    },
-  ],
 };
 
 const dmSans = DM_Sans({
@@ -32,7 +22,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="uk" suppressHydrationWarning>
+      <head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+      </head>
       <body className={`bg-neutral-100 dark:bg-gray ${dmSans.className}`}>
         <Providers>{children}</Providers>
       </body>

@@ -1,7 +1,5 @@
-import Link from 'next/link';
 import React from 'react';
 
-import Checkbox from '@/shared/Checkbox/Checkbox';
 import FormItem from '@/shared/FormItem';
 import Input from '@/shared/Input/Input';
 
@@ -10,35 +8,50 @@ const ContactInfo = () => {
     <div className="z-0 ">
       <div className="space-y-2">
         <div className="flex items-center justify-between">
-          <h3 className="text-xl font-semibold">Contact</h3>
-          <span>
+          <h3 className="text-xl font-semibold">Контактні дані</h3>
+          {/* <span>
             <Link
               href="/account/login"
               className="text-sm text-primary underline"
             >
-              Log In
+              Увійти
             </Link>
-          </span>
+          </span> */}
         </div>
-        <div className="">
-          <FormItem>
-            <Input
-              rounded="rounded"
-              sizeClass="h-12 px-4 py-3"
-              placeholder="Email Address"
-              className="border-neutral-300 bg-transparent placeholder:text-neutral-500 focus:border-primary"
-              type="email"
-            />
-          </FormItem>
+        <div className="grid grid-cols-1">
+          <div>
+            <FormItem>
+              <Input
+                rounded="rounded"
+                sizeClass="h-12 px-4 py-3"
+                placeholder="ПІБ"
+                className="border-neutral-300 bg-transparent placeholder:text-neutral-500 focus:border-primary"
+                type="text"
+              />
+            </FormItem>
+          </div>
         </div>
-        <div className="">
+        <div className="grid grid-cols-1">
+          <div>
+            <FormItem>
+              <Input
+                rounded="rounded"
+                sizeClass="h-12 px-4 py-3"
+                placeholder="Телефон"
+                className="border-neutral-300 bg-transparent placeholder:text-neutral-500 focus:border-primary"
+                type="tel"
+              />
+            </FormItem>
+          </div>
+        </div>
+        {/* <div className="">
           <Checkbox
             className="!text-sm"
             name="uudai"
-            label="Email me news and offers"
+            label="Отримувати сповіщення про акції та знижки"
             defaultChecked
           />
-        </div>
+        </div> */}
       </div>
     </div>
   );

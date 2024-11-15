@@ -7,22 +7,44 @@ import React, { Fragment, useState } from 'react';
 import { CiShoppingCart } from 'react-icons/ci';
 import { MdClose } from 'react-icons/md';
 
-import { products } from '@/data/content';
-import type { ProductType } from '@/data/types';
+import type { ProductCartType } from '@/data/types';
 import ButtonCircle3 from '@/shared/Button/ButtonCircle3';
+import ButtonLink from '@/shared/Button/ButtonLink';
 import ButtonPrimary from '@/shared/Button/ButtonPrimary';
 import ButtonSecondary from '@/shared/Button/ButtonSecondary';
 import InputNumber from '@/shared/InputNumber/InputNumber';
+import { useCartStore } from '@/stores/useCartStore';
 
 export interface CartSideBarProps {}
 const CartSideBar: React.FC<CartSideBarProps> = () => {
+  const { items, changeQuantity, removeItem } = useCartStore();
+
   const [isVisable, setIsVisable] = useState(false);
 
   const handleOpenMenu = () => setIsVisable(true);
   const handleCloseMenu = () => setIsVisable(false);
 
-  const renderProduct = (item: ProductType) => {
-    const { name, coverImage, currentPrice, slug } = item;
+  const getSubTotal = () => {
+    return items.reduce(
+      (acc, item) => acc + item.product.currentPrice * item.quantity,
+      0,
+    );
+  };
+
+  const getQuantity = () => {
+    return items.reduce((acc, item) => acc + item.quantity, 0);
+  };
+
+  const handleChangeQuantity = (item: ProductCartType) => {
+    changeQuantity(item.product.slug, item.quantity);
+  };
+
+  const handleRemoveItem = (slug: string) => {
+    removeItem(slug);
+  };
+
+  const renderProduct = (item: ProductCartType) => {
+    const { name, coverImage, currentPrice, slug } = item.product;
 
     return (
       <div key={name} className="flex gap-5 py-5 last:pb-0">
@@ -48,10 +70,16 @@ const CartSideBar: React.FC<CartSideBarProps> = () => {
                   {name}
                 </Link>
               </h3>
-              <span className=" font-medium">${currentPrice}</span>
+              <span className=" font-medium">₴{currentPrice}</span>
             </div>
             <div>
-              <InputNumber className="h-10" />
+              <InputNumber
+                defaultValue={item.quantity}
+                onChange={(value) =>
+                  handleChangeQuantity({ ...item, quantity: value })
+                }
+                className="h-10"
+              />
             </div>
           </div>
           <div className="flex w-full items-end justify-between text-sm">
@@ -59,9 +87,9 @@ const CartSideBar: React.FC<CartSideBarProps> = () => {
               <span className="text-gray">storage: 128GB</span>
             </div>
             <div className="flex items-center gap-3">
-              <Link className="underline" href="/">
-                Remove
-              </Link>
+              <ButtonLink onClick={() => handleRemoveItem(slug)}>
+                Видалити
+              </ButtonLink>
             </div>
           </div>
         </div>
@@ -93,29 +121,27 @@ const CartSideBar: React.FC<CartSideBarProps> = () => {
                     <div className="hiddenScrollbar h-full overflow-y-auto p-5">
                       <div className="flex items-center justify-between">
                         <h3 className="text-4xl font-semibold">
-                          Cart{' '}
-                          <span className="text-sm font-normal">2 items</span>
+                          Кошик{' '}
+                          {/* <span className="text-sm font-normal">2 items</span> */}
                         </h3>
                         <ButtonCircle3 onClick={handleCloseMenu}>
                           <MdClose className="text-2xl" />
                         </ButtonCircle3>
                       </div>
                       <div className="divide-y divide-neutral-300">
-                        {products
-                          .slice(0, 2)
-                          .map((item) => renderProduct(item))}
+                        {items.map((item) => renderProduct(item))}
                       </div>
                     </div>
                     <div className="absolute bottom-0 left-0 w-full  p-5">
                       <div className=" bg-neutral-100 p-6 dark:bg-neutral-800">
                         <span className="flex justify-between font-medium">
-                          <span className="">Subtotal</span>
-                          <span className="">$597</span>
+                          <span className="">Всього</span>
+                          <span className="">₴{getSubTotal()}</span>
                         </span>
-                        <p className="block w-2/3 text-sm text-neutral-500">
+                        {/* <p className="block w-2/3 text-sm text-neutral-500">
                           Tax included and Shipping and taxes calculated at
                           checkout.
-                        </p>
+                        </p> */}
                       </div>
                       <div className="mt-5 flex flex-col items-center gap-4">
                         <ButtonPrimary
@@ -123,14 +149,14 @@ const CartSideBar: React.FC<CartSideBarProps> = () => {
                           className="w-full"
                           href="/checkout"
                         >
-                          Checkout
+                          Оформити замовлення
                         </ButtonPrimary>
                         <ButtonSecondary
                           onClick={handleCloseMenu}
                           href="/cart"
                           className="w-fit text-center"
                         >
-                          View cart
+                          Переглянути кошик
                         </ButtonSecondary>
                       </div>
                     </div>
@@ -164,7 +190,7 @@ const CartSideBar: React.FC<CartSideBarProps> = () => {
         className="relative mx-5 flex items-center focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75"
       >
         <span className="absolute -top-1/4 left-3/4 inline-block aspect-square size-4 rounded-full bg-primary text-[10px] text-white">
-          3
+          {getQuantity()}
         </span>
         <CiShoppingCart size={24} />
       </button>
