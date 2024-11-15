@@ -36,7 +36,7 @@ const page = () => {
               <div className="mb-16">
                 <span className="mb-2 text-xs uppercase">About</span>
                 <h2 className="mb-6 text-xl font-semibold lg:text-3xl">
-                  Hi, we are stockmart
+                  Hi, we are TechMart
                 </h2>
                 <p className="mb-4 lg:text-xl">
                   Foreseeing the trends and the desires of the human of the
@@ -63,7 +63,7 @@ const page = () => {
                     </div>
                     <div className="leading-tight">
                       <h3 className="font-semibold">Anthony Evans</h3>
-                      <span className="text-sm">Founder Stockmart</span>
+                      <span className="text-sm">Founder TechMart</span>
                     </div>
                   </div>
                   <div>

@@ -47,7 +47,7 @@ const ProductCard: FC<ProductCardProps> = ({
         </div>
         <div className="px-5 py-4">
           {onSale && <ColorPicker />}
-          <span className="text-xs">STOCKMART</span>
+          <span className="text-xs">TECHMART</span>
           <h3 className="line-clamp-2 text-ellipsis font-bold">{name}</h3>
           {onSale ? (
             <p>

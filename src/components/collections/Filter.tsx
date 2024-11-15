@@ -10,7 +10,7 @@ import React, { useState } from 'react';
 import Button from '@/shared/Button/Button';
 
 // DEMO DATA
-const brands = ['TechMark'];
+const brands = ['TechMart'];
 const productType = ['Phone', 'Laptop', 'Gamng'];
 const avaiablitiy = ['In Stock', 'Out of Stock'];
 

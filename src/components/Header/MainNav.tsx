@@ -11,7 +11,6 @@ import Logo from '@/shared/Logo/Logo';
 import CartSideBar from '../CartSideBar';
 import Language from '../Language';
 import type { NavItemType } from '../NavItem';
-import UserAccount from '../UserAccount';
 import CatalogBar from './CatalogBar';
 import MenuBar from './MenuBar';
 
@@ -60,9 +59,9 @@ const MainNav = () => {
             <div className="hidden lg:inline-block">
               <Language />
             </div>
-            <div className="hidden lg:inline-block">
+            {/* <div className="hidden lg:inline-block">
               <UserAccount />
-            </div>
+            </div> */}
             <CartSideBar />
           </div>
         </div>

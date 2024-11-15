@@ -11,7 +11,7 @@ const Logo: FC<LogoProps> = ({ className = '' }) => {
   return (
     <Link className="flex cursor-pointer items-center gap-1" href="/">
       <RiMicrosoftLoopFill className="text-3xl text-primary" />{' '}
-      <span className={`${className} text-2xl font-bold`}>TechMark</span>
+      <span className={`${className} text-2xl font-bold`}>TechMart</span>
     </Link>
   );
 };

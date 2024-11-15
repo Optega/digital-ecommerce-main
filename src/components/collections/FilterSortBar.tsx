@@ -13,7 +13,7 @@ import ButtonCircle3 from '@/shared/Button/ButtonCircle3';
 import ButtonPrimary from '@/shared/Button/ButtonPrimary';
 import ButtonSecondary from '@/shared/Button/ButtonSecondary';
 
-const brands = ['TechMark'];
+const brands = ['TechMart'];
 const productType = ['Phone', 'Laptop', 'Gamng'];
 const avaiablitiy = ['In Stock', 'Out of Stock'];
 const PRICE_RANGE = [1, 500];

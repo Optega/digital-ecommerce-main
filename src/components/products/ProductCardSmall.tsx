@@ -33,7 +33,7 @@ const ProductCardSmall: FC<ProductType> = ({
         </div>
         <div className="flex grow items-center justify-between gap-4">
           <div>
-            <span className="text-xs">STOCKMART</span>
+            <span className="text-xs">TECHMART</span>
             <h3 className="line-clamp-2 text-ellipsis text-sm font-semibold">
               {name}
             </h3>

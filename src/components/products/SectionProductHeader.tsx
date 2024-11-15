@@ -56,7 +56,7 @@ const SectionProduct: FC<SectionProductHeaderProps> = ({
       </div>
 
       <div className="col-span-12 md:col-span-6 lg:col-span-4">
-        <span className="mb-2 text-xs">STOCKMART</span>
+        <span className="mb-2 text-xs">TECHMART</span>
         <h1 className="mb-0 text-3xl font-bold">{name}</h1>
 
         <div className="mb-5 space-y-1">
@@ -169,7 +169,7 @@ const SectionProduct: FC<SectionProductHeaderProps> = ({
         </div>
         <div className="mb-8 rounded-md bg-primary px-10 py-4 text-white">
           <div>
-            <span className="mb-5 inline-block">StockMart</span>
+            <span className="mb-5 inline-block">TechMart</span>
             <h3 className="font-semibold">
               Discount & Free shipping on Your first purchase.
             </h3>

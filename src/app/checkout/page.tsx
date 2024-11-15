@@ -101,7 +101,7 @@ const CheckoutPage = () => {
 
         <div className="hidden border-t border-neutral-300  pt-4 dark:border-neutral-600 lg:block">
           <p className="text-sm text-neutral-500">
-            Усі права захищені TechMark
+            Усі права захищені TechMart
           </p>
         </div>
       </div>
@@ -143,7 +143,7 @@ const CheckoutPage = () => {
         </div>
         <div className="mt-4 border-t border-neutral-300 pt-4  dark:border-neutral-600 lg:hidden">
           <p className="text-sm text-neutral-500">
-            Усі права захищені TechMark
+            Усі права захищені TechMart
           </p>
         </div>
       </main>

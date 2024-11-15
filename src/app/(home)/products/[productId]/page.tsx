@@ -42,7 +42,6 @@ const page = (props: Props) => {
   ];
 
   const handleAddToCart = (quantity: number) => {
-    console.log('Add to cart', selectedProduct, quantity);
     if (selectedProduct) {
       addItem(selectedProduct, quantity);
     }
