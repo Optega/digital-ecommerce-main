@@ -46,7 +46,7 @@ const NewArrivals2 = () => {
                     />
                   </div>
                   <div className="flex flex-col items-center justify-center bg-white p-6 text-center dark:bg-neutral-900 lg:p-14 xl:w-1/2">
-                    <span className="mb-2 text-xs uppercase">In stock Now</span>
+                    <span className="mb-2 text-xs uppercase">В наявності</span>
                     <h4 className="mb-4 text-2xl font-semibold">
                       {newArrival.title}
                     </h4>

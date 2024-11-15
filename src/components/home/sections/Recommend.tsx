@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 
 import ProductCardSmall from '@/components/products/ProductCardSmall';
@@ -9,25 +10,29 @@ const RecommendedSection = () => {
     <section>
       <div className="container pb-8 xl:pb-24">
         <h2 className="mb-4 text-lg font-semibold lg:mb-8">
-          Recommended For You
+          Рекомендовані товари
         </h2>
         <div className="mb-4">
           <ul className="flex flex-wrap gap-2 lg:gap-3">
             <li>
-              <ButtonSecondary sizeClass="py-2 px-3">All</ButtonSecondary>
+              <Link href="/collections">
+                <ButtonSecondary sizeClass="py-2 px-3">Всі</ButtonSecondary>
+              </Link>
             </li>
             {catalogNavLinks.slice(0, 5).map((navItem) => (
               <li key={navItem.id}>
-                <ButtonSecondary sizeClass="py-2 px-3">
-                  {navItem.name}
-                </ButtonSecondary>
+                <Link href={navItem.href}>
+                  <ButtonSecondary sizeClass="py-2 px-3">
+                    {navItem.name}
+                  </ButtonSecondary>
+                </Link>
               </li>
             ))}
           </ul>
         </div>
         <div>
           <ul className="grid grid-cols-12 gap-2">
-            {products.map((product) => (
+            {products.slice(0, 12).map((product) => (
               <li
                 key={product.name}
                 className="col-span-12 md:col-span-6 xl:col-span-3"

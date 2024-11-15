@@ -5,7 +5,7 @@ import Input from '../Input/Input';
 
 const Subscribe = () => {
   return (
-    <div className="mt-6 items-center justify-between gap-3 space-y-2 rounded-2xl bg-white/10 dark:bg-neutral-900 md:flex md:space-y-0 lg:mt-0">
+    <div className="mt-6 flex flex-col justify-between gap-3 space-y-2 rounded-2xl bg-white/10 dark:bg-neutral-900 md:space-y-0 lg:mt-0">
       <h3 className=" font-semibold">Підпишіться на наші новини</h3>
       <div className="basis-[52%] ">
         <Input

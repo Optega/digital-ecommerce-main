@@ -33,15 +33,16 @@ const HeaderCard: FC<CardProps> = ({ href, image, title, tag, index }) => {
       {isFirst ? (
         <div>
           <span className="text-xs text-primary dark:text-white">
-            <span className="inline-block size-1 rounded-full bg-green-600 dark:bg-white" />{' '}
-            IN STOCK NOW
+            <span className="inline-block size-1 rounded-full bg-green-600 uppercase dark:bg-white" />{' '}
+            в наявності
           </span>
           <h2 className="mb-2 text-4xl font-bold leading-tight md:mt-16 md:w-[70%] lg:mt-10">
             {title}
           </h2>
 
           <p className="mb-4 w-4/5 text-neutral-500 dark:text-white md:w-1/2">
-            Find your perfect phone - sleek and stylish or budget-friendly.
+            Знайдіть свій ідеальний телефон – елегантний і стильний або
+            бюджетний.
           </p>
 
           <div className="md:mt-16 lg:mt-10">

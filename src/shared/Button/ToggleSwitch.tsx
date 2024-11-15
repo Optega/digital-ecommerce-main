@@ -27,7 +27,9 @@ const ToggleSwitch = () => {
   }, []);
   return (
     <div className="flex items-center gap-2">
-      <span className="whitespace-nowrap text-sm font-semibold">Dark Mode</span>
+      <span className="whitespace-nowrap text-sm font-semibold">
+        Темна тема
+      </span>
       <label
         htmlFor="check"
         className="relative h-[24px] w-[50px] cursor-pointer rounded-full bg-neutral-200"

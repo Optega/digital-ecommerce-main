@@ -22,19 +22,19 @@ const StylesSection = () => {
               </div>
               <div className="flex h-full flex-col justify-center">
                 <h2 className="mb-2 text-xl font-bold lg:w-[70%] lg:text-3xl">
-                  Crash high scores
+                  Зламай ліміти з нашими геймпадами
                 </h2>
                 <p className="mb-4 text-sm lg:w-1/2">
-                  Designed for comfort and precision, our controller allows you
-                  to play your favorite games on your phone with ease.
+                  Створений для зручності та точності, наш контролер дозволяє з
+                  легкістю грати в улюблені ігри на телефоні.
                 </p>
                 <div className="mt-10 flex items-center gap-10">
                   <div>
-                    <ButtonPrimary showPointer>Shop Now</ButtonPrimary>
+                    <ButtonPrimary showPointer>Замовити</ButtonPrimary>
                   </div>
                   <p>
-                    <span>From </span>
-                    <span className="font-semibold text-primary">$245</span>
+                    <span>Від </span>
+                    <span className="font-semibold text-primary">₴245</span>
                   </p>
                 </div>
               </div>
@@ -51,15 +51,16 @@ const StylesSection = () => {
               </div>
               <div className="flex h-full flex-col justify-center text-white lg:items-center">
                 <h3 className="text-center text-2xl font-bold">
-                  Swap styles in a snap
+                  Миттєво змінюйте стилі
                 </h3>
                 <p className="mt-2 lg:text-center">
-                  Swap your style on the go with our smartwatches - change your
-                  look in seconds with customizable watch faces and brands,
-                  prefect for any occasion
+                  Змінюйте свій стиль у дорозі з нашими розумними годинниками -
+                  змінюйте свій зовнішній вигляд за лічені секунди за допомогою
+                  настроюваних циферблатів годинників і брендів, ідеальних для
+                  будь-якого випадку
                 </p>
                 <ButtonPrimary showPointer className="mt-6">
-                  Shop Now
+                  Замовити
                 </ButtonPrimary>
               </div>
             </div>

@@ -8,7 +8,7 @@ const PopluarCategoriesSection = () => {
     <section>
       <div className="container pb-8 xl:pb-24">
         <h2 className="mb-6 text-lg font-semibold lg:mb-8">
-          Popular Categories
+          Популярні категорії
         </h2>
         <div>
           <ul className="grid grid-cols-12 gap-2">

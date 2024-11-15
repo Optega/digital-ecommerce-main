@@ -51,15 +51,13 @@ const ProductCard: FC<ProductCardProps> = ({
           <h3 className="line-clamp-2 text-ellipsis font-bold">{name}</h3>
           {onSale ? (
             <p>
-              <span className="font-bold text-green-700">
-                ${currentPrice}.00
-              </span>{' '}
+              <span className="font-bold text-green-700">₴{currentPrice}</span>{' '}
               <span className="text-sm font-semibold text-neutral-500 line-through">
-                ${previousPrice}.00
+                ₴{previousPrice}
               </span>
             </p>
           ) : (
-            <p className="font-bold">${currentPrice}.00</p>
+            <p className="font-bold">₴{currentPrice}</p>
           )}
         </div>
       </div>

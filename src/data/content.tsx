@@ -300,39 +300,39 @@ export const categoriesData = [
 export const benefitsData = [
   {
     Icon: FaTruck,
-    title: 'Free Shipping & Returns',
-    text: `Shop with confidence and have your favorite electronics delivered right to your doorstep without any additional cost.`,
+    title: `Безкоштовна доставка та повернення`,
+    text: `Робіть покупки з упевненістю та доставляйте свою улюблену електроніку без будь-яких додаткових витрат.`,
   },
   {
     Icon: RiExchangeDollarLine,
-    title: `Money Back Guarantee`,
-    text: `If you're not completely satisfied with your purchase, we'll make it right. No questions asked.`,
+    title: `Гарантія повернення грошей`,
+    text: `Якщо ви не повністю задоволені своєю покупкою, ми виправимо це. Без питань.`,
   },
   {
     Icon: Ri24HoursLine,
-    title: `Online Support 24/7`,
-    text: `Need help with your electronics? Get in touch with us anytime, anywhere, and let's get your tech sorted.`,
+    title: `Онлайн підтримка 24/7`,
+    text: `Потрібна допомога з електронікою? Зв’яжіться з нами в будь-який час і в будь-якому місці, і ми допоможемо Вам.`,
   },
   {
-    title: `Regular Sales`,
-    text: `Don't miss out on our amazing deals with regular sales on our top-of-the-line electronics.`,
     Icon: LuDivide,
+    title: `Регулярні розпродажі`,
+    text: `Не пропустіть наші дивовижні пропозиції з регулярними розпродажами нашої першокласної електроніки.`,
   },
 ];
 
 export const FAQsData = {
   faqs: [
     {
-      question: `What payment methods are accepted at your store?`,
-      answer: `Our online store accepts a variety of payment methods to ensure a convenient shopping experience for our customers. We accept major credit cards, such as Visa, MasterCard, American Express, and Discover, as well as debit cards. Additionally, we offer support for digital payment platforms like PayPal, Apple Pay, and Google Pay. We are constantly working to expand our payment options to accommodate our customers' needs.`,
+      question: `Які способи оплати приймаються у вашому магазині?`,
+      answer: `Наш інтернет-магазин приймає різні способи оплати, щоб забезпечити зручність покупок для наших клієнтів. Ми приймаємо основні кредитні картки, такі як Visa, MasterCard, American Express і Discover, а також дебетові картки. Крім того, ми пропонуємо підтримку таких платформ цифрових платежів, як PayPal, Apple Pay і Google Pay. Ми постійно працюємо над розширенням наших варіантів оплати, щоб задовольнити потреби наших клієнтів.`,
     },
     {
-      question: `How long does it take to process and ship my order?`,
-      answer: `Answer: We strive to process and ship orders as quickly as possible. Generally, orders are processed within 1-2 business days after being placed. Shipping times vary depending on the chosen shipping method and the destination of the package. Standard shipping typically takes 3-7 business days within the continental United States, while expedited shipping options are available for faster delivery. International shipping times vary depending on the country and customs processing times.`,
+      question: `Скільки часу займає обробка та відправка мого замовлення?`,
+      answer: `Відповідь: Ми прагнемо обробляти та відправляти замовлення якомога швидше. Як правило, замовлення обробляються протягом 1-2 робочих днів після оформлення. Час доставки залежить від вибраного способу доставки та місця призначення посилки. Стандартна доставка зазвичай займає 1-3 робочих днів у межах України. Час міжнародної доставки залежить від країни та часу митної обробки.`,
     },
     {
-      question: `Can I return or exchange an item I've purchased from your online store?`,
-      answer: `Our online store offers a hassle-free return and exchange policy. You can return or exchange any eligible items within 30 days of the delivery date, provided they are in their original, unused condition with all tags and packaging intact. To initiate a return or exchange, please contact our customer support team through our website or email, and they will guide you through the process. Please note that return shipping costs are the responsibility of the customer unless the item is faulty or an error has been made on our part.`,
+      question: `Чи можу я повернути або обміняти товар, який я придбав у вашому інтернет-магазині?`,
+      answer: `Наш інтернет-магазин пропонує безпроблемне повернення та обмін. Ви можете повернути або обміняти будь-які відповідні товари протягом 14 днів з дати доставки, за умови, що вони знаходяться в оригінальному, невикористаному стані з усіма бірками та упаковкою. Щоб ініціювати повернення або обмін, зв’яжіться з нашою командою підтримки клієнтів через наш веб-сайт або електронною поштою, і вони допоможуть вам пройти цей процес. Будь ласка, зверніть увагу, що витрати на зворотну доставку покладаються на клієнта, якщо тільки товар не має дефектів або з нашого боку сталася помилка.`,
     },
   ],
 };
@@ -346,27 +346,27 @@ export const socialLinks = [
 
 export const landingPageHeaderData = [
   {
-    title: 'Upgrade Your Tech Game',
+    title: 'Оновіть свою технічну гру',
     image: phoneheader,
-    tag: 'Phones',
+    tag: 'Телефони',
     href: '/collections/phones',
   },
   {
-    title: 'Discover ideal gaming solutions',
+    title: 'Відкрийте для себе ідеальні ігрові рішення',
     image: gamingheader,
-    tag: 'Gaming',
+    tag: 'Геймінг',
     href: '/collections/gaming',
   },
   {
-    title: 'Hear the Difference',
+    title: 'Почуйте різницю',
     image: headphonesheader,
-    tag: 'Headphones',
+    tag: 'Навушники',
     href: '/collections/headphones',
   },
   {
-    title: 'Experience the Latest Technology',
+    title: 'Відчуйте новітні технології',
     image: watchheader,
-    tag: 'Smart Watches',
+    tag: 'Смарт годинники',
     href: '/collections/smart-watches',
   },
 ];
@@ -392,22 +392,22 @@ export const productCharacterData = [
 
 export const newArrivalsData = [
   {
-    title: 'Elevate Your Life with Cutting-Edge Electronics',
+    title: 'Покращуйте своє життя з передовою електронікою',
     content:
-      'Cutting-edge electronics that take you to the forefront of innovation and tech',
+      'Передова електроніка, яка виводить вас на передовий рівень інновацій і технологій',
     image: slider_hp,
     href: '/collections/headphones',
   },
   {
-    title: 'Experience the Future with Our New Tech Arrivals',
+    title: 'Відчуйте майбутнє з нашими новими технологіями',
     content:
-      'Latest tech arrivals to embark on an exciting digital journey today.',
+      'Найновіші технології, щоб вирушити у захоплюючу цифрову подорож сьогодні.',
     image: slider_pc,
     href: '/collections/laptops',
   },
   {
-    title: 'Be the First to Unleash Innovation with Newest Tech',
-    content: 'Stay ahead of the curve in this ever-changing digital world.',
+    title: 'Будьте першим, хто розкриє інновації з новітніми технологіями',
+    content: 'Будьте попереду в цьому цифровому світі, що постійно змінюється.',
     image: slider_watch,
     href: '/collections/smart-watches',
   },

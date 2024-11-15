@@ -41,13 +41,13 @@ const ProductCardSmall: FC<ProductType> = ({
           <div className="text-end  text-sm">
             {onSale ? (
               <>
-                <p className="font-bold  text-green-700">${currentPrice}</p>
+                <p className="font-bold  text-green-700">₴{currentPrice}</p>
                 <p className="text-sm font-bold text-neutral-500 line-through">
-                  ${previousPrice}
+                  ₴{previousPrice}
                 </p>
               </>
             ) : (
-              <p className="font-semibold">${currentPrice}</p>
+              <p className="font-semibold">₴{currentPrice}</p>
             )}
           </div>
         </div>

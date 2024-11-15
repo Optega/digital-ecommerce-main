@@ -6,9 +6,9 @@ const FAQsSection = () => {
       <div className="container pb-8 xl:pb-24">
         <div>
           <h2 className="text-2xl font-semibold">FAQ</h2>
-          <p className="mt-3 text-neutral-500 dark:text-neutral-300 lg:w-1/2 xl:w-1/3">
-            Have a question? Check out our FAQ section for answers to common
-            questions.
+          <p className="mt-3 text-neutral-500 dark:text-neutral-300">
+            Є питання? Перегляньте наш розділ поширених запитань, щоб отримати
+            відповіді на поширені запитання..
           </p>
         </div>
         <div className=" mt-8 lg:mt-10">
