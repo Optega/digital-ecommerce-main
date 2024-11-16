@@ -1,17 +1,29 @@
 import type { StaticImageData } from 'next/image';
 
+export type ProductCharacteristics = {
+  title: string;
+  text: string;
+};
+
 export type ProductType = {
   slug: string;
   name: string;
-  category: string;
   coverImage: StaticImageData | string;
   currentPrice: number;
   previousPrice: number;
+  category: string;
   rating: number;
+  reviews: number;
   pieces_sold: number;
-  justIn?: boolean;
   onSale?: boolean;
+  justIn?: boolean;
   colorOptions?: string[];
+  sizeOptions?: string[];
+  inStock?: number;
+  shots: StaticImageData[];
+  sku: string;
+  overview: string;
+  characterData: ProductCharacteristics[];
 };
 
 export type ProductCartType = {

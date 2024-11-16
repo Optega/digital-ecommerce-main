@@ -44,6 +44,8 @@ import johnson from '@/images/companies/Johnson_Berg.svg';
 import johnson_dark from '@/images/companies/Johnson_Berg-white.svg';
 import stela from '@/images/companies/Stela.svg';
 import stela_dark from '@/images/companies/Stela-white.svg';
+import antena3gUmts21db from '@/images/products/3g-antena-umts-21-db.jpg';
+import antennaHuaweiAtr4518r7v07 from '@/images/products/antenna-huawei-atr4518r7v07.jpg';
 import applwwatch1 from '@/images/products/applewatch1.png';
 import gamingcontrollwe from '@/images/products/controller.jpg';
 import ear from '@/images/products/earphones.jpg';
@@ -52,9 +54,15 @@ import harman from '@/images/products/Harman-Kardon.jpg';
 import head from '@/images/products/headphones.jpg';
 import iphone from '@/images/products/iphone.jpg';
 import jbl from '@/images/products/JBL GO 3.jpg';
+import krugovaAntenna5dbIndoor from '@/images/products/krugova-antenna-5db-900-1800-indoor.jpg';
 import macbook from '@/images/products/Macbook 1.jpg';
+import mikrotikSRj01 from '@/images/products/mikrotik-s-rj01.jpg';
+import moduleTpLinkTlSm311lm from '@/images/products/modul_tp-link_tl-sm311lm.jpg';
+import modulSfp2mm from '@/images/products/modul-sfp-2mm.jpg';
 import mouse from '@/images/products/mouse1.png';
+import opticalModule472579 from '@/images/products/optical-module-472579.jpg';
 import pixel from '@/images/products/pixel.png';
+import SFPMikroTikS85DLC05D from '@/images/products/SFP-MikroTik-S-85DLC05D.jpg';
 import watch2 from '@/images/products/watch2.png';
 import shot1 from '@/images/shots/Macbook 2.jpg';
 import shot2 from '@/images/shots/Macbook 3.jpg';
@@ -295,6 +303,20 @@ export const categoriesData = [
     bannerUrl: laptopBanner,
     href: '/collections/laptops',
   },
+  {
+    title: 'Кабелі та аксесуари',
+    slug: generateSlug('cables-and-accessories'),
+    imgUrl: laptopCat,
+    bannerUrl: laptopBanner,
+    href: `/collections/${generateSlug('cables-and-accessories')}`,
+  },
+  {
+    title: 'Антени',
+    slug: generateSlug('antennas'),
+    imgUrl: laptopCat,
+    bannerUrl: laptopBanner,
+    href: `/collections/${generateSlug('antennas')}`,
+  },
 ];
 
 export const benefitsData = [
@@ -465,8 +487,27 @@ export const products = [
     pieces_sold: 600,
     onSale: true,
     shots: [macbook, shot1, shot2],
+    sku: '',
     overview:
       'The Macbook Air 13inch M1 Chip 256GB is a high-performing and visually stunning laptop that is perfect for both personal and professional use. With its advanced image signal processor, 8-core CPU, and 16-core Neural Engine, this laptop offers unparalleled speed and power.',
+    characterData: [
+      {
+        title: `Display Resolutions`,
+        text: `Retina XDR Display 2532 x 1170 pixels, 19.5:9 ratio, 457 PPI 60Hz`,
+      },
+      {
+        title: `Sound`,
+        text: `Custom Tempest Engine 3D Audio, Dolby Atmos & DTS:X (Blu-ray video & UHD Blu-ray video)`,
+      },
+      {
+        title: `Memory`,
+        text: `16 GB/256-bit GDDR6 SDRAM 512 MB DDR4 RAM (for background tasks)`,
+      },
+      {
+        title: `Connectivity`,
+        text: `Wi-Fi IEEE 802.11ax; Bluetooth 5.1; Gigabit Ethernet; 2× USB 3.2 Gen 2×1; 1× USB 2.0; 1× USB-C with USB 3.2 Gen 2×1; 1× HDMI 2.1`,
+      },
+    ],
   },
   {
     slug: 'jbl-go-3-165',
@@ -480,8 +521,27 @@ export const products = [
     pieces_sold: 600,
     onSale: false,
     shots: [jbl, shot1, shot2],
+    sku: '',
     overview:
       'Get the ultimate portable speaker with JBL GO 3. With its dynamic frequency response range, water resistance rating, and Bluetooth technology, you can enjoy up to 5 hours of high-quality sound wherever you go. Its compact size and durability make it perfect for outdoor use. Choose from four different colors to match your style.',
+    characterData: [
+      {
+        title: `Display Resolutions`,
+        text: `Retina XDR Display 2532 x 1170 pixels, 19.5:9 ratio, 457 PPI 60Hz`,
+      },
+      {
+        title: `Sound`,
+        text: `Custom Tempest Engine 3D Audio, Dolby Atmos & DTS:X (Blu-ray video & UHD Blu-ray video)`,
+      },
+      {
+        title: `Memory`,
+        text: `16 GB/256-bit GDDR6 SDRAM 512 MB DDR4 RAM (for background tasks)`,
+      },
+      {
+        title: `Connectivity`,
+        text: `Wi-Fi IEEE 802.11ax; Bluetooth 5.1; Gigabit Ethernet; 2× USB 3.2 Gen 2×1; 1× USB 2.0; 1× USB-C with USB 3.2 Gen 2×1; 1× HDMI 2.1`,
+      },
+    ],
   },
   {
     slug: 'iphone-14-128gb-12',
@@ -495,8 +555,27 @@ export const products = [
     pieces_sold: 600,
     onSale: true,
     shots: [iphone, shot1, shot2],
+    sku: '',
     overview:
       'The iPhone 14 128GB is the must-have gadget for tech enthusiasts, featuring a stunning 6.1-inch OLED screen, powerful 128GB storage, and 6GB RAM. With its dual rear camera setup and 12MP selfie camera with biometric sensor, you can capture high-quality photos and videos with ease',
+    characterData: [
+      {
+        title: `Display Resolutions`,
+        text: `Retina XDR Display 2532 x 1170 pixels, 19.5:9 ratio, 457 PPI 60Hz`,
+      },
+      {
+        title: `Sound`,
+        text: `Custom Tempest Engine 3D Audio, Dolby Atmos & DTS:X (Blu-ray video & UHD Blu-ray video)`,
+      },
+      {
+        title: `Memory`,
+        text: `16 GB/256-bit GDDR6 SDRAM 512 MB DDR4 RAM (for background tasks)`,
+      },
+      {
+        title: `Connectivity`,
+        text: `Wi-Fi IEEE 802.11ax; Bluetooth 5.1; Gigabit Ethernet; 2× USB 3.2 Gen 2×1; 1× USB 2.0; 1× USB-C with USB 3.2 Gen 2×1; 1× HDMI 2.1`,
+      },
+    ],
   },
   {
     slug: 'google-pixel-8-pro-128gb-663',
@@ -510,7 +589,26 @@ export const products = [
     pieces_sold: 600,
     onSale: true,
     shots: [pixel, shot1, shot2],
+    sku: '',
     overview: `The Google Pixel 8 Pro 128GB is the perfect phone for the tech-savvy user who wants the latest and greatest gadgets. With its stunning 6.7 LTPO OLED screen, 120Hz refresh rate, HDR10+, 1600 nits HBM, and 2400 nits peak, you'll have beautiful visuals and vibrant colors no matter what you're doing.`,
+    characterData: [
+      {
+        title: `Display Resolutions`,
+        text: `Retina XDR Display 2532 x 1170 pixels, 19.5:9 ratio, 457 PPI 60Hz`,
+      },
+      {
+        title: `Sound`,
+        text: `Custom Tempest Engine 3D Audio, Dolby Atmos & DTS:X (Blu-ray video & UHD Blu-ray video)`,
+      },
+      {
+        title: `Memory`,
+        text: `16 GB/256-bit GDDR6 SDRAM 512 MB DDR4 RAM (for background tasks)`,
+      },
+      {
+        title: `Connectivity`,
+        text: `Wi-Fi IEEE 802.11ax; Bluetooth 5.1; Gigabit Ethernet; 2× USB 3.2 Gen 2×1; 1× USB 2.0; 1× USB-C with USB 3.2 Gen 2×1; 1× HDMI 2.1`,
+      },
+    ],
   },
   {
     slug: 'logitech-m190-wireless-mouse-391',
@@ -524,7 +622,26 @@ export const products = [
     pieces_sold: 600,
     onSale: false,
     shots: [mouse, shot1, shot2],
+    sku: '',
     overview: `The Logitech M190 Wireless Mouse is a comfortable and reliable mouse that works seamlessly with your PC or laptop. With a contoured ergonomic shape and scooped buttons, it provides all-day comfort, while its power-saving features and`,
+    characterData: [
+      {
+        title: `Display Resolutions`,
+        text: `Retina XDR Display 2532 x 1170 pixels, 19.5:9 ratio, 457 PPI 60Hz`,
+      },
+      {
+        title: `Sound`,
+        text: `Custom Tempest Engine 3D Audio, Dolby Atmos & DTS:X (Blu-ray video & UHD Blu-ray video)`,
+      },
+      {
+        title: `Memory`,
+        text: `16 GB/256-bit GDDR6 SDRAM 512 MB DDR4 RAM (for background tasks)`,
+      },
+      {
+        title: `Connectivity`,
+        text: `Wi-Fi IEEE 802.11ax; Bluetooth 5.1; Gigabit Ethernet; 2× USB 3.2 Gen 2×1; 1× USB 2.0; 1× USB-C with USB 3.2 Gen 2×1; 1× HDMI 2.1`,
+      },
+    ],
   },
   {
     slug: 'playstation-dualsense-controller-146',
@@ -538,7 +655,26 @@ export const products = [
     pieces_sold: 600,
     onSale: true,
     shots: [gamingcontrollwe, shot1, shot2],
+    sku: '',
     overview: `The Playstation DualSense Controller is a must-have for serious gamers. With Haptic feedback and Adaptive Triggers, you'll feel more immersed in your games than ever before. The built-in microphone and headset jack also make it easy to chat with friends while you play. Choose between white and black colors to match your style.`,
+    characterData: [
+      {
+        title: `Display Resolutions`,
+        text: `Retina XDR Display 2532 x 1170 pixels, 19.5:9 ratio, 457 PPI 60Hz`,
+      },
+      {
+        title: `Sound`,
+        text: `Custom Tempest Engine 3D Audio, Dolby Atmos & DTS:X (Blu-ray video & UHD Blu-ray video)`,
+      },
+      {
+        title: `Memory`,
+        text: `16 GB/256-bit GDDR6 SDRAM 512 MB DDR4 RAM (for background tasks)`,
+      },
+      {
+        title: `Connectivity`,
+        text: `Wi-Fi IEEE 802.11ax; Bluetooth 5.1; Gigabit Ethernet; 2× USB 3.2 Gen 2×1; 1× USB 2.0; 1× USB-C with USB 3.2 Gen 2×1; 1× HDMI 2.1`,
+      },
+    ],
   },
   {
     slug: 'fifa-23-157',
@@ -552,8 +688,27 @@ export const products = [
     pieces_sold: 600,
     onSale: false,
     shots: [fifa, shot1, shot2],
+    sku: '',
     overview:
       "Experience FIFA 23 and bring The World's Game to the pitch, with HyperMotion2 Technology.",
+    characterData: [
+      {
+        title: `Display Resolutions`,
+        text: `Retina XDR Display 2532 x 1170 pixels, 19.5:9 ratio, 457 PPI 60Hz`,
+      },
+      {
+        title: `Sound`,
+        text: `Custom Tempest Engine 3D Audio, Dolby Atmos & DTS:X (Blu-ray video & UHD Blu-ray video)`,
+      },
+      {
+        title: `Memory`,
+        text: `16 GB/256-bit GDDR6 SDRAM 512 MB DDR4 RAM (for background tasks)`,
+      },
+      {
+        title: `Connectivity`,
+        text: `Wi-Fi IEEE 802.11ax; Bluetooth 5.1; Gigabit Ethernet; 2× USB 3.2 Gen 2×1; 1× USB 2.0; 1× USB-C with USB 3.2 Gen 2×1; 1× HDMI 2.1`,
+      },
+    ],
   },
   {
     slug: 'harman-kardon-luna-652',
@@ -567,7 +722,26 @@ export const products = [
     pieces_sold: 600,
     onSale: true,
     shots: [harman, shot1, shot2],
+    sku: '',
     overview: `Introducing the Harman/Kardon Luna – the ultimate way to enjoy and appreciate your favorite tunes. Packing HARMAN KARDON SUPERIOR SOUND in a stylish and quality design, the Harman/Kardon Luna is the ideal speaker for your home or on-the-go. With advanced two-way drivers, you can hear every detail of your favorite music with crystal clear and balanced audio. `,
+    characterData: [
+      {
+        title: `Display Resolutions`,
+        text: `Retina XDR Display 2532 x 1170 pixels, 19.5:9 ratio, 457 PPI 60Hz`,
+      },
+      {
+        title: `Sound`,
+        text: `Custom Tempest Engine 3D Audio, Dolby Atmos & DTS:X (Blu-ray video & UHD Blu-ray video)`,
+      },
+      {
+        title: `Memory`,
+        text: `16 GB/256-bit GDDR6 SDRAM 512 MB DDR4 RAM (for background tasks)`,
+      },
+      {
+        title: `Connectivity`,
+        text: `Wi-Fi IEEE 802.11ax; Bluetooth 5.1; Gigabit Ethernet; 2× USB 3.2 Gen 2×1; 1× USB 2.0; 1× USB-C with USB 3.2 Gen 2×1; 1× HDMI 2.1`,
+      },
+    ],
   },
   {
     slug: 'samsung-type-c-akg-earphones-112',
@@ -581,7 +755,26 @@ export const products = [
     pieces_sold: 600,
     onSale: true,
     shots: [ear, shot1, shot2],
+    sku: '',
     overview: `The Samsung TypeC AKG Earphones offer undistorted studio-quality audio, convenient control features, and compatibility with a wide range of Samsung phones.`,
+    characterData: [
+      {
+        title: `Display Resolutions`,
+        text: `Retina XDR Display 2532 x 1170 pixels, 19.5:9 ratio, 457 PPI 60Hz`,
+      },
+      {
+        title: `Sound`,
+        text: `Custom Tempest Engine 3D Audio, Dolby Atmos & DTS:X (Blu-ray video & UHD Blu-ray video)`,
+      },
+      {
+        title: `Memory`,
+        text: `16 GB/256-bit GDDR6 SDRAM 512 MB DDR4 RAM (for background tasks)`,
+      },
+      {
+        title: `Connectivity`,
+        text: `Wi-Fi IEEE 802.11ax; Bluetooth 5.1; Gigabit Ethernet; 2× USB 3.2 Gen 2×1; 1× USB 2.0; 1× USB-C with USB 3.2 Gen 2×1; 1× HDMI 2.1`,
+      },
+    ],
   },
   {
     slug: 'anker-life-2-neo-54',
@@ -595,7 +788,26 @@ export const products = [
     pieces_sold: 600,
     onSale: false,
     shots: [head, shot1, shot2],
+    sku: '',
     overview: `Anker Soundcore Life 2 Neo is a Wireless Bluetooth Over-Ear Headphones with a USB-C Fast Charging gives you 60-Hour Playtime and 40mm Driver, also Bass-up and AUX Input – Bluetooth Headphones Comes in a nice Black Color`,
+    characterData: [
+      {
+        title: `Display Resolutions`,
+        text: `Retina XDR Display 2532 x 1170 pixels, 19.5:9 ratio, 457 PPI 60Hz`,
+      },
+      {
+        title: `Sound`,
+        text: `Custom Tempest Engine 3D Audio, Dolby Atmos & DTS:X (Blu-ray video & UHD Blu-ray video)`,
+      },
+      {
+        title: `Memory`,
+        text: `16 GB/256-bit GDDR6 SDRAM 512 MB DDR4 RAM (for background tasks)`,
+      },
+      {
+        title: `Connectivity`,
+        text: `Wi-Fi IEEE 802.11ax; Bluetooth 5.1; Gigabit Ethernet; 2× USB 3.2 Gen 2×1; 1× USB 2.0; 1× USB-C with USB 3.2 Gen 2×1; 1× HDMI 2.1`,
+      },
+    ],
   },
   {
     slug: 'apple-watch-series-9-45mm-616',
@@ -609,7 +821,26 @@ export const products = [
     pieces_sold: 600,
     onSale: true,
     shots: [applwwatch1, shot1, shot2],
+    sku: '',
     overview: `The Apple Watch Series 9 45MM is a powerful smartwatch designed to impress Apple fans. It boasts a sleek design, Retina LTPO OLED display, 64GB of storage, dual loud speakers, and various features like GPS, Wi-Fi, and Bluetooth 5.3.`,
+    characterData: [
+      {
+        title: `Display Resolutions`,
+        text: `Retina XDR Display 2532 x 1170 pixels, 19.5:9 ratio, 457 PPI 60Hz`,
+      },
+      {
+        title: `Sound`,
+        text: `Custom Tempest Engine 3D Audio, Dolby Atmos & DTS:X (Blu-ray video & UHD Blu-ray video)`,
+      },
+      {
+        title: `Memory`,
+        text: `16 GB/256-bit GDDR6 SDRAM 512 MB DDR4 RAM (for background tasks)`,
+      },
+      {
+        title: `Connectivity`,
+        text: `Wi-Fi IEEE 802.11ax; Bluetooth 5.1; Gigabit Ethernet; 2× USB 3.2 Gen 2×1; 1× USB 2.0; 1× USB-C with USB 3.2 Gen 2×1; 1× HDMI 2.1`,
+      },
+    ],
   },
   {
     slug: 'amazfit-pop-3r-860',
@@ -623,8 +854,488 @@ export const products = [
     pieces_sold: 600,
     onSale: false,
     shots: [watch2, shot1, shot2],
+    sku: '',
     overview:
       'When your workouts wade into the nitty gritty, the Nike Free Metcon 5 can meet you in the depths, help you dig deep to find that final ounce of force and come out of the other side on a high. It matches style with substance, forefoot flexibility with backend stability, perfect for flying through a cardio day or enhancing your agility. A revamped upper offers easier entry with a collar made just for your ankle.',
+    characterData: [
+      {
+        title: `Display Resolutions`,
+        text: `Retina XDR Display 2532 x 1170 pixels, 19.5:9 ratio, 457 PPI 60Hz`,
+      },
+      {
+        title: `Sound`,
+        text: `Custom Tempest Engine 3D Audio, Dolby Atmos & DTS:X (Blu-ray video & UHD Blu-ray video)`,
+      },
+      {
+        title: `Memory`,
+        text: `16 GB/256-bit GDDR6 SDRAM 512 MB DDR4 RAM (for background tasks)`,
+      },
+      {
+        title: `Connectivity`,
+        text: `Wi-Fi IEEE 802.11ax; Bluetooth 5.1; Gigabit Ethernet; 2× USB 3.2 Gen 2×1; 1× USB 2.0; 1× USB-C with USB 3.2 Gen 2×1; 1× HDMI 2.1`,
+      },
+    ],
+  },
+  {
+    slug: generateSlug('module_tp-link_tl-sm311lm'),
+    name: 'Модуль TP-Link TL-SM311LM',
+    coverImage: moduleTpLinkTlSm311lm,
+    currentPrice: 759,
+    previousPrice: 118,
+    category: 'Кабелі та аксесуари',
+    rating: 4.8,
+    reviews: 56,
+    pieces_sold: 600,
+    onSale: false,
+    shots: [moduleTpLinkTlSm311lm],
+    sku: '123845',
+    overview:
+      'Серія оптоволоконних модульних карт TL-SM311LM призначена для збільшення дальності передавання даних і використовується разом із керованими/web smart комутаторами. Вони дають змогу збільшити дальність передавання на кілька десятків кілометрів, що здебільшого задовольняє вимоги локальних мереж. Залежно від потреби користувач може вибрати, з якими елементами використовувати оптоволоконні модулі, щоб знизити витрати.',
+    characterData: [
+      {
+        title: `Тип`,
+        text: `модуль SFP`,
+      },
+      {
+        title: `Середовище поширення сигналу`,
+        text: `оптоволоконний кабель`,
+      },
+      {
+        title: `Пропускна спроможність`,
+        text: `1,25 Гбіт/с`,
+      },
+      {
+        title: `Хар-ки кабелю`,
+        text: `багатомодовий, інтерфейс LC`,
+      },
+      {
+        title: `Стандарти`,
+        text: `IEEE 802.3z, CSMA/CD, TCP/IP`,
+      },
+      {
+        title: `Інтерфейси`,
+        text: `порт LC`,
+      },
+    ],
+  },
+  {
+    slug: generateSlug('antenna-huawei-atr4518r7v07'),
+    name: 'Панельна антена Huawei ATR4518R7v07 790-2690 Мгц КП18',
+    coverImage: antennaHuaweiAtr4518r7v07,
+    currentPrice: 9000,
+    previousPrice: 118,
+    category: 'Антени',
+    rating: 4.8,
+    reviews: 56,
+    pieces_sold: 600,
+    onSale: false,
+    shots: [antennaHuaweiAtr4518r7v07],
+    sku: '4518r7v07',
+    overview: `## Модель: Huawei ATR4518R12v07\n### Діапазон частот (МГц):\n- 790 - 960\n- 2 х (1695 - 2690)\n\n790 - 862 824 - 894 880 - 960 1695 - 1990 1920 - 2200 2200 - 2490 2490 - 2690\n\n- Частота антени: 790–862/880–960/1710–2690 МГц\n- Горизонтальна ширина луча (°): 65°/65°/65°\n- Потужність (дБі): 16.7i/17.5i/18.2i\n- Електричний наклон вниз (°): 0-10/0-10/0-10\n- Метод наклону: EasyRET\n- Размер: 6*4,3-10\n- Розмір (мм): 2528 * 349 * 166\n\n### Механічні властивості:\n- Розміри антени (В x Ш x Г) (мм) 2528 x 349 x 166\n- Розміри упаковки (В x Ш x Г) (мм) 2880 x 415 x 245\n- Вага антени (кг) 27,4\n- Вага затискачів (кг) 3,6 (2 шт.)\n- Вага упаковки антени (кг) 43,1 (у комплекті затискачі)\n- Підтримуваний діаметр щогли (мм) 50 - 115\n- Матеріал обтічника Склопластик\n- Колір обтічника Світло-сірий\n- Робоча температура (℃) -40.. +65\n- Вітрове навантаження (Н): Фронтальне: 920 (при 150 км/год) / Бокове: 305 (при 150 км/год) / Задня сторона: 955 (при 150 км/год)\n- Макс. робоча швидкість вітру (км/год) 200\n- Рятувальна швидкість вітру (км/год) 250\n- Роз'єм 6 x 4,3-10 гніздо\n- Положення роз'єму Нижнє\n- Поляризація +45 °, -45 °\n- Електричний нахил (°) 0 - 10, плавне регулювання, кожна смуга окремо\n- Посилення (дБі)\n- у середньому нахилі 16,7 16,8 17,1 17,5 17,8 18,0 18,2\n- по всіх нахилах 16,6 ±0,4 16,8 ±0,5 17,0 ±0,5 17,4 ±0,5 17,6 ±0,5 17,9 ±0,5 18,0 ±0 ,5\n- Придушення бічних пелюсток для першої сторони\n- пелюстка над основним променем (дБ) > 17 > 17 > 17 > 16 > 16 > 16 > 16\n- Ширина горизонтального променя 3 дБ (°) 65 ±2,0 64 ±2,0 62 ±4,1 65 ±4,8 62 ±3,7 60 ±4,3 60 ±4,5\n- Вертикальна ширина променя 3 дБ (°) 8,6 ±0,5 8,2 ±0,5 7,6 ±0,5 7,1 ±0,5 6,5 ±0,5 5,8 ±0,4 5,3 ±0,2\n- КРВ < 1,5\n- Крос-полярна ізоляція (дБ) ≥ 28\n- Міжсмугова розв'язка (дБ) ≥ 30 (790-960 // 1695-2690 МГц)\n- ≥ 30 (1695–2690 // 1695–2690 МГц)\n- Співвідношення спереду та ззаду, ±30° (дБ) > 25 > 25 > 25 > 25 > 25 > 25 > 25\n- Кросполярне відношення (дБ) 0° > 18 > 18 > 18 > 18 > 18 > 18 > 18\n- Макс. потужність на вхід (Вт) 500 (при температурі довкілля 50℃) 250 (при температурі довкілля 50℃)\n- Інтермодуляція IM3 (дБн) ≤ -153 (2 x 43 дБм несучої)\n- Імпеданс (Ом) 50\n\nЗаземлення Заземлення постійного струму\n\n1. Значення базуються на рекомендаціях NGMN щодо стандартів антен базових станцій (BASTA).\n2. Є електротехнічний опис у форматі XML.\n`,
+    characterData: [
+      {
+        title: `Робочий діапазон частот, МГц`,
+        text: `791-821 МГц/832-862 МГц/1710-1785 МГц/1805-1880 МГц/2500-2570 МГц/2620-2690 МГц`,
+      },
+      {
+        title: `Підсилення, дБ`,
+        text: `18`,
+      },
+      {
+        title: `MIMO`,
+        text: `2x2`,
+      },
+      {
+        title: 'Роз`єм ВЧ',
+        text: `4.3-10 Female`,
+      },
+      {
+        title: `Вхідний опір (Ом)`,
+        text: `50`,
+      },
+      {
+        title: `Частота 4G`,
+        text: `LTE 800, LTE 900, LTE 1800, LTE 2600`,
+      },
+      {
+        title: `Частота роботи Wi-Fi`,
+        text: `2.4 ГГц`,
+      },
+      {
+        title: `Коефіціент посилення`,
+        text: `от 15 до 19 дБ`,
+      },
+      {
+        title: `Місце встановлення`,
+        text: `Вулиця`,
+      },
+      {
+        title: `Тип кріплення`,
+        text: `на стіну, на кронштейн/мачту`,
+      },
+      {
+        title: `Сектор випромінювання у вертикальній площині, градуси`,
+        text: `65`,
+      },
+      {
+        title: `Сектор випромінювання в горизонтальній площині, градуси`,
+        text: `7`,
+      },
+      {
+        title: `Допустима потужність (Вт)`,
+        text: `250, 500`,
+      },
+      {
+        title: `Тип антени`,
+        text: `Панельна`,
+      },
+      {
+        title: `Габарити`,
+        text: `2528x349x166 мм`,
+      },
+      {
+        title: `КСХ`,
+        text: `< 1,5`,
+      },
+      {
+        title: `Діапазон робочих температур`,
+        text: `от -40 до +65°C`,
+      },
+      {
+        title: `Країна виробник`,
+        text: `Китай`,
+      },
+      {
+        title: `Вага`,
+        text: `27.4 кг`,
+      },
+      {
+        title: 'Стандарт зв`язкуt',
+        text: `GSM 900, EGSM 900, GSM 1800, 3G UMTS 2000, GSM 900/1800, 3G 2000 / 4G 2600 (LTE), CDMA 800, LTE 2600, LTE 800, LTE 900, LTE 1800, LTE 2100  `,
+      },
+    ],
+  },
+  {
+    slug: generateSlug('SFP-MikroTik-S-85DLC05D'),
+    name: 'Модуль SFP MikroTik S-85DLC05D',
+    coverImage: SFPMikroTikS85DLC05D,
+    currentPrice: 685,
+    previousPrice: 118,
+    category: 'Кабелі та аксесуари',
+    rating: 4.8,
+    reviews: 56,
+    pieces_sold: 600,
+    onSale: false,
+    shots: [SFPMikroTikS85DLC05D],
+    sku: '24530716',
+    overview: `**Модуль SFP MikroTik S-85DLC05D** — це приймач SFP, який підтримує швидкість до 1.25 Гбіт/с, має двоконтактний роз'єм, довжину хвилі 850 нм і призначений для оптоволоконного під'єднання до 550 м з DDM.nnВиріб сумісний з RB260GS, RB2011LS, RB2011LS-IN, RB2011UAS-IN, RB2011UAS-RM, RB2011UAS-2HnD, RB2011UAS-2HnD-IN і CCR1036-12G-4S, а також аналогічними пристроями SFP не **MikroTik**.`,
+    characterData: [
+      {
+        title: 'Тип конектора',
+        text: 'LC',
+      },
+      {
+        title: 'Країна-виробник',
+        text: 'Китай',
+      },
+      {
+        title: 'Швидкість передавання',
+        text: ' 1 Гбіт/сек',
+      },
+      {
+        title: 'Дальність передавання, км ',
+        text: '0.55',
+      },
+      {
+        title: 'Тип волокна',
+        text: 'Multimode',
+      },
+      {
+        title: 'Особливості',
+        text: 'Підтримка функції DDM',
+      },
+      {
+        title: 'Розміри (ДxШxВ), мм',
+        text: '60 х 10 х 15',
+      },
+    ],
+  },
+  {
+    slug: generateSlug('optical-module-472579A'),
+    name: 'Оптичний модуль NSN FOSH SFP+ 6G OBSAI 300m TDM 850nm',
+    coverImage: opticalModule472579,
+    currentPrice: 120,
+    previousPrice: 118,
+    category: 'Кабелі та аксесуари',
+    rating: 4.8,
+    reviews: 56,
+    pieces_sold: 600,
+    onSale: false,
+    shots: [opticalModule472579],
+    sku: '472579A',
+    overview: `**Високошвидкісне підключення**: Цей модуль Nokia SFP FOSH 472579A підтримує швидкість 6G, забезпечуючи швидку та надійну передачу даних на великі відстані, що ідеально підходить для мереж з високою пропускною здатністю.nn**Можливість дальньої дії**: Цей модуль з радіусом дії до 300 метрів підходить для додатків, де потрібне високошвидкісне з'єднання на великих відстанях.nn**Оптичні характеристики:** довжина хвилі 850 нм забезпечує оптимальну якість передачі та знижує погіршення сигналу, що робить його відмінним вибором для складних мережних середовищ.nn**Сумісність:** Цей модуль призначений для використання в OBSAI-сумісних системах, забезпечуючи плавну інтеграцію з наявною інфраструктурою.nn**Надійність бренду:** як справжній продукт Nokia, цей модуль має репутацію компанії за якість та продуктивність, надаючи користувачам душевний спокій та знижуючи витрати на технічне обслуговування.`,
+    characterData: [
+      {
+        title: 'Тип',
+        text: 'Волоконно-оптичні трансівери',
+      },
+      {
+        title: 'Модель',
+        text: 'Nokia SFP FOSH 472579A',
+      },
+      {
+        title: 'Країна виробництва',
+        text: 'Zhejiang, China',
+      },
+      {
+        title: 'Марка',
+        text: 'Nokia',
+      },
+      {
+        title: 'Використання',
+        text: 'Оптичний',
+      },
+    ],
+  },
+  {
+    slug: generateSlug('mikrotik-s-rj01'),
+    name: 'Модуль SFP MikroTik S-RJ01',
+    coverImage: mikrotikSRj01,
+    currentPrice: 1190,
+    previousPrice: 118,
+    category: 'Кабелі та аксесуари',
+    rating: 4.8,
+    reviews: 56,
+    pieces_sold: 600,
+    onSale: false,
+    shots: [mikrotikSRj01],
+    sku: '24161536',
+    overview: `**MikroTik S-RJ01** — це мідний модуль RJ45 SFP 10/100/1000 Мб/с, сумісний із більшістю портів Gigabit SFP, доступних на різних мережних пристроях.`,
+    characterData: [
+      {
+        title: 'Тип конектора',
+        text: 'RJ45',
+      },
+      {
+        title: 'Країна-виробник',
+        text: 'Китай',
+      },
+      {
+        title: 'Швидкість передавання',
+        text: '1 Гбіт/сек',
+      },
+      {
+        title: 'Дальність передавання, км ',
+        text: '0.1',
+      },
+      {
+        title: 'Розміри (ДxШxВ), мм ',
+        text: '69 x 14 x 14',
+      },
+    ],
+  },
+  {
+    slug: generateSlug('modul-sfp-2mm-6921'),
+    name: 'Модуль SFP+ 2MM 10G-SR 300м LC 850nm (SFP+2MM-03L)',
+    coverImage: modulSfp2mm,
+    currentPrice: 804,
+    previousPrice: 118,
+    category: 'Кабелі та аксесуари',
+    rating: 4.8,
+    reviews: 56,
+    pieces_sold: 600,
+    onSale: false,
+    shots: [modulSfp2mm],
+    sku: '6921',
+    overview: `Двоволоконний оптичний модуль Raybridge, SFP+ 10GBASE-SR/SW, роз'єм LC duplex, робоча довжина хвилі 850нм, дальність до 300м (5dB).nnДвухволоконний оптичний модуль з форм-фактором SFP+ для 10G Ethernet, відповідає стандарту 10GBASE-SR/SW. Призначений для роботи в багатомодовому оптичному волокні (Multi mode fiber, MMF), максимальна дальність 300м, оптичний бюджет 5дБnn100% сумісність модулів з Ethernet-обладнанням Mikrotik, Ubiquiti, Cisco, Extreme, Juniper, Dell, Force10, Huawei, Dlink та ін. виробників.`,
+    characterData: [
+      {
+        title: 'Режим роботи',
+        text: 'MM',
+      },
+      {
+        title: 'Формат',
+        text: 'SFP+',
+      },
+      {
+        title: 'Довжина хвилі',
+        text: '850nm',
+      },
+      {
+        title: 'Відстань передачі даних',
+        text: '300m',
+      },
+      {
+        title: 'Швидкість передачі даних',
+        text: '10 Gbps',
+      },
+      {
+        title: "Тип роз'єму (порту)",
+        text: 'LC',
+      },
+      {
+        title: 'Відносна вологість, % ',
+        text: 'від 10 до 90 (без конденсації)',
+      },
+      {
+        title: 'Вага в упаковці, м ',
+        text: '200',
+      },
+    ],
+  },
+  {
+    slug: generateSlug('krugova-antenna-5db-900-1800-indoor'),
+    name: 'Кругова антенна АШ-5 GSM 900/1800',
+    coverImage: krugovaAntenna5dbIndoor,
+    currentPrice: 379,
+    previousPrice: 118,
+    category: 'Антени',
+    rating: 4.8,
+    reviews: 56,
+    pieces_sold: 600,
+    onSale: false,
+    shots: [krugovaAntenna5dbIndoor],
+    sku: '78',
+    overview: `## Антена штир 900/1800 МГцnКругова антена АШ-5 GSM 900/1800 - всенаправленная антена зпосиленням в 5 дБ для поширення сигналу мобільного зв'язку. Навіть при нахилі в 1-5 градусів кругова антена АШ-5 GSM 900/1800 працює з максимальними показниками. Антена має ВЧ роз'єм типу N-Male. Кругова антена використовується при посиленні мобільного зв'язку в приміщеннях не великих розмірів.nnАнтена сумісна з більшістю видами репитеров.nnПризначення: посилення мобільного зв'язку Київстар, МТС, Лайф в стандартах GSM 900 і DCS 1800.nnОпис кругової антени АШ-5 GSM 900/1800:nn- Посилення - 5 дБn- вертикальна поляризаціяn- Роз'єм - N-Malen- КСВ< 2n- Хвильовий опір - 50 Омn- Діаграма спрямованості - 360`,
+    characterData: [
+      {
+        title: 'Робочий діапазон частот, МГцt',
+        text: '890-960/1710-1880',
+      },
+      {
+        title: 'Підсилення, дБt',
+        text: '5',
+      },
+      {
+        title: 'Поляризація',
+        text: 'вертикальна',
+      },
+      {
+        title: "Роз'єм ВЧt",
+        text: 'N-Male',
+      },
+      {
+        title: 'Вхідний опір (Ом)',
+        text: '50',
+      },
+      {
+        title: 'Частота 4G',
+        text: 'LTE 900, LTE 1800',
+      },
+      {
+        title: 'Коефіціент посиленняt',
+        text: 'от 1 до 5 дБ',
+      },
+      {
+        title: 'Сектор випромінювання у вертикальній площині, градусиt',
+        text: '80',
+      },
+      {
+        title: 'Сектор випромінювання в горизонтальній площині, градусиt',
+        text: '360',
+      },
+      {
+        title: 'Клас захистуt',
+        text: '360',
+      },
+      {
+        title: 'Допустима потужність (Вт)',
+        text: '50',
+      },
+      {
+        title: 'Тип антениt',
+        text: 'Штирьова',
+      },
+      {
+        title: 'КСХ',
+        text: 'менше 2',
+      },
+      {
+        title: 'Діапазон робочих температурt',
+        text: 'от -30 до +40 °C',
+      },
+      {
+        title: "Стандарт зв'язкуt",
+        text: 'GSM 900',
+      },
+    ],
+  },
+  {
+    slug: generateSlug('3g-antena-umts-21-db'),
+    name: '3G антена Rnet 21 дБ с кабелем та перехідником',
+    coverImage: antena3gUmts21db,
+    currentPrice: 1130,
+    previousPrice: 118,
+    category: 'Антени',
+    rating: 4.8,
+    reviews: 56,
+    pieces_sold: 600,
+    onSale: false,
+    shots: [antena3gUmts21db],
+    sku: '603',
+    overview: `## 3G антена Rnet 21 дБ для Київстар Vodafone Lifecell з кабелем і антенним адаптеромnnБагато власників UMTS модемів користуються неякісним інтернетом і вважаю що так і повинно бути, що нічого не можна вдіяти, що все залежить від оператора мобільного зв'язку. Напевно не всі знають про те, що за допомогою інтернету за допомогою USB модему, в Вашому модемі є роз'єм для підключення спеціальної підсилює **3G UMTS антени**. Саме такою антеною, типу хвильовий канал, і є 3G антена UMTS HSDPA 21 дБ.`,
+    characterData: [
+      {
+        title: 'Робочий діапазон частот, МГц',
+        text: '1920-1980/2110-2170',
+      },
+      {
+        title: 'Підсилення, дБt',
+        text: '21',
+      },
+      {
+        title: 'Поляризація',
+        text: 'вертикальна',
+      },
+      {
+        title: "Роз'єм ВЧt",
+        text: 'F-розʼєм',
+      },
+      {
+        title: 'Вхідний опір (Ом)',
+        text: '50',
+      },
+      {
+        title: 'Коефіціент посиленняt',
+        text: 'от 19 до 24 дБ',
+      },
+      {
+        title: 'Тип кріпленняt',
+        text: 'на кронштейн/мачту',
+      },
+      {
+        title: 'Клас захистуt',
+        text: 'IP65',
+      },
+      {
+        title: 'Допустима потужність (Вт)',
+        text: '50',
+      },
+      {
+        title: 'Тип антениt',
+        text: 'Направлена',
+      },
+      {
+        title: 'Габарити',
+        text: '1000x135x100 мм',
+      },
+      {
+        title: 'Довжина кабеляt',
+        text: '10 м',
+      },
+      {
+        title: 'КСХ',
+        text: 'до 1.5',
+      },
+      {
+        title: 'Діапазон робочих температурt',
+        text: 'от -30 до +40 °C',
+      },
+      {
+        title: "Стандарт зв'язкуt",
+        text: '3G UMTS 2000',
+      },
+    ],
   },
 ];
 

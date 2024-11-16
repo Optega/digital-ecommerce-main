@@ -19,6 +19,7 @@ const ProductCard: FC<ProductCardProps> = ({
   slug,
   previousPrice,
   currentPrice,
+  colorOptions = [],
 }) => {
   return (
     <Link
@@ -46,7 +47,7 @@ const ProductCard: FC<ProductCardProps> = ({
           </div>
         </div>
         <div className="px-5 py-4">
-          {onSale && <ColorPicker />}
+          {onSale && <ColorPicker colors={colorOptions} />}
           <span className="text-xs">TECHMART</span>
           <h3 className="line-clamp-2 text-ellipsis font-bold">{name}</h3>
           {onSale ? (

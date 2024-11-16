@@ -4,10 +4,9 @@ import { pathOr } from 'ramda';
 import React from 'react';
 
 import Breadcrumbs from '@/components/Breadcrumbs';
-import GuideSection from '@/components/home/sections/Guide';
-import RelatedProducts from '@/components/products/RelatedProducts';
 import SectionProduct from '@/components/products/SectionProductHeader';
 import { products } from '@/data/content';
+import type { ProductType } from '@/data/types';
 import ButtonLink from '@/shared/Button/ButtonLink';
 import { useCartStore } from '@/stores/useCartStore';
 
@@ -25,10 +24,10 @@ const page = (props: Props) => {
 
   const selectedProduct = getProductData(
     pathOr('', ['params', 'productId'], props),
-  );
+  ) as ProductType;
 
   const breadcrumbItems = [
-    { title: <ButtonLink href="/">Home</ButtonLink> },
+    { title: <ButtonLink href="/">Головна</ButtonLink> },
     {
       title: (
         <ButtonLink
@@ -56,16 +55,11 @@ const page = (props: Props) => {
 
         <div className="mb-20">
           <SectionProduct
-            name={pathOr('', ['name'], selectedProduct)}
-            shots={pathOr([], ['shots'], selectedProduct)}
-            prevPrice={pathOr(0, ['previousPrice'], selectedProduct)}
-            currentPrice={pathOr(0, ['currentPrice'], selectedProduct)}
+            product={selectedProduct}
             handleAddToCart={handleAddToCart}
           />
         </div>
       </div>
-      <RelatedProducts />
-      <GuideSection />
     </main>
   );
 };

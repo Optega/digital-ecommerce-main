@@ -1,15 +1,19 @@
 import { pathOr } from 'ramda';
 import React from 'react';
 
-import { productCharacterData } from '@/data/content';
+import type { ProductCharacteristics } from '@/data/types';
 
-const ProductCharacteristicsTab = () => {
+const ProductCharacteristicsTab = ({
+  characteristics,
+}: {
+  characteristics: ProductCharacteristics[];
+}) => {
   return (
     <div className="">
       <details className="group">
         <summary className="flex w-full cursor-pointer list-none items-center justify-between gap-4 rounded-lg py-5">
-          <div className="space-x-6 group-open:text-primary dark:group-open:text-white">
-            <span>Characteristics</span>
+          <div className="group-open:text-primary space-x-6 dark:group-open:text-white">
+            <span>Характеристики</span>
           </div>
           <div>
             <svg
@@ -44,7 +48,7 @@ const ProductCharacteristicsTab = () => {
         </summary>
         <div className="pb-4 text-sm">
           <ul className="divide-y divide-neutral-300  dark:divide-neutral-400">
-            {productCharacterData.map((listItem) => (
+            {characteristics.map((listItem) => (
               <li className="mb-4 pt-4 " key={pathOr('', ['title'], listItem)}>
                 <div className="flex justify-between gap-3">
                   <div className="basis-1/5">

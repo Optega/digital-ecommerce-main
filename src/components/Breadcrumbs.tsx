@@ -15,9 +15,7 @@ const Breadcrumbs: FC<BreadcrumbProps> = ({ Items }) => {
               {typeof title === 'string' ? (
                 <div className="flex items-center">
                   <div className="m-2 h-px w-4 bg-neutral-400 group-first:hidden" />
-                  <span className="text-neutral-500 dark:text-neutral-700">
-                    {title}
-                  </span>
+                  <span>{title}</span>
                 </div>
               ) : (
                 <div className="flex items-center">

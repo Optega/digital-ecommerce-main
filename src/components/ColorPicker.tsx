@@ -1,10 +1,9 @@
 import React from 'react';
 
-const demoColors = ['red', 'blue', 'gray'];
-const ColorPicker = () => {
+const ColorPicker = ({ colors }: { colors: string[] }) => {
   return (
     <div className="mb-2 flex gap-2">
-      {demoColors.map((color) => (
+      {colors.map((color) => (
         <div
           key={color}
           className="relative flex items-center justify-center rounded-full"
