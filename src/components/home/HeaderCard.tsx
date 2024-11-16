@@ -32,7 +32,7 @@ const HeaderCard: FC<CardProps> = ({ href, image, title, tag, index }) => {
       </div>
       {isFirst ? (
         <div>
-          <span className="text-xs text-primary dark:text-white">
+          <span className="text-primary text-xs dark:text-white">
             <span className="inline-block size-1 rounded-full bg-green-600 uppercase dark:bg-white" />{' '}
             в наявності
           </span>
@@ -40,7 +40,7 @@ const HeaderCard: FC<CardProps> = ({ href, image, title, tag, index }) => {
             {title}
           </h2>
 
-          <p className="mb-4 w-4/5 text-neutral-500 dark:text-white md:w-1/2">
+          <p className="mb-4 w-4/5 text-neutral-500 md:w-1/2 dark:text-white">
             Знайдіть свій ідеальний телефон – елегантний і стильний або
             бюджетний.
           </p>

@@ -17,7 +17,7 @@ const BottomNav = () => {
   );
   return (
     <div className="container">
-      <div className="hidden  border-t border-neutral-300 py-6 dark:border-neutral-600 xl:block">
+      <div className="hidden  border-t border-neutral-300 py-6 xl:block dark:border-neutral-600">
         <div className="flex items-center justify-between text-sm ">
           <div className="flex items-center text-base font-semibold">
             <PhoneBar />
@@ -29,7 +29,7 @@ const BottomNav = () => {
                     <li key={linkItem.label}>
                       <Link
                         href={linkItem.href}
-                        className="inline-block w-full px-3 py-2 font-medium hover:text-primary"
+                        className="hover:text-primary inline-block w-full px-3 py-2 font-medium"
                       >
                         {linkItem.label}
                       </Link>

@@ -12,7 +12,7 @@ const PopluarCategoriesSection = () => {
         </h2>
         <div>
           <ul className="grid grid-cols-12 gap-2">
-            {categoriesData.map((listItem) => (
+            {categoriesData.slice(0, 6).map((listItem) => (
               <li
                 key={listItem.title}
                 className="col-span-6 md:col-span-4 lg:col-span-3 xl:col-span-2"

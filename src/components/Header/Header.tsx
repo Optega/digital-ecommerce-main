@@ -23,7 +23,7 @@ const Header: FC<HeaderProps> = () => {
 
   return (
     <div
-      className={`nc-Header sticky inset-x-0 z-50 w-full bg-neutral-100 transition-transform duration-200 dark:bg-gray ${hidnNav && '-translate-y-full'} ${scroll.y > 200 ? 'top-0 shadow' : 'top-[-190px]'}`}
+      className={`nc-Header dark:bg-gray sticky inset-x-0 z-50 w-full bg-neutral-100 transition-transform duration-200 ${hidnNav && '-translate-y-full'} ${scroll.y > 200 ? 'top-0 shadow' : 'top-[-190px]'}`}
     >
       <MainNav />
       <BottomNav />
