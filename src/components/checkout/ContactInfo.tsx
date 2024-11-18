@@ -27,6 +27,8 @@ const ContactInfo = () => {
                 placeholder="ПІБ"
                 className="border-neutral-300 bg-transparent placeholder:text-neutral-500 focus:border-primary"
                 type="text"
+                name="name"
+                autoComplete="name"
               />
             </FormItem>
           </div>
@@ -40,6 +42,8 @@ const ContactInfo = () => {
                 placeholder="Телефон"
                 className="border-neutral-300 bg-transparent placeholder:text-neutral-500 focus:border-primary"
                 type="tel"
+                name="phone"
+                autoComplete="tel"
               />
             </FormItem>
           </div>

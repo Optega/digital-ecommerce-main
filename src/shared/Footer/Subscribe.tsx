@@ -10,6 +10,8 @@ const Subscribe = () => {
       <div className="basis-[52%] ">
         <Input
           type="text"
+          name="email"
+          autoComplete="email"
           sizeClass="h-12 px-0 py-3"
           rounded="rounded-none"
           className="border-2 border-neutral-400 bg-transparent px-2 placeholder:text-sm placeholder:text-neutral-200 focus:border-transparent dark:border-white/15"

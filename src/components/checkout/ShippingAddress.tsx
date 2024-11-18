@@ -19,6 +19,7 @@ interface Props {
 const ShippingAddress: FC<Props> = () => {
   const [shipMethod, setShipMethod] = useState<'Ship' | 'Pickup'>('Ship');
   const [postType, setPostType] = useState<'NovaPost' | 'UkrPost'>('NovaPost');
+  const [city, setCity] = useState('Ukraine');
 
   return (
     <div className=" ">
@@ -63,9 +64,12 @@ const ShippingAddress: FC<Props> = () => {
             <div>
               <FormItem>
                 <Select
+                  name="country"
+                  autoComplete="country"
                   sizeClass="h-12 px-4 py-3"
                   className="rounded border-neutral-300 bg-transparent placeholder:text-neutral-500 focus:border-primary dark:border-neutral-600"
-                  defaultValue="Ukraine"
+                  defaultValue={city}
+                  onChange={(e) => setCity(e.target.value)}
                 >
                   <option value="Ukraine">Україна</option>
                 </Select>
@@ -78,6 +82,7 @@ const ShippingAddress: FC<Props> = () => {
             <div>
               <FormItem>
                 <Select
+                  name="postType"
                   sizeClass="h-12 px-4 py-3"
                   className="rounded border-neutral-300 bg-transparent placeholder:text-neutral-500 focus:border-primary dark:border-neutral-600"
                   defaultValue={postType}
@@ -126,6 +131,8 @@ const ShippingAddress: FC<Props> = () => {
                   className="border-neutral-300 bg-transparent placeholder:text-neutral-500 focus:border-primary dark:border-neutral-600"
                   placeholder="Місто"
                   type="text"
+                  name="city"
+                  autoComplete="address-level2"
                 />
               </FormItem>
             </div>
@@ -143,6 +150,8 @@ const ShippingAddress: FC<Props> = () => {
                     postType === 'NovaPost' ? 'Відділення' : 'Індекс'
                   }
                   type="text"
+                  name="address"
+                  autoComplete="address-line1"
                 />
               </FormItem>
             </div>
