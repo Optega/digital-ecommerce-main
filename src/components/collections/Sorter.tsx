@@ -2,7 +2,13 @@ import React from 'react';
 
 import Sorter from '../Sorter';
 
-const CollectionSorter = ({ count = 0 }: { count?: number }) => {
+const CollectionSorter = ({
+  count = 0,
+  handleSort = () => {},
+}: {
+  count?: number;
+  handleSort?: (sortKey: string) => void;
+}) => {
   return (
     <section className="hidden lg:block">
       <div className="container pb-10">
@@ -14,7 +20,7 @@ const CollectionSorter = ({ count = 0 }: { count?: number }) => {
           </div>
           <div className="flex items-center gap-3">
             <span>Сортування:</span>
-            <Sorter />
+            <Sorter handleSort={handleSort} />
           </div>
         </div>
       </div>

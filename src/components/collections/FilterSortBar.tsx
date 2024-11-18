@@ -14,14 +14,18 @@ import ButtonCircle3 from '@/shared/Button/ButtonCircle3';
 import ButtonPrimary from '@/shared/Button/ButtonPrimary';
 import ButtonSecondary from '@/shared/Button/ButtonSecondary';
 
+import Sorter from '../Sorter';
+
 const FilterSortBar = ({
   productsList,
   count,
   onChangeAnyFilter,
+  handleSort = () => {},
 }: {
   productsList: ProductType[];
   count: number;
   onChangeAnyFilter?: (products: ProductType[]) => void;
+  handleSort?: (sortKey: string) => void;
 }) => {
   const [isVisable, setIsVisable] = useState(false);
 
@@ -162,7 +166,7 @@ const FilterSortBar = ({
         <div className="flex justify-between">
           <button
             type="button"
-            className="font-medium uppercase"
+            className="font-medium"
             onClick={() => setActiveTab((prev) => !prev)}
           >
             Категорія
@@ -266,7 +270,7 @@ const FilterSortBar = ({
           <div className="flex justify-between">
             <button
               type="button"
-              className="font-medium uppercase"
+              className="font-medium"
               onClick={() => setActiveTab((prev) => !prev)}
             >
               Ціна
@@ -387,6 +391,14 @@ const FilterSortBar = ({
                         </ButtonCircle3>
                       </div>
                       <div className="divide-y divide-neutral-300">
+                        <div className="my-4">
+                          <span>Сортування</span>
+                          <Sorter
+                            handleSort={(sortKey) => {
+                              handleSort(sortKey);
+                            }}
+                          />
+                        </div>
                         {renderTabsBrands()}
                         {renderTabsPriceRage()}
                         {renderTabsCategories()}

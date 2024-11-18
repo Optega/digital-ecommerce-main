@@ -5,21 +5,23 @@ import { Fragment, useState } from 'react';
 import { MdKeyboardArrowDown } from 'react-icons/md';
 
 const sortData = [
-  { key: 1, value: 'BestSelling', label: 'Популярні' },
-  { key: 2, value: 'Featured', label: 'Рекомендовані' },
-  { key: 3, value: 'Date', label: 'Дата' },
-  { key: 4, value: 'Price', label: 'Ціна' },
-  { key: 5, value: 'A-Z', label: 'Назва A-Z' },
-  { key: 6, value: 'Z-A', label: 'Назва Z-A' },
+  { key: 1, value: 'reviews', label: 'Популярні' },
+  { key: 2, value: 'rating', label: 'Рейтинг' },
+  { key: 3, value: 'currentPrice', label: 'Ціна' },
+  { key: 4, value: 'name', label: 'Назва' },
 ];
 
-const Sorter = () => {
+const Sorter = ({
+  handleSort = () => {},
+}: {
+  handleSort?: (sortKey: string) => void;
+}) => {
   const [activeSortKey, setActiveSortKey] = useState(1);
 
   return (
     <div className=" font-medium ">
       <Popover as="div" className="relative inline-block w-full">
-        <Popover.Button className="border-primary/15 flex w-full items-center justify-between gap-2 rounded border px-5 py-4 lg:min-w-60 dark:border-white/15">
+        <Popover.Button className="flex w-full items-center justify-between gap-2 rounded border border-primary/15 px-5 py-4 dark:border-white/15 lg:min-w-60">
           <span className="inline-flex flex-col leading-tight">
             <span>
               {
@@ -41,13 +43,16 @@ const Sorter = () => {
           leaveFrom="transform opacity-100 scale-100"
           leaveTo="transform opacity-0 scale-95"
         >
-          <Popover.Panel className="absolute bottom-9 left-0 mt-2 w-40 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-none dark:bg-neutral-900">
+          <Popover.Panel className="divide-gray-100 absolute bottom-9 left-0 mt-2 w-40 origin-top-right divide-y rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-none dark:bg-neutral-900">
             <div className="flex flex-col">
               {sortData.map((item) => (
                 <button
                   key={item.key}
                   type="button"
-                  onClick={() => setActiveSortKey(item.key)}
+                  onClick={() => {
+                    setActiveSortKey(item.key);
+                    handleSort(item.value);
+                  }}
                   className="w-full px-3 py-1 text-left text-sm focus:outline-none"
                 >
                   {item.label}

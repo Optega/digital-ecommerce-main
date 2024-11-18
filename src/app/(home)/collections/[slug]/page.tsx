@@ -29,6 +29,22 @@ const CollectionPage: FC<PageProps> = ({ params }) => {
   const handleFilter = (newProductsList: ProductType[]) =>
     setFilteredList(newProductsList);
 
+  const handleSort = (sortKey: string) => {
+    if (sortKey === 'reviews') {
+      setFilteredList([...filteredList].sort((a, b) => b.reviews - a.reviews));
+    } else if (sortKey === 'rating') {
+      setFilteredList([...filteredList].sort((a, b) => b.rating - a.rating));
+    } else if (sortKey === 'currentPrice') {
+      setFilteredList(
+        [...filteredList].sort((a, b) => a.currentPrice - b.currentPrice),
+      );
+    } else if (sortKey === 'name') {
+      setFilteredList(
+        [...filteredList].sort((a, b) => a.name.localeCompare(b.name)),
+      );
+    }
+  };
+
   return (
     <main className="pb-24">
       {catalogData && (
@@ -38,13 +54,14 @@ const CollectionPage: FC<PageProps> = ({ params }) => {
         />
       )}
 
-      <CollectionSorter count={filteredList.length} />
+      <CollectionSorter count={filteredList.length} handleSort={handleSort} />
       <div className="container pb-8 lg:pb-24">
         <div className="mb-3 lg:hidden">
           <FilterSortBar
             productsList={productsList}
             count={filteredList.length}
             onChangeAnyFilter={handleFilter}
+            handleSort={handleSort}
           />
         </div>
         <div className="grid grid-cols-12 gap-3">
