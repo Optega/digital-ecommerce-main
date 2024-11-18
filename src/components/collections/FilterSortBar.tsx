@@ -19,13 +19,19 @@ import Sorter from '../Sorter';
 const FilterSortBar = ({
   productsList,
   count,
+  sortData,
+  activeSortKey,
+  setActiveSortKey,
   onChangeAnyFilter,
   handleSort = () => {},
 }: {
   productsList: ProductType[];
   count: number;
   onChangeAnyFilter?: (products: ProductType[]) => void;
+  sortData: { key: string; label: string }[];
   handleSort?: (sortKey: string) => void;
+  activeSortKey: string;
+  setActiveSortKey: (key: string) => void;
 }) => {
   const [isVisable, setIsVisable] = useState(false);
 
@@ -394,9 +400,10 @@ const FilterSortBar = ({
                         <div className="my-4">
                           <span>Сортування</span>
                           <Sorter
-                            handleSort={(sortKey) => {
-                              handleSort(sortKey);
-                            }}
+                            sortData={sortData}
+                            activeSortKey={activeSortKey}
+                            setActiveSortKey={setActiveSortKey}
+                            handleSort={handleSort}
                           />
                         </div>
                         {renderTabsBrands()}

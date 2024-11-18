@@ -14,11 +14,19 @@ import CategoriesSection from '@/components/home/sections/Categories';
 import { categoriesData, products } from '@/data/content';
 import type { ProductType } from '@/data/types';
 
+const sortData = [
+  { key: 'reviews', label: 'Популярні' },
+  { key: 'rating', label: 'Рейтинг' },
+  { key: 'currentPrice', label: 'Ціна' },
+  { key: 'name', label: 'Назва' },
+];
+
 type PageProps = {
   params: { slug: string };
 };
 const CollectionPage: FC<PageProps> = ({ params }) => {
   const slug = pathOr('', ['slug'], params);
+  const [activeSortKey, setActiveSortKey] = useState(sortData[0]?.key || '');
 
   const catalogData = categoriesData.find((item) => item.slug === slug);
   const productsList = products.filter(
@@ -26,23 +34,25 @@ const CollectionPage: FC<PageProps> = ({ params }) => {
   ) as ProductType[];
   const [filteredList, setFilteredList] = useState(productsList);
 
-  const handleFilter = (newProductsList: ProductType[]) =>
-    setFilteredList(newProductsList);
-
-  const handleSort = (sortKey: string) => {
+  const handleSort = (sortKey: string, productList = filteredList) => {
     if (sortKey === 'reviews') {
-      setFilteredList([...filteredList].sort((a, b) => b.reviews - a.reviews));
+      setFilteredList([...productList].sort((a, b) => b.reviews - a.reviews));
     } else if (sortKey === 'rating') {
-      setFilteredList([...filteredList].sort((a, b) => b.rating - a.rating));
+      setFilteredList([...productList].sort((a, b) => b.rating - a.rating));
     } else if (sortKey === 'currentPrice') {
       setFilteredList(
-        [...filteredList].sort((a, b) => a.currentPrice - b.currentPrice),
+        [...productList].sort((a, b) => a.currentPrice - b.currentPrice),
       );
     } else if (sortKey === 'name') {
       setFilteredList(
-        [...filteredList].sort((a, b) => a.name.localeCompare(b.name)),
+        [...productList].sort((a, b) => a.name.localeCompare(b.name)),
       );
     }
+  };
+
+  const handleFilter = (newProductsList: ProductType[]) => {
+    setFilteredList(newProductsList);
+    handleSort(activeSortKey, newProductsList);
   };
 
   return (
@@ -54,13 +64,22 @@ const CollectionPage: FC<PageProps> = ({ params }) => {
         />
       )}
 
-      <CollectionSorter count={filteredList.length} handleSort={handleSort} />
+      <CollectionSorter
+        count={filteredList.length}
+        sortData={sortData}
+        activeSortKey={activeSortKey}
+        setActiveSortKey={setActiveSortKey}
+        handleSort={handleSort}
+      />
       <div className="container pb-8 lg:pb-24">
         <div className="mb-3 lg:hidden">
           <FilterSortBar
             productsList={productsList}
             count={filteredList.length}
             onChangeAnyFilter={handleFilter}
+            sortData={sortData}
+            activeSortKey={activeSortKey}
+            setActiveSortKey={setActiveSortKey}
             handleSort={handleSort}
           />
         </div>

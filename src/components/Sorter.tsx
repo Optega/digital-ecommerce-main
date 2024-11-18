@@ -1,23 +1,20 @@
 'use client';
 
 import { Popover, Transition } from '@headlessui/react';
-import { Fragment, useState } from 'react';
+import { Fragment } from 'react';
 import { MdKeyboardArrowDown } from 'react-icons/md';
 
-const sortData = [
-  { key: 1, value: 'reviews', label: 'Популярні' },
-  { key: 2, value: 'rating', label: 'Рейтинг' },
-  { key: 3, value: 'currentPrice', label: 'Ціна' },
-  { key: 4, value: 'name', label: 'Назва' },
-];
-
 const Sorter = ({
+  sortData,
+  activeSortKey,
+  setActiveSortKey,
   handleSort = () => {},
 }: {
+  sortData: { key: string; label: string }[];
   handleSort?: (sortKey: string) => void;
+  activeSortKey: string;
+  setActiveSortKey: (key: string) => void;
 }) => {
-  const [activeSortKey, setActiveSortKey] = useState(1);
-
   return (
     <div className=" font-medium ">
       <Popover as="div" className="relative inline-block w-full">
@@ -51,7 +48,7 @@ const Sorter = ({
                   type="button"
                   onClick={() => {
                     setActiveSortKey(item.key);
-                    handleSort(item.value);
+                    handleSort(item.key);
                   }}
                   className="w-full px-3 py-1 text-left text-sm focus:outline-none"
                 >

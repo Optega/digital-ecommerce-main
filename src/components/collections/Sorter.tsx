@@ -4,10 +4,16 @@ import Sorter from '../Sorter';
 
 const CollectionSorter = ({
   count = 0,
+  sortData,
+  activeSortKey,
+  setActiveSortKey,
   handleSort = () => {},
 }: {
   count?: number;
+  sortData: { key: string; label: string }[];
   handleSort?: (sortKey: string) => void;
+  activeSortKey: string;
+  setActiveSortKey: (key: string) => void;
 }) => {
   return (
     <section className="hidden lg:block">
@@ -20,7 +26,12 @@ const CollectionSorter = ({
           </div>
           <div className="flex items-center gap-3">
             <span>Сортування:</span>
-            <Sorter handleSort={handleSort} />
+            <Sorter
+              sortData={sortData}
+              activeSortKey={activeSortKey}
+              setActiveSortKey={setActiveSortKey}
+              handleSort={handleSort}
+            />
           </div>
         </div>
       </div>
