@@ -1,13 +1,13 @@
 import React from 'react';
 
-import { products } from '@/data/content';
+import type { ProductType } from '@/data/types';
 
 import ProductCard from '../products/ProductCard';
 
-const ProductListing = () => {
+const ProductListing = ({ productsList }: { productsList: ProductType[] }) => {
   return (
     <div className="grid grid-cols-10 gap-3">
-      {products.map((product) => (
+      {productsList.map((product) => (
         <ProductCard
           key={product.name}
           {...product}

@@ -521,6 +521,7 @@ export const products = [
   {
     slug: 'macbook-air-13inch-m1-chip-256gb-143',
     name: 'Macbook Air 13inch M1 Chip 256GB',
+    brand: 'Apple',
     coverImage: macbook,
     currentPrice: 335,
     previousPrice: 478,
@@ -555,6 +556,7 @@ export const products = [
   {
     slug: 'jbl-go-3-165',
     name: 'JBL GO 3',
+    brand: 'JBL',
     coverImage: jbl,
     currentPrice: 334,
     previousPrice: 474,
@@ -589,6 +591,7 @@ export const products = [
   {
     slug: 'iphone-14-128gb-12',
     name: 'iPhone 14 128GB',
+    brand: 'Apple',
     coverImage: iphone,
     currentPrice: 552,
     previousPrice: 585,
@@ -623,6 +626,7 @@ export const products = [
   {
     slug: 'google-pixel-8-pro-128gb-663',
     name: 'Google Pixel 8 Pro 128GB',
+    brand: 'Google',
     coverImage: pixel,
     currentPrice: 338,
     previousPrice: 391,
@@ -656,6 +660,7 @@ export const products = [
   {
     slug: 'logitech-m190-wireless-mouse-391',
     name: 'Logitech M190 Wireless Mouse',
+    brand: 'Logitech',
     coverImage: mouse,
     currentPrice: 229,
     previousPrice: 334,
@@ -689,6 +694,7 @@ export const products = [
   {
     slug: 'playstation-dualsense-controller-146',
     name: 'Playstation DualSense Controller',
+    brand: 'Sony',
     coverImage: gamingcontrollwe,
     currentPrice: 233,
     previousPrice: 553,
@@ -722,6 +728,7 @@ export const products = [
   {
     slug: 'fifa-23-157',
     name: 'FIFA 23',
+    brand: 'EA Sports',
     coverImage: fifa,
     currentPrice: 585,
     previousPrice: 628,
@@ -756,6 +763,7 @@ export const products = [
   {
     slug: 'harman-kardon-luna-652',
     name: 'Kardon Luna',
+    brand: 'Harman',
     coverImage: harman,
     currentPrice: 489,
     previousPrice: 552,
@@ -789,6 +797,7 @@ export const products = [
   {
     slug: 'samsung-type-c-akg-earphones-112',
     name: 'Samsung Type-C AKG Earphones',
+    brand: 'Samsung',
     coverImage: ear,
     currentPrice: 342,
     previousPrice: 411,
@@ -822,6 +831,7 @@ export const products = [
   {
     slug: 'anker-life-2-neo-54',
     name: 'Anker Life 2 Neo',
+    brand: 'Anker',
     coverImage: head,
     currentPrice: 123,
     previousPrice: 236,
@@ -855,6 +865,7 @@ export const products = [
   {
     slug: 'apple-watch-series-9-45mm-616',
     name: 'Apple Watch Series 9 45MM',
+    brand: 'Apple',
     coverImage: applwwatch1,
     currentPrice: 495,
     previousPrice: 689,
@@ -888,6 +899,7 @@ export const products = [
   {
     slug: 'amazfit-pop-3r-860',
     name: 'Amazfit Pop 3R',
+    brand: 'Amazfit',
     coverImage: watch2,
     currentPrice: 207,
     previousPrice: 118,
@@ -922,6 +934,7 @@ export const products = [
   {
     slug: generateSlug('module_tp-link_tl-sm311lm'),
     name: 'Модуль TP-Link TL-SM311LM',
+    brand: 'TP-Link',
     coverImage: moduleTpLinkTlSm311lm,
     currentPrice: 759,
     previousPrice: 118,
@@ -964,6 +977,7 @@ export const products = [
   {
     slug: generateSlug('antenna-huawei-atr4518r7v07'),
     name: 'Панельна антена Huawei ATR4518R7v07 790-2690 Мгц КП18',
+    brand: 'Huawei',
     coverImage: antennaHuaweiAtr4518r7v07,
     currentPrice: 9000,
     previousPrice: 118,
@@ -1061,6 +1075,7 @@ export const products = [
   {
     slug: generateSlug('SFP-MikroTik-S-85DLC05D'),
     name: 'Модуль SFP MikroTik S-85DLC05D',
+    brand: 'MikroTik',
     coverImage: SFPMikroTikS85DLC05D,
     currentPrice: 685,
     previousPrice: 118,
@@ -1106,6 +1121,7 @@ export const products = [
   {
     slug: generateSlug('optical-module-472579A'),
     name: 'Оптичний модуль NSN FOSH SFP+ 6G OBSAI 300m TDM 850nm',
+    brand: 'Nokia',
     coverImage: opticalModule472579,
     currentPrice: 120,
     previousPrice: 118,
@@ -1143,6 +1159,7 @@ export const products = [
   {
     slug: generateSlug('mikrotik-s-rj01'),
     name: 'Модуль SFP MikroTik S-RJ01',
+    brand: 'MikroTik',
     coverImage: mikrotikSRj01,
     currentPrice: 1190,
     previousPrice: 118,
@@ -1180,6 +1197,7 @@ export const products = [
   {
     slug: generateSlug('modul-sfp-2mm-6921'),
     name: 'Модуль SFP+ 2MM 10G-SR 300м LC 850nm (SFP+2MM-03L)',
+    brand: 'Raybridge',
     coverImage: modulSfp2mm,
     currentPrice: 804,
     previousPrice: 118,
@@ -1229,6 +1247,7 @@ export const products = [
   {
     slug: generateSlug('krugova-antenna-5db-900-1800-indoor'),
     name: 'Кругова антенна АШ-5 GSM 900/1800',
+    brand: 'Антенна',
     coverImage: krugovaAntenna5dbIndoor,
     currentPrice: 379,
     previousPrice: 118,
@@ -1306,6 +1325,7 @@ export const products = [
   {
     slug: generateSlug('3g-antena-umts-21-db'),
     name: '3G антена Rnet 21 дБ с кабелем та перехідником',
+    brand: 'Rnet',
     coverImage: antena3gUmts21db,
     currentPrice: 1130,
     previousPrice: 118,

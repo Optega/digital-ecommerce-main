@@ -15,11 +15,15 @@ const CollectionHeader: FC<{
     {
       title: (
         <ButtonLink href="/" className="dark:text-neutral-700">
-          Home
+          Головна
         </ButtonLink>
       ),
     },
-    { title },
+    {
+      title: (
+        <span className="text-neutral-500 dark:text-neutral-700">{title}</span>
+      ),
+    },
   ];
 
   return (
@@ -30,10 +34,6 @@ const CollectionHeader: FC<{
           <h1 className="mb-4 text-4xl font-semibold capitalize dark:text-neutral-900">
             {title}
           </h1>
-          <p className="text-neutral-500 dark:text-neutral-700 lg:w-1/3">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt,
-            asperiores recusandae hic fugit numquam.
-          </p>
         </div>
         <div className="absolute left-0 top-0 -z-10 size-full">
           <Image

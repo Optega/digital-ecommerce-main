@@ -8,18 +8,29 @@ import React, { Fragment, useState } from 'react';
 import { AiOutlineControl } from 'react-icons/ai';
 import { MdClose } from 'react-icons/md';
 
+import type { ProductType } from '@/data/types';
 import Button from '@/shared/Button/Button';
 import ButtonCircle3 from '@/shared/Button/ButtonCircle3';
 import ButtonPrimary from '@/shared/Button/ButtonPrimary';
 import ButtonSecondary from '@/shared/Button/ButtonSecondary';
 
-const brands = ['TechMart'];
-const productType = ['Phone', 'Laptop', 'Gamng'];
-const avaiablitiy = ['In Stock', 'Out of Stock'];
-const PRICE_RANGE = [1, 500];
-
-const FilterSortBar = () => {
+const FilterSortBar = ({ productsList }: { productsList: ProductType[] }) => {
   const [isVisable, setIsVisable] = useState(false);
+  const brands = productsList.map((product) => product.brand);
+  const productType = productsList.map((product) => product.category);
+  const avaiablitiy = ['В наявності', 'Немає в наявності'];
+  const PRICE_RANGE = productsList.reduce<[number, number]>(
+    (acc, product) => {
+      if (product.currentPrice < acc[0]) {
+        acc[0] = product.currentPrice; // Update min price
+      }
+      if (product.currentPrice > acc[1]) {
+        acc[1] = product.currentPrice; // Update max price
+      }
+      return acc;
+    },
+    [Infinity, -Infinity], // Initialize with extremes
+  );
 
   const handleOpenMenu = () => setIsVisable(true);
   const handleCloseMenu = () => setIsVisable(false);
@@ -63,7 +74,7 @@ const FilterSortBar = () => {
           </button>
           <span>
             <Button className="text-neutral-500 underline dark:text-neutral-300">
-              Reset
+              Скинути
             </Button>
           </span>
         </div>
@@ -83,7 +94,7 @@ const FilterSortBar = () => {
                     setValueArray: setActiveBrands,
                   })
                 }
-                className="size-6 appearance-none rounded-sm border-2 border-neutral-300 checked:bg-primary dark:border-neutral-600 dark:bg-neutral-800"
+                className="checked:bg-primary size-6 appearance-none rounded-sm border-2 border-neutral-300 dark:border-neutral-600 dark:bg-neutral-800"
               />
               <label htmlFor={brand} className="capitalize">
                 {brand}
@@ -110,7 +121,7 @@ const FilterSortBar = () => {
           </button>
           <span>
             <Button className="text-neutral-500 underline dark:text-neutral-300">
-              Reset
+              Скинути
             </Button>
           </span>
         </div>
@@ -130,7 +141,7 @@ const FilterSortBar = () => {
                     setValueArray: setActiveProductTypes,
                   })
                 }
-                className="size-6 appearance-none rounded-sm border-2 border-neutral-300 checked:bg-primary dark:border-neutral-600 dark:bg-neutral-800"
+                className="checked:bg-primary size-6 appearance-none rounded-sm border-2 border-neutral-300 dark:border-neutral-600 dark:bg-neutral-800"
               />
               <label htmlFor={product} className="capitalize">
                 {product}
@@ -157,7 +168,7 @@ const FilterSortBar = () => {
           </button>
           <span>
             <Button className="text-neutral-500 underline dark:text-neutral-300">
-              Reset
+              Скинути
             </Button>
           </span>
         </div>
@@ -178,7 +189,7 @@ const FilterSortBar = () => {
                       setValueArray: setActiveStock,
                     })
                   }
-                  className="size-6 appearance-none rounded-sm border-2 border-neutral-300 checked:bg-primary dark:border-neutral-600 dark:bg-neutral-800"
+                  className="checked:bg-primary size-6 appearance-none rounded-sm border-2 border-neutral-300 dark:border-neutral-600 dark:bg-neutral-800"
                 />
                 <label htmlFor={item} className="capitalize">
                   {item}
@@ -208,7 +219,7 @@ const FilterSortBar = () => {
             </button>
             <span>
               <Button className="text-neutral-500 underline dark:text-neutral-300">
-                Reset
+                Скинути
               </Button>
             </span>
           </div>
@@ -291,7 +302,7 @@ const FilterSortBar = () => {
             >
               <div className="relative z-20">
                 <div className="overflow-hidden shadow-lg ring-1 ring-black/5">
-                  <div className="relative h-screen bg-white dark:bg-gray">
+                  <div className="dark:bg-gray relative h-screen bg-white">
                     <div className="hiddenScrollbar h-screen overflow-y-auto p-5">
                       <div className="flex items-center justify-between">
                         <div>

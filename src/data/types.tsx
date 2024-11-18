@@ -8,6 +8,7 @@ export type ProductCharacteristics = {
 export type ProductType = {
   slug: string;
   name: string;
+  brand: string;
   coverImage: StaticImageData | string;
   currentPrice: number;
   previousPrice: number;
@@ -29,6 +30,14 @@ export type ProductType = {
 export type ProductCartType = {
   product: ProductType;
   quantity: number;
+};
+
+export type CategoryType = {
+  title: string;
+  slug: string;
+  imgUrl: StaticImageData;
+  bannerUrl: StaticImageData;
+  href: string;
 };
 
 export type BlogData = {

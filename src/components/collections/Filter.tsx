@@ -5,22 +5,74 @@ import 'rc-slider/assets/index.css';
 import { pathOr } from 'ramda';
 import Slider from 'rc-slider';
 import type { Dispatch, SetStateAction } from 'react';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
+import type { ProductType } from '@/data/types';
 import Button from '@/shared/Button/Button';
 
-// DEMO DATA
-const brands = ['TechMart'];
-const productType = ['Phone', 'Laptop', 'Gamng'];
-const avaiablitiy = ['In Stock', 'Out of Stock'];
+const SidebarFilters = ({
+  productsList,
+  onChangeAnyFilter,
+}: {
+  productsList: ProductType[];
+  onChangeAnyFilter?: (products: ProductType[]) => void;
+}) => {
+  const existingBrands = productsList.map((product) => product.brand);
+  const existingCategories = Array.from(
+    new Set(productsList.map((product) => product.category)),
+  );
+  const avaiablitiy = ['В наявності', 'Немає в наявності'];
+  const PRICE_RANGE = productsList.reduce<[number, number]>(
+    (acc, product) => {
+      if (product.currentPrice < acc[0]) {
+        acc[0] = product.currentPrice; // Update min price
+      }
+      if (product.currentPrice > acc[1]) {
+        acc[1] = product.currentPrice; // Update max price
+      }
+      return acc;
+    },
+    [Infinity, -Infinity], // Initialize with extremes
+  );
 
-const PRICE_RANGE = [1, 500];
-//
-const SidebarFilters = () => {
-  const [rangePrices, setRangePrices] = useState([100, 500]);
-  const [activeBrands, setActiveBrands] = useState(['All']);
-  const [activeProductTypes, setActiveProductTypes] = useState(['']);
-  const [activeStock, setActiveStock] = useState(['']);
+  const [rangePrices, setRangePrices] = useState(PRICE_RANGE);
+  const [activeBrands, setActiveBrands] = useState<string[]>([]);
+  const [activeStock, setActiveStock] = useState<string[]>([]);
+  const [activeCategory, setActiveCategory] = useState<string[]>(
+    existingCategories[0] ? [existingCategories[0]] : [],
+  );
+
+  useEffect(
+    (
+      brands = activeBrands,
+      categories = activeCategory,
+      stockState = activeStock,
+      prices = rangePrices,
+    ) => {
+      const newProductList = productsList.filter((product) => {
+        const isBrand = brands.length === 0 || brands.includes(product.brand);
+        const isCategory =
+          categories.length === 0 || categories.includes(product.category);
+        const inStock =
+          stockState.length === 0 ||
+          stockState.length === 2 ||
+          (product.inStock &&
+            (stockState[0] === 'В наявності' ? product.inStock > 0 : true)) ||
+          (!product.inStock && stockState[0] === 'Немає в наявності');
+        const isPrice =
+          product.currentPrice >= prices[0] &&
+          product.currentPrice <= prices[1];
+
+        return isBrand && isCategory && inStock && isPrice;
+      });
+
+      if (onChangeAnyFilter) {
+        onChangeAnyFilter(newProductList);
+      }
+    },
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [activeBrands, activeCategory, activeStock, rangePrices],
+  );
 
   const handleToggleFilter = ({
     value,
@@ -37,12 +89,12 @@ const SidebarFilters = () => {
       );
       setValueArray(filteredArray);
     } else {
-      setActiveBrands((prev) => [...prev, value]);
+      setValueArray((prev) => [...prev, value]);
     }
   };
 
   // OK
-  const renderTabsCategories = () => {
+  const renderTabsBrands = () => {
     const [activeTab, setActiveTab] = useState(true);
     return (
       <div className="relative flex flex-col p-5">
@@ -52,24 +104,27 @@ const SidebarFilters = () => {
             className=" font-medium"
             onClick={() => setActiveTab((prev) => !prev)}
           >
-            Brands
+            Бренд
           </button>
           <span>
-            <Button className="text-neutral-500 underline dark:text-neutral-300">
-              Reset
+            <Button
+              className="text-neutral-500 underline dark:text-neutral-300"
+              onClick={() => setActiveBrands([])}
+            >
+              Скинути
             </Button>
           </span>
         </div>
         <ul
-          className={`space-y-2 overflow-hidden  ${activeTab ? 'h-auto pt-4' : 'h-0'}`}
+          className={`space-y-2 overflow-hidden  ${activeTab ? 'h-auto p-2 pt-4' : 'h-0'}`}
         >
-          {brands.map((brand) => (
+          {existingBrands.map((brand) => (
             <li key={brand} className="flex items-center gap-2 ">
               <input
                 type="checkbox"
                 id={brand}
                 checked={activeBrands.includes(brand)}
-                onClick={() =>
+                onChange={() =>
                   handleToggleFilter({
                     value: brand,
                     valueArray: activeBrands,
@@ -89,38 +144,41 @@ const SidebarFilters = () => {
   };
 
   // OK
-  const renderTabsProductType = () => {
+  const renderTabsCategories = () => {
     const [activeTab, setActiveTab] = useState(true);
     return (
       <div className="relative flex flex-col p-5">
         <div className="flex justify-between">
           <button
             type="button"
-            className="font-medium uppercase"
+            className="font-medium"
             onClick={() => setActiveTab((prev) => !prev)}
           >
-            Product Type
+            Категорія
           </button>
           <span>
-            <Button className="text-neutral-500 underline dark:text-neutral-300">
-              Reset
+            <Button
+              className="text-neutral-500 underline dark:text-neutral-300"
+              onClick={() => setActiveCategory([])}
+            >
+              Скинути
             </Button>
           </span>
         </div>
         <ul
-          className={`space-y-2 overflow-hidden  ${activeTab ? 'h-auto pt-4' : 'h-0'}`}
+          className={`space-y-2 overflow-hidden  ${activeTab ? 'h-auto p-2 pt-4' : 'h-0'}`}
         >
-          {productType.map((product) => (
+          {existingCategories.map((product) => (
             <li key={product} className="flex items-center gap-2 ">
               <input
                 type="checkbox"
                 id={product}
-                checked={activeProductTypes.includes(product)}
-                onClick={() =>
+                checked={activeCategory.includes(product)}
+                onChange={() =>
                   handleToggleFilter({
                     value: product,
-                    valueArray: activeProductTypes,
-                    setValueArray: setActiveProductTypes,
+                    valueArray: activeCategory,
+                    setValueArray: setActiveCategory,
                   })
                 }
                 className="size-6 appearance-none rounded-sm border-2 border-neutral-300 checked:bg-primary dark:border-neutral-600 dark:bg-neutral-800"
@@ -146,16 +204,19 @@ const SidebarFilters = () => {
             className=" font-medium"
             onClick={() => setActiveTab((prev) => !prev)}
           >
-            Brands
+            Наявність
           </button>
           <span>
-            <Button className="text-neutral-500 underline dark:text-neutral-300">
-              Reset
+            <Button
+              className="text-neutral-500 underline dark:text-neutral-300"
+              onClick={() => setActiveStock([])}
+            >
+              Скинути
             </Button>
           </span>
         </div>
         <ul
-          className={`space-y-2 overflow-hidden  ${activeTab ? 'h-auto pt-4' : 'h-0'}`}
+          className={`space-y-2 overflow-hidden  ${activeTab ? 'h-auto p-2 pt-4' : 'h-0'}`}
         >
           {avaiablitiy.map((item) => {
             return (
@@ -164,7 +225,7 @@ const SidebarFilters = () => {
                   type="checkbox"
                   id={item}
                   checked={activeStock.includes(item)}
-                  onClick={() =>
+                  onChange={() =>
                     handleToggleFilter({
                       value: item,
                       valueArray: activeStock,
@@ -173,9 +234,7 @@ const SidebarFilters = () => {
                   }
                   className="size-6 appearance-none rounded-sm border-2 border-neutral-300 checked:bg-primary dark:border-neutral-600 dark:bg-neutral-800"
                 />
-                <label htmlFor={item} className="capitalize">
-                  {item}
-                </label>
+                <label htmlFor={item}>{item}</label>
               </li>
             );
           })}
@@ -194,19 +253,24 @@ const SidebarFilters = () => {
           <div className="flex justify-between">
             <button
               type="button"
-              className="font-medium uppercase"
+              className="font-medium"
               onClick={() => setActiveTab((prev) => !prev)}
             >
-              Price
+              Ціна
             </button>
             <span>
-              <Button className="text-neutral-500 underline dark:text-neutral-300">
-                Reset
+              <Button
+                className="text-neutral-500 underline dark:text-neutral-300"
+                onClick={() => {
+                  setRangePrices(PRICE_RANGE);
+                }}
+              >
+                Скинути
               </Button>
             </span>
           </div>
           <div
-            className={`space-y-2 overflow-hidden ${activeTab ? 'h-auto pt-4' : 'h-0'}`}
+            className={`space-y-2 overflow-hidden ${activeTab ? 'h-auto p-2 pt-4' : 'h-0'}`}
           >
             <Slider
               className=""
@@ -219,41 +283,52 @@ const SidebarFilters = () => {
                 pathOr(0, [1], rangePrices),
               ]}
               allowCross={false}
+              value={rangePrices}
               onChange={(_input: number | number[]) =>
-                setRangePrices(_input as number[])
+                setRangePrices(_input as [number, number])
               }
             />
             <span className="mt-2 text-sm text-neutral-500">
-              Price : {rangePrices[0]} - ${rangePrices[1]}{' '}
+              Ціна: ₴{PRICE_RANGE[0]} - ₴{PRICE_RANGE[1]}{' '}
             </span>
             <div className="flex justify-between space-x-5">
               <div>
                 <div className="relative mt-1 rounded-md">
                   <span className="pointer-events-none absolute inset-y-0 right-4 flex items-center text-neutral-500 sm:text-sm">
-                    $
+                    ₴
                   </span>
                   <input
                     type="text"
                     name="minPrice"
-                    disabled
                     id="minPrice"
                     className="block w-full rounded-md border-neutral-300 bg-transparent p-3 sm:text-sm"
                     value={rangePrices[0]}
+                    onChange={(e) =>
+                      setRangePrices([
+                        parseInt(e.target.value, 10),
+                        rangePrices[1],
+                      ])
+                    }
                   />
                 </div>
               </div>
               <div>
                 <div className="relative mt-1 rounded-md">
                   <span className="pointer-events-none absolute inset-y-0 right-4 flex items-center text-neutral-500 sm:text-sm">
-                    $
+                    ₴
                   </span>
                   <input
                     type="text"
-                    disabled
                     name="maxPrice"
                     id="maxPrice"
                     className="block w-full rounded-md border-neutral-300 bg-transparent p-3 sm:text-sm"
                     value={rangePrices[1]}
+                    onChange={(e) =>
+                      setRangePrices([
+                        rangePrices[0],
+                        parseInt(e.target.value, 10),
+                      ])
+                    }
                   />
                 </div>
               </div>
@@ -267,9 +342,9 @@ const SidebarFilters = () => {
   return (
     <div className="rounded-md bg-white dark:bg-neutral-900">
       <div className="divide-y divide-neutral-300 dark:divide-neutral-600">
-        {renderTabsCategories()}
+        {renderTabsBrands()}
         {renderTabsPriceRage()}
-        {renderTabsProductType()}
+        {renderTabsCategories()}
         {renderTabsAvaiability()}
       </div>
     </div>
