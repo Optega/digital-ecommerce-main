@@ -6,7 +6,7 @@ import Link from 'next/link';
 import React, { Fragment, useState } from 'react';
 import { RiMenu2Line } from 'react-icons/ri';
 
-import { catalogNavLinks, NavLinks } from '@/data/content';
+import { catalogNavLinks, topNavLinks2 } from '@/data/content';
 import banner_1 from '@/images/banner-1_3.webp';
 import banner_2 from '@/images/banner-1_4.webp';
 import ButtonPrimary from '@/shared/Button/ButtonPrimary';
@@ -61,7 +61,7 @@ const CatalogBar: React.FC<CatalogBarProps> = ({ className }) => {
                         <div className="col-span-2">
                           <h4 className="mb-2 font-medium">Сторінки</h4>
                           <div className="space-y-2 text-neutral-500 dark:text-neutral-300">
-                            {NavLinks.map((link) => (
+                            {topNavLinks2.map((link) => (
                               <div key={link.name} className="text-sm">
                                 <Link href={link.href} className="">
                                   {link.name}

@@ -1,11 +1,9 @@
 import Link from 'next/link';
 import { pathOr } from 'ramda';
 import React from 'react';
-import { RiSearch2Line } from 'react-icons/ri';
 
 import { headerNavData } from '@/data/content';
 import ToggleSwitch from '@/shared/Button/ToggleSwitch';
-import Input from '@/shared/Input/Input';
 import Logo from '@/shared/Logo/Logo';
 
 import CartSideBar from '../CartSideBar';
@@ -25,14 +23,14 @@ const MainNav = () => {
         <div className="relative flex items-center gap-5 xl:grow">
           <Logo />
           <CatalogBar className="hidden xl:inline-block" />
-          <div className="hidden w-full items-center gap-5 rounded border-2 border-primary/15 bg-white pr-3 transition-all duration-300 hover:border-primary dark:border-white/15 dark:bg-neutral-950 xl:flex">
+          {/* <div className="hidden w-full items-center gap-5 rounded border-2 border-primary/15 bg-white pr-3 transition-all duration-300 hover:border-primary dark:border-white/15 dark:bg-neutral-950 xl:flex">
             <Input
               type="text"
               className="border-transparent placeholder:text-neutral-500 focus:border-transparent"
               placeholder="Пошук"
             />
             <RiSearch2Line className="text-2xl text-neutral-500" />
-          </div>
+          </div> */}
         </div>
 
         <div className="flex items-center justify-end gap-4">
@@ -66,7 +64,7 @@ const MainNav = () => {
           </div>
         </div>
       </div>
-      <div className="pb-2 xl:hidden">
+      {/* <div className="pb-2 xl:hidden">
         <div className="flex w-full items-center gap-5 border border-neutral-300 bg-white pr-3 dark:bg-neutral-950">
           <Input
             type="text"
@@ -75,7 +73,7 @@ const MainNav = () => {
           />
           <RiSearch2Line className="text-2xl text-neutral-500" />
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

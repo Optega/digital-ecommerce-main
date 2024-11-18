@@ -43,7 +43,9 @@ const ProductCard: FC<ProductCardProps> = ({
             />
           </div>
           <div className="absolute bottom-2 w-full px-4 text-center transition-all duration-300 group-hover:bottom-2 lg:-bottom-full">
-            <ButtonPrimary className="w-full text-sm">Quick View</ButtonPrimary>
+            <ButtonPrimary className="w-full text-sm">
+              Переглянути
+            </ButtonPrimary>
           </div>
         </div>
         <div className="px-5 py-4">
