@@ -6,12 +6,12 @@ import ProductCard from '../products/ProductCard';
 
 const ProductListing = ({ productsList }: { productsList: ProductType[] }) => {
   return (
-    <div className="grid grid-cols-10 gap-3">
+    <div className="grid grid-cols-12 gap-3">
       {productsList.map((product) => (
         <ProductCard
           key={product.name}
           {...product}
-          className="col-span-10 md:col-span-5 lg:col-span-2"
+          className="col-span-12 md:col-span-4 lg:col-span-3"
         />
       ))}
     </div>

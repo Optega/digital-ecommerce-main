@@ -9,7 +9,7 @@ const CollectionSorter = ({ count = 0 }: { count?: number }) => {
         <div className="flex items-center justify-end gap-6">
           <div>
             <p className="text-sm text-neutral-500 dark:text-neutral-300">
-              Товарів: {count}
+              Знайдено товарів: {count}
             </p>
           </div>
           <div className="flex items-center gap-3">
