@@ -154,7 +154,7 @@ const SectionProduct: FC<SectionProductHeaderProps> = ({
               <HiMiniArrowUturnLeft />
             </div>
             <div>
-              <h3 className="text-primary  text-sm font-semibold dark:text-white">
+              <h3 className="text-sm  font-semibold text-primary dark:text-white">
                 Безкоштовне повернення протягом 14 днів
               </h3>
               <p className="text-neutral-500  dark:text-neutral-300">

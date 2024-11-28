@@ -14,7 +14,7 @@ const Select: FC<SelectProps> = ({
 }) => {
   return (
     <select
-      className={`nc-Select ${sizeClass} ${className} block w-full rounded border bg-gray text-sm focus:border-transparent focus:ring focus:ring-transparent focus:ring-opacity-50`}
+      className={`nc-Select ${sizeClass} ${className} focus:ring/50 block w-full rounded border bg-gray text-sm focus:border-transparent focus:ring focus:ring-transparent`}
       {...args}
     >
       {children}

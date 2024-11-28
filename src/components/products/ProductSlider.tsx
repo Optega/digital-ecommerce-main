@@ -56,14 +56,14 @@ const ProductSlider: FC<RowProps> = ({ title, subText, products }) => {
             >
               <button
                 type="button"
-                className="glide__arrow glide__arrow--left text-primary flex size-9 min-w-fit items-center justify-center rounded-full bg-white px-0 focus:ring-transparent disabled:bg-zinc-200/70"
+                className="glide__arrow glide__arrow--left flex size-9 min-w-fit items-center justify-center rounded-full bg-white px-0 text-primary focus:ring-transparent disabled:bg-zinc-200/70"
                 data-glide-dir="<"
               >
                 <FaChevronLeft />
               </button>
               <button
                 type="button"
-                className="glide__arrow glide__arrow--right text-primary flex size-9 min-w-fit items-center justify-center rounded-full bg-white px-0 focus:ring-transparent disabled:bg-zinc-200/70"
+                className="glide__arrow glide__arrow--right flex size-9 min-w-fit items-center justify-center rounded-full bg-white px-0 text-primary focus:ring-transparent disabled:bg-zinc-200/70"
                 data-glide-dir=">"
               >
                 <FaChevronRight />

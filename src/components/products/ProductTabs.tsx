@@ -13,7 +13,7 @@ const ProductTabs = ({
   return (
     <div className="mb-16">
       <h3 className="mb-3 text-2xl font-semibold">Про товар</h3>
-      <div className="divide-primary/20 border-primary/20 divide-y border-y dark:divide-neutral-300 dark:border-neutral-300">
+      <div className="divide-y divide-primary/20 border-y border-primary/20 dark:divide-neutral-300 dark:border-neutral-300">
         <ProductDescriptiontab description={description} />
         <ProductCharacteristicsTab characteristics={characteristics} />
       </div>

@@ -6,7 +6,7 @@ const ProductDescriptiontab = ({ description }: { description: string }) => {
     <div className="">
       <details className="group">
         <summary className="flex w-full cursor-pointer list-none items-center justify-between gap-4 rounded-lg py-5">
-          <div className="group-open:text-primary space-x-6 dark:group-open:text-white">
+          <div className="space-x-6 group-open:text-primary dark:group-open:text-white">
             <span>Опис</span>
           </div>
           <div>
@@ -40,7 +40,7 @@ const ProductDescriptiontab = ({ description }: { description: string }) => {
             </svg>
           </div>
         </summary>
-        <div className="prose dark:prose-invert pb-4 text-sm text-neutral-500 dark:text-neutral-300">
+        <div className="prose pb-4 text-sm text-neutral-500 dark:prose-invert dark:text-neutral-300">
           <Markdown>{description}</Markdown>
         </div>
       </details>

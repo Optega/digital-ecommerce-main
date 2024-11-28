@@ -24,7 +24,7 @@ const ToggleSwitch = () => {
     else {
       setDarkModeActive(false);
     }
-  }, []);
+  }, [resolvedTheme]);
   return (
     <div className="flex items-center gap-2">
       <span className="whitespace-nowrap text-sm font-semibold">
