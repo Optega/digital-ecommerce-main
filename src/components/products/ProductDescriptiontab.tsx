@@ -40,7 +40,7 @@ const ProductDescriptiontab = ({ description }: { description: string }) => {
             </svg>
           </div>
         </summary>
-        <div className="prose pb-4 text-sm text-neutral-500 dark:prose-invert dark:text-neutral-300">
+        <div className="prose max-w-full pb-4 dark:prose-invert">
           <Markdown>{description}</Markdown>
         </div>
       </details>
