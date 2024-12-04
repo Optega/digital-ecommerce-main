@@ -55,7 +55,9 @@ import head from '@/images/products/headphones.jpg';
 import iphone from '@/images/products/iphone.jpg';
 import jbl from '@/images/products/JBL GO 3.jpg';
 import krugovaAntenna5dbIndoor from '@/images/products/krugova-antenna-5db-900-1800-indoor.jpg';
-import macbook from '@/images/products/Macbook 1.jpg';
+import macbook1 from '@/images/products/Macbook 1.jpg';
+import macbook2 from '@/images/products/Macbook 2.jpg';
+import macbook3 from '@/images/products/Macbook 3.jpg';
 import mikrotikSRj01 from '@/images/products/mikrotik-s-rj01.jpg';
 import moduleTpLinkTlSm311lm from '@/images/products/modul_tp-link_tl-sm311lm.jpg';
 import modulSfp2mm from '@/images/products/modul-sfp-2mm.jpg';
@@ -64,8 +66,6 @@ import opticalModule472579 from '@/images/products/optical-module-472579.jpg';
 import pixel from '@/images/products/pixel.png';
 import SFPMikroTikS85DLC05D from '@/images/products/SFP-MikroTik-S-85DLC05D.jpg';
 import watch2 from '@/images/products/watch2.png';
-import shot1 from '@/images/shots/Macbook 2.jpg';
-import shot2 from '@/images/shots/Macbook 3.jpg';
 import {
   generateRandomRating,
   generateRandomReviews,
@@ -526,7 +526,7 @@ export const products = [
     slug: 'macbook-air-13inch-m1-chip-256gb-143',
     name: 'Macbook Air 13inch M1 Chip 256GB',
     brand: 'Apple',
-    coverImage: macbook,
+    coverImage: macbook1,
     currentPrice: 335,
     previousPrice: 478,
     category: 'Ноутбуки',
@@ -534,7 +534,7 @@ export const products = [
     reviews: generateRandomReviews(),
     pieces_sold: 600,
     onSale: true,
-    shots: [macbook, shot1, shot2],
+    shots: [macbook1, macbook2, macbook3],
     sku: '',
     overview:
       'The Macbook Air 13inch M1 Chip 256GB is a high-performing and visually stunning laptop that is perfect for both personal and professional use. With its advanced image signal processor, 8-core CPU, and 16-core Neural Engine, this laptop offers unparalleled speed and power.',
@@ -569,7 +569,7 @@ export const products = [
     reviews: generateRandomReviews(),
     pieces_sold: 600,
     onSale: false,
-    shots: [jbl, shot1, shot2],
+    shots: [jbl],
     sku: '',
     overview:
       'Get the ultimate portable speaker with JBL GO 3. With its dynamic frequency response range, water resistance rating, and Bluetooth technology, you can enjoy up to 5 hours of high-quality sound wherever you go. Its compact size and durability make it perfect for outdoor use. Choose from four different colors to match your style.',
@@ -604,7 +604,7 @@ export const products = [
     reviews: generateRandomReviews(),
     pieces_sold: 600,
     onSale: true,
-    shots: [iphone, shot1, shot2],
+    shots: [iphone],
     sku: '',
     overview:
       'The iPhone 14 128GB is the must-have gadget for tech enthusiasts, featuring a stunning 6.1-inch OLED screen, powerful 128GB storage, and 6GB RAM. With its dual rear camera setup and 12MP selfie camera with biometric sensor, you can capture high-quality photos and videos with ease',
@@ -639,7 +639,7 @@ export const products = [
     reviews: generateRandomReviews(),
     pieces_sold: 600,
     onSale: true,
-    shots: [pixel, shot1, shot2],
+    shots: [pixel],
     sku: '',
     overview: `The Google Pixel 8 Pro 128GB is the perfect phone for the tech-savvy user who wants the latest and greatest gadgets. With its stunning 6.7 LTPO OLED screen, 120Hz refresh rate, HDR10+, 1600 nits HBM, and 2400 nits peak, you'll have beautiful visuals and vibrant colors no matter what you're doing.`,
     characterData: [
@@ -673,7 +673,7 @@ export const products = [
     reviews: generateRandomReviews(),
     pieces_sold: 600,
     onSale: false,
-    shots: [mouse, shot1, shot2],
+    shots: [mouse],
     sku: '',
     overview: `The Logitech M190 Wireless Mouse is a comfortable and reliable mouse that works seamlessly with your PC or laptop. With a contoured ergonomic shape and scooped buttons, it provides all-day comfort, while its power-saving features and`,
     characterData: [
@@ -707,7 +707,7 @@ export const products = [
     reviews: generateRandomReviews(),
     pieces_sold: 600,
     onSale: true,
-    shots: [gamingcontrollwe, shot1, shot2],
+    shots: [gamingcontrollwe],
     sku: '',
     overview: `The Playstation DualSense Controller is a must-have for serious gamers. With Haptic feedback and Adaptive Triggers, you'll feel more immersed in your games than ever before. The built-in microphone and headset jack also make it easy to chat with friends while you play. Choose between white and black colors to match your style.`,
     characterData: [
@@ -741,7 +741,7 @@ export const products = [
     reviews: generateRandomReviews(),
     pieces_sold: 600,
     onSale: false,
-    shots: [fifa, shot1, shot2],
+    shots: [fifa],
     sku: '',
     overview:
       "Experience FIFA 23 and bring The World's Game to the pitch, with HyperMotion2 Technology.",
@@ -776,7 +776,7 @@ export const products = [
     reviews: generateRandomReviews(),
     pieces_sold: 600,
     onSale: true,
-    shots: [harman, shot1, shot2],
+    shots: [harman],
     sku: '',
     overview: `Introducing the Harman/Kardon Luna – the ultimate way to enjoy and appreciate your favorite tunes. Packing HARMAN KARDON SUPERIOR SOUND in a stylish and quality design, the Harman/Kardon Luna is the ideal speaker for your home or on-the-go. With advanced two-way drivers, you can hear every detail of your favorite music with crystal clear and balanced audio. `,
     characterData: [
@@ -810,7 +810,7 @@ export const products = [
     reviews: generateRandomReviews(),
     pieces_sold: 600,
     onSale: true,
-    shots: [ear, shot1, shot2],
+    shots: [ear],
     sku: '',
     overview: `The Samsung TypeC AKG Earphones offer undistorted studio-quality audio, convenient control features, and compatibility with a wide range of Samsung phones.`,
     characterData: [
@@ -844,7 +844,7 @@ export const products = [
     reviews: generateRandomReviews(),
     pieces_sold: 600,
     onSale: false,
-    shots: [head, shot1, shot2],
+    shots: [head],
     sku: '',
     overview: `Anker Soundcore Life 2 Neo is a Wireless Bluetooth Over-Ear Headphones with a USB-C Fast Charging gives you 60-Hour Playtime and 40mm Driver, also Bass-up and AUX Input – Bluetooth Headphones Comes in a nice Black Color`,
     characterData: [
@@ -878,7 +878,7 @@ export const products = [
     reviews: generateRandomReviews(),
     pieces_sold: 600,
     onSale: true,
-    shots: [applwwatch1, shot1, shot2],
+    shots: [applwwatch1],
     sku: '',
     overview: `The Apple Watch Series 9 45MM is a powerful smartwatch designed to impress Apple fans. It boasts a sleek design, Retina LTPO OLED display, 64GB of storage, dual loud speakers, and various features like GPS, Wi-Fi, and Bluetooth 5.3.`,
     characterData: [
@@ -912,7 +912,7 @@ export const products = [
     reviews: generateRandomReviews(),
     pieces_sold: 600,
     onSale: false,
-    shots: [watch2, shot1, shot2],
+    shots: [watch2],
     sku: '',
     overview:
       'When your workouts wade into the nitty gritty, the Nike Free Metcon 5 can meet you in the depths, help you dig deep to find that final ounce of force and come out of the other side on a high. It matches style with substance, forefoot flexibility with backend stability, perfect for flying through a cardio day or enhancing your agility. A revamped upper offers easier entry with a collar made just for your ankle.',
