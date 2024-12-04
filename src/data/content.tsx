@@ -52,8 +52,12 @@ import ear from '@/images/products/earphones.jpg';
 import fifa from '@/images/products/fifa.jpg';
 import harman from '@/images/products/Harman-Kardon.jpg';
 import head from '@/images/products/headphones.jpg';
-import iphone from '@/images/products/iphone.jpg';
-import jbl from '@/images/products/JBL GO 3.jpg';
+import iphone1 from '@/images/products/iphone_14_1.jpg';
+import iphone2 from '@/images/products/iphone_14_2.jpg';
+import iphone3 from '@/images/products/iphone_14_3.jpg';
+import jbl1 from '@/images/products/jbl_go_3_black_1.jpg';
+import jbl2 from '@/images/products/jbl_go_3_black_2.jpg';
+import jbl3 from '@/images/products/jbl_go_3_black_3.jpg';
 import krugovaAntenna5dbIndoor from '@/images/products/krugova-antenna-5db-900-1800-indoor.jpg';
 import macbook1 from '@/images/products/Macbook 1.jpg';
 import macbook2 from '@/images/products/Macbook 2.jpg';
@@ -61,9 +65,13 @@ import macbook3 from '@/images/products/Macbook 3.jpg';
 import mikrotikSRj01 from '@/images/products/mikrotik-s-rj01.jpg';
 import moduleTpLinkTlSm311lm from '@/images/products/modul_tp-link_tl-sm311lm.jpg';
 import modulSfp2mm from '@/images/products/modul-sfp-2mm.jpg';
-import mouse from '@/images/products/mouse1.png';
+import mouse1 from '@/images/products/mouse1.png';
+import mouse2 from '@/images/products/mouse2.jpg';
+import mouse3 from '@/images/products/mouse3.jpg';
 import opticalModule472579 from '@/images/products/optical-module-472579.jpg';
-import pixel from '@/images/products/pixel.png';
+import pixel1 from '@/images/products/pixel1.png';
+import pixel2 from '@/images/products/pixel2.jpg';
+import pixel3 from '@/images/products/pixel3.jpg';
 import SFPMikroTikS85DLC05D from '@/images/products/SFP-MikroTik-S-85DLC05D.jpg';
 import watch2 from '@/images/products/watch2.png';
 import {
@@ -522,179 +530,332 @@ export const NavLinks: NavItemType[] = [
 ];
 
 export const products = [
+  // Ноутбуки
+  // Macbook Air 13inch M1 Chip 256GB
   {
     slug: 'macbook-air-13inch-m1-chip-256gb-143',
     name: 'Macbook Air 13inch M1 Chip 256GB',
     brand: 'Apple',
     coverImage: macbook1,
-    currentPrice: 335,
-    previousPrice: 478,
+    currentPrice: 39499,
+    previousPrice: 41499,
     category: 'Ноутбуки',
     rating: generateRandomRating(),
     reviews: generateRandomReviews(),
-    pieces_sold: 600,
+    pieces_sold: 41499,
     onSale: true,
     shots: [macbook1, macbook2, macbook3],
     sku: '',
     overview:
-      'The Macbook Air 13inch M1 Chip 256GB is a high-performing and visually stunning laptop that is perfect for both personal and professional use. With its advanced image signal processor, 8-core CPU, and 16-core Neural Engine, this laptop offers unparalleled speed and power.',
+      '### MacBook Air — найтонший і найлегший ноутбук від Apple. А тепер завдяки чипу Apple M1 він іще й надпотужний. Цей чип забезпечив грандіозний прорив у продуктивності центрального й графічного процесорів\n' +
+      '### Найтонший і найлегший ноутбук від Apple стає надпотужним завдяки чипу Apple M1. Легко виконуйте будь-які завдання завдяки надшвидкісному 8-ядерному центральному процесору.\n' +
+      'Графічний процесор із щонайбільше **8 ядрами** забезпечує відмінне зображення в додатках та іграх зі складною графікою. **16-ядерна** система Neural Engine прискорює виконання всіх операцій, у яких використовується машинне навчання. Конструкція без вентилятора гарантує безшумну роботу. А ще новий MacBook Air побив власний рекорд роботи від акумулятора — тепер він працює без підзарядки **до 18 годин**.',
     characterData: [
       {
-        title: `Display Resolutions`,
-        text: `Retina XDR Display 2532 x 1170 pixels, 19.5:9 ratio, 457 PPI 60Hz`,
+        title: `Діагональ екрану`,
+        text: `13,3"`,
       },
       {
-        title: `Sound`,
-        text: `Custom Tempest Engine 3D Audio, Dolby Atmos & DTS:X (Blu-ray video & UHD Blu-ray video)`,
+        title: `Роздільна здатність екрану`,
+        text: `2560x1600`,
       },
       {
-        title: `Memory`,
-        text: `16 GB/256-bit GDDR6 SDRAM 512 MB DDR4 RAM (for background tasks)`,
+        title: `Частота оновлення екрану`,
+        text: `60 Гц`,
       },
       {
-        title: `Connectivity`,
-        text: `Wi-Fi IEEE 802.11ax; Bluetooth 5.1; Gigabit Ethernet; 2× USB 3.2 Gen 2×1; 1× USB 2.0; 1× USB-C with USB 3.2 Gen 2×1; 1× HDMI 2.1`,
+        title: `Тип матриці`,
+        text: `IPS`,
+      },
+      {
+        title: `Яcкравість (nit)`,
+        text: `400`,
+      },
+      {
+        title: `Процесор`,
+        text: `Apple M1 8 ядер`,
+      },
+      {
+        title: `Об'єм ОЗП`,
+        text: `8 ГБ`,
+      },
+      {
+        title: `Накопичувач`,
+        text: `256 ГБ SSD`,
       },
     ],
   },
-  {
-    slug: 'jbl-go-3-165',
-    name: 'JBL GO 3',
-    brand: 'JBL',
-    coverImage: jbl,
-    currentPrice: 334,
-    previousPrice: 474,
-    category: 'Колонки',
-    rating: generateRandomRating(),
-    reviews: generateRandomReviews(),
-    pieces_sold: 600,
-    onSale: false,
-    shots: [jbl],
-    sku: '',
-    overview:
-      'Get the ultimate portable speaker with JBL GO 3. With its dynamic frequency response range, water resistance rating, and Bluetooth technology, you can enjoy up to 5 hours of high-quality sound wherever you go. Its compact size and durability make it perfect for outdoor use. Choose from four different colors to match your style.',
-    characterData: [
-      {
-        title: `Display Resolutions`,
-        text: `Retina XDR Display 2532 x 1170 pixels, 19.5:9 ratio, 457 PPI 60Hz`,
-      },
-      {
-        title: `Sound`,
-        text: `Custom Tempest Engine 3D Audio, Dolby Atmos & DTS:X (Blu-ray video & UHD Blu-ray video)`,
-      },
-      {
-        title: `Memory`,
-        text: `16 GB/256-bit GDDR6 SDRAM 512 MB DDR4 RAM (for background tasks)`,
-      },
-      {
-        title: `Connectivity`,
-        text: `Wi-Fi IEEE 802.11ax; Bluetooth 5.1; Gigabit Ethernet; 2× USB 3.2 Gen 2×1; 1× USB 2.0; 1× USB-C with USB 3.2 Gen 2×1; 1× HDMI 2.1`,
-      },
-    ],
-  },
-  {
-    slug: 'iphone-14-128gb-12',
-    name: 'iPhone 14 128GB',
-    brand: 'Apple',
-    coverImage: iphone,
-    currentPrice: 552,
-    previousPrice: 585,
-    category: 'Телефони',
-    rating: generateRandomRating(),
-    reviews: generateRandomReviews(),
-    pieces_sold: 600,
-    onSale: true,
-    shots: [iphone],
-    sku: '',
-    overview:
-      'The iPhone 14 128GB is the must-have gadget for tech enthusiasts, featuring a stunning 6.1-inch OLED screen, powerful 128GB storage, and 6GB RAM. With its dual rear camera setup and 12MP selfie camera with biometric sensor, you can capture high-quality photos and videos with ease',
-    characterData: [
-      {
-        title: `Display Resolutions`,
-        text: `Retina XDR Display 2532 x 1170 pixels, 19.5:9 ratio, 457 PPI 60Hz`,
-      },
-      {
-        title: `Sound`,
-        text: `Custom Tempest Engine 3D Audio, Dolby Atmos & DTS:X (Blu-ray video & UHD Blu-ray video)`,
-      },
-      {
-        title: `Memory`,
-        text: `16 GB/256-bit GDDR6 SDRAM 512 MB DDR4 RAM (for background tasks)`,
-      },
-      {
-        title: `Connectivity`,
-        text: `Wi-Fi IEEE 802.11ax; Bluetooth 5.1; Gigabit Ethernet; 2× USB 3.2 Gen 2×1; 1× USB 2.0; 1× USB-C with USB 3.2 Gen 2×1; 1× HDMI 2.1`,
-      },
-    ],
-  },
-  {
-    slug: 'google-pixel-8-pro-128gb-663',
-    name: 'Google Pixel 8 Pro 128GB',
-    brand: 'Google',
-    coverImage: pixel,
-    currentPrice: 338,
-    previousPrice: 391,
-    category: 'Телефони',
-    rating: generateRandomRating(),
-    reviews: generateRandomReviews(),
-    pieces_sold: 600,
-    onSale: true,
-    shots: [pixel],
-    sku: '',
-    overview: `The Google Pixel 8 Pro 128GB is the perfect phone for the tech-savvy user who wants the latest and greatest gadgets. With its stunning 6.7 LTPO OLED screen, 120Hz refresh rate, HDR10+, 1600 nits HBM, and 2400 nits peak, you'll have beautiful visuals and vibrant colors no matter what you're doing.`,
-    characterData: [
-      {
-        title: `Display Resolutions`,
-        text: `Retina XDR Display 2532 x 1170 pixels, 19.5:9 ratio, 457 PPI 60Hz`,
-      },
-      {
-        title: `Sound`,
-        text: `Custom Tempest Engine 3D Audio, Dolby Atmos & DTS:X (Blu-ray video & UHD Blu-ray video)`,
-      },
-      {
-        title: `Memory`,
-        text: `16 GB/256-bit GDDR6 SDRAM 512 MB DDR4 RAM (for background tasks)`,
-      },
-      {
-        title: `Connectivity`,
-        text: `Wi-Fi IEEE 802.11ax; Bluetooth 5.1; Gigabit Ethernet; 2× USB 3.2 Gen 2×1; 1× USB 2.0; 1× USB-C with USB 3.2 Gen 2×1; 1× HDMI 2.1`,
-      },
-    ],
-  },
+  // Logitech M190 Wireless Mouse
   {
     slug: 'logitech-m190-wireless-mouse-391',
     name: 'Logitech M190 Wireless Mouse',
     brand: 'Logitech',
-    coverImage: mouse,
-    currentPrice: 229,
-    previousPrice: 334,
+    coverImage: mouse1,
+    currentPrice: 499,
+    previousPrice: 699,
     category: 'Ноутбуки',
     rating: generateRandomRating(),
     reviews: generateRandomReviews(),
-    pieces_sold: 600,
+    pieces_sold: 699,
     onSale: false,
-    shots: [mouse],
+    shots: [mouse1, mouse2, mouse3],
     sku: '',
-    overview: `The Logitech M190 Wireless Mouse is a comfortable and reliable mouse that works seamlessly with your PC or laptop. With a contoured ergonomic shape and scooped buttons, it provides all-day comfort, while its power-saving features and`,
+    overview:
+      "### ЗРУЧНІСТЬ ПОВНОРОЗМІРНОЇ МИШІ. БЕЗДРОТОВИЙ ЗВ'ЯЗОК БЕЗ ЗАТРИМОК\n" +
+      'Ніяких кабелів і повна свобода пересувань — стабільне підключення практично без затримок та збоїв на відстані до 10 метрів. Відмінна якість збірки, 18 місяців роботи від батареї, точне відстеження та порядкова прокрутка — все за доступною ціною\n' +
+      '### ПОВНОРОЗМІРНА КОНСТРУКЦІЯ. АБСОЛЮТНИЙ КОМФОРТ\n' +
+      'Пристрій добре підходить для роботи як правою, так і лівою рукою; ергономічний дизайн повторює природні вигини долонь великого розміру. Спеціальні округлі кнопки призначені для оптимального розташування пальців, а додаткова підтримка для кисті забезпечує комфорт протягом всього дня.',
     characterData: [
       {
-        title: `Display Resolutions`,
-        text: `Retina XDR Display 2532 x 1170 pixels, 19.5:9 ratio, 457 PPI 60Hz`,
+        title: `Тип пристрою`,
+        text: `оптична миша`,
       },
       {
-        title: `Sound`,
-        text: `Custom Tempest Engine 3D Audio, Dolby Atmos & DTS:X (Blu-ray video & UHD Blu-ray video)`,
+        title: `Бездротова`,
+        text: `є`,
       },
       {
-        title: `Memory`,
-        text: `16 GB/256-bit GDDR6 SDRAM 512 MB DDR4 RAM (for background tasks)`,
+        title: `Тип бездротового зв'язку`,
+        text: `радіозв'язок`,
       },
       {
-        title: `Connectivity`,
-        text: `Wi-Fi IEEE 802.11ax; Bluetooth 5.1; Gigabit Ethernet; 2× USB 3.2 Gen 2×1; 1× USB 2.0; 1× USB-C with USB 3.2 Gen 2×1; 1× HDMI 2.1`,
+        title: `Конструктивні особливості`,
+        text: `симетрична форма, ергономічний дизайн`,
+      },
+      {
+        title: `Кількість кнопок`,
+        text: `2 + колесо прокручування`,
+      },
+      {
+        title: `Макс. роздільна здатність`,
+        text: `1000 dpi`,
+      },
+      {
+        title: `Живлення`,
+        text: `1xAA`,
+      },
+      {
+        title: `Довжина кабелю/радіус дії`,
+        text: `до 10 м`,
       },
     ],
   },
+  // !Ноутбуки
+
+  // Телефони
+  // iPhone 14 128GB
+  {
+    slug: 'iphone-14-128gb-12',
+    name: 'iPhone 14 128GB',
+    brand: 'Apple',
+    coverImage: iphone1,
+    currentPrice: 31999,
+    previousPrice: 34999,
+    category: 'Телефони',
+    rating: generateRandomRating(),
+    reviews: generateRandomReviews(),
+    pieces_sold: 34999,
+    onSale: true,
+    shots: [iphone1, iphone2, iphone3],
+    sku: '',
+    overview:
+      '### iPhone 14 Більше ніж вражає.\n' +
+      '### Неймовірні фотографії як при слабкому, так і при яскравому освітленні.',
+    characterData: [
+      {
+        title: `Кількість sim-карт`,
+        text: `2`,
+      },
+      {
+        title: `Формат SIM-карти`,
+        text: `Nano-SIM та e-SIM`,
+      },
+      {
+        title: `Стандарти зв'язку`,
+        text: `GSM, 3G, 4G (LTE), 5G`,
+      },
+      {
+        title: `Діагональ екрану`,
+        text: `6.1"`,
+      },
+      {
+        title: `Роздільна здатність дисплея`,
+        text: `2532x1170`,
+      },
+      {
+        title: `Щільність пікселів`,
+        text: `460 ppi`,
+      },
+      {
+        title: `Тип екрану`,
+        text: `OLED`,
+      },
+      {
+        title: `Процесор`,
+        text: `A15 Bionic`,
+      },
+      {
+        title: `Кількість ядер`,
+        text: `6`,
+      },
+      {
+        title: `Внутрішня пам'ять`,
+        text: `128 ГБ`,
+      },
+      {
+        title: `Камера`,
+        text: `12 Мп + 12 Мп`,
+      },
+      {
+        title: `Діафрагма`,
+        text: `f/1.5 + f/2.4`,
+      },
+      {
+        title: `Запис відео`,
+        text: `4К UHD (3840x2160)`,
+      },
+      {
+        title: `Операційна система`,
+        text: `iOS 16`,
+      },
+    ],
+  },
+  // Google Pixel 8 Pro 128GB
+  {
+    slug: 'google-pixel-8-pro-128gb-663',
+    name: 'Google Pixel 8 Pro 128GB',
+    brand: 'Google',
+    coverImage: pixel1,
+    currentPrice: 27799,
+    previousPrice: 29499,
+    category: 'Телефони',
+    rating: generateRandomRating(),
+    reviews: generateRandomReviews(),
+    pieces_sold: 29499,
+    onSale: true,
+    shots: [pixel1, pixel2, pixel3],
+    sku: '',
+    overview:
+      '### Super Actua дисплей 6,7 дюйма: найяскравіший в історії Pixel\n' +
+      'Ексклюзивно для Pixel 8 Pro, дисплей Super Actua забезпечує яскравість і чіткість зображення на новому рівні. Завдяки вдосконаленим технологіям, цей дисплей гарантує чудову видимість навіть під прямим сонячним світлом, забезпечуючи винятковий користувацький досвід\n' +
+      '### Елегантний дизайн: поєднання полірованого алюмінію та матового скла\n' +
+      'Pixel 8 Pro виділяється завдяки своєму преміальному дизайну з полірованою алюмінієвою рамкою та матовою скляною задньою панеллю. Цей елегантний дизайн не лише надає смартфону сучасного вигляду, але й забезпечує комфортне відчуття в руці.' +
+      '### Нова ера потужності: чіп Google Tensor G3\n' +
+      'Pixel 8 Pro працює на базі нового чіпа Google Tensor G3, спеціально розробленого для підтримки функцій штучного інтелекту від Google. Цей чіп забезпечує неймовірну швидкість та ефективність роботи, дозволяючи використовувати передові функції фото та відео, а також отримувати ще більш розумні рішення на кожен день.',
+    characterData: [
+      {
+        title: `Операційна система`,
+        text: `Android 14`,
+      },
+      {
+        title: `Діагональ`,
+        text: `6.7"`,
+      },
+      {
+        title: `Технологія дисплею`,
+        text: `OLED`,
+      },
+      {
+        title: `Роздільна здатність`,
+        text: `3120 x 1440`,
+      },
+      {
+        title: `PPI (щільність пікселів)`,
+        text: `513`,
+      },
+      {
+        title: `Частота оновлення екрану`,
+        text: `120 Гц`,
+      },
+      {
+        title: `Особливості дисплею`,
+        text: `Corning Gorilla Glass Victus 2`,
+      },
+      {
+        title: `Процесор`,
+        text: `Google Tensor G3`,
+      },
+      {
+        title: `Частота процесора`,
+        text: `3 ГГц`,
+      },
+      {
+        title: `Кількість ядер процесора`,
+        text: `Immortalis-G715s MC10`,
+      },
+      {
+        title: `Вбудована пам'ять`,
+        text: `128 ГБ`,
+      },
+      {
+        title: `Оперативна пам'ять`,
+        text: `8 ГБ`,
+      },
+      {
+        title: `Підтримка карт пам'яті`,
+        text: `не підтримує`,
+      },
+    ],
+  },
+  // !Телефони
+
+  // Колонки
+  // JBL GO 3
+  {
+    slug: 'jbl-go-3-165',
+    name: 'JBL GO 3',
+    brand: 'JBL',
+    coverImage: jbl1,
+    currentPrice: 1399,
+    previousPrice: 1399,
+    category: 'Колонки',
+    rating: generateRandomRating(),
+    reviews: generateRandomReviews(),
+    pieces_sold: 1399,
+    onSale: false,
+    shots: [jbl1, jbl2, jbl3],
+    sku: '',
+    overview:
+      'JBL GO 3 – це нове покоління ультрапортативної колонки, що поєднує легендарний фірмовий звук JBL та яскравий сучасний дизайн. Вона створена для тих, хто не бажає розлучатися з улюбленою музикою ні на секунду, а тому має максимально компактний форм-фактор, водонепроникний корпус із захистом від пилу та вологи й місткий акумулятор. На прогулянці або під час велотренування, біля басейну або на пляжі – нехай улюблена музика супроводжує тебе всюди.',
+    characterData: [
+      {
+        title: `Загальна потужність`,
+        text: `4,2 Вт`,
+      },
+      {
+        title: `Потужність сателітів`,
+        text: `1x4,2 Вт`,
+      },
+      {
+        title: `Кількість смуг (сателіти)`,
+        text: `1`,
+      },
+      {
+        title: `Бездротові інтерфейси`,
+        text: `Bluetooth 5.1`,
+      },
+      {
+        title: `Інші інтерфейси`,
+        text: `USB Type-C`,
+      },
+      {
+        title: `Відношення сигнал/шум`,
+        text: `87 дБ`,
+      },
+      {
+        title: `Діапазон частот`,
+        text: `110-20000 Гц`,
+      },
+      {
+        title: `Час роботи від батареї`,
+        text: `до 5 годин`,
+      },
+    ],
+  },
+  // !Колонки
+
+  // Геймінг
+  // Playstation DualSense Controller
   {
     slug: 'playstation-dualsense-controller-146',
     name: 'Playstation DualSense Controller',
