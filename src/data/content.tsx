@@ -45,13 +45,24 @@ import johnson_dark from '@/images/companies/Johnson_Berg-white.svg';
 import stela from '@/images/companies/Stela.svg';
 import stela_dark from '@/images/companies/Stela-white.svg';
 import antena3gUmts21db from '@/images/products/3g-antena-umts-21-db.jpg';
+import amazfit_watch_1 from '@/images/products/amazfit_watch_1.png';
+import amazfit_watch_2 from '@/images/products/amazfit_watch_2.jpg';
+import amazfit_watch_3 from '@/images/products/amazfit_watch_3.jpg';
+import ankerSoundcore1 from '@/images/products/ankerSoundcore1.jpg';
+import ankerSoundcore2 from '@/images/products/ankerSoundcore2.avif';
+import ankerSoundcore3 from '@/images/products/ankerSoundcore3.avif';
 import antennaHuaweiAtr4518r7v07 from '@/images/products/antenna-huawei-atr4518r7v07.jpg';
-import applwwatch1 from '@/images/products/applewatch1.png';
-import gamingcontrollwe from '@/images/products/controller.jpg';
+import applewatch1 from '@/images/products/applewatch1.png';
+import applewatch2 from '@/images/products/applewatch2.webp';
+import applewatch3 from '@/images/products/applewatch3.webp';
+import dualsense1 from '@/images/products/dualsense1.jpg';
+import dualsense2 from '@/images/products/dualsense2.jpg';
+import dualsense3 from '@/images/products/dualsense3.jpg';
+import ear2 from '@/images/products/ear2.avif';
+import ear3 from '@/images/products/ear3.jpeg';
 import ear from '@/images/products/earphones.jpg';
 import fifa from '@/images/products/fifa.jpg';
 import harman from '@/images/products/Harman-Kardon.jpg';
-import head from '@/images/products/headphones.jpg';
 import iphone1 from '@/images/products/iphone_14_1.jpg';
 import iphone2 from '@/images/products/iphone_14_2.jpg';
 import iphone3 from '@/images/products/iphone_14_3.jpg';
@@ -73,7 +84,6 @@ import pixel1 from '@/images/products/pixel1.png';
 import pixel2 from '@/images/products/pixel2.jpg';
 import pixel3 from '@/images/products/pixel3.jpg';
 import SFPMikroTikS85DLC05D from '@/images/products/SFP-MikroTik-S-85DLC05D.jpg';
-import watch2 from '@/images/products/watch2.png';
 import {
   generateRandomRating,
   generateRandomReviews,
@@ -530,7 +540,7 @@ export const NavLinks: NavItemType[] = [
 ];
 
 export const products = [
-  // Ноутбуки
+  // ~~~ Ноутбуки
   // Macbook Air 13inch M1 Chip 256GB
   {
     slug: 'macbook-air-13inch-m1-chip-256gb-143',
@@ -642,7 +652,7 @@ export const products = [
   },
   // !Ноутбуки
 
-  // Телефони
+  // ~~~ Телефони
   // iPhone 14 128GB
   {
     slug: 'iphone-14-128gb-12',
@@ -799,7 +809,7 @@ export const products = [
   },
   // !Телефони
 
-  // Колонки
+  // ~~~ Колонки
   // JBL GO 3
   {
     slug: 'jbl-go-3-165',
@@ -852,250 +862,548 @@ export const products = [
       },
     ],
   },
-  // !Колонки
-
-  // Геймінг
-  // Playstation DualSense Controller
-  {
-    slug: 'playstation-dualsense-controller-146',
-    name: 'Playstation DualSense Controller',
-    brand: 'Sony',
-    coverImage: gamingcontrollwe,
-    currentPrice: 233,
-    previousPrice: 553,
-    category: 'Геймінг',
-    rating: generateRandomRating(),
-    reviews: generateRandomReviews(),
-    pieces_sold: 600,
-    onSale: true,
-    shots: [gamingcontrollwe],
-    sku: '',
-    overview: `The Playstation DualSense Controller is a must-have for serious gamers. With Haptic feedback and Adaptive Triggers, you'll feel more immersed in your games than ever before. The built-in microphone and headset jack also make it easy to chat with friends while you play. Choose between white and black colors to match your style.`,
-    characterData: [
-      {
-        title: `Display Resolutions`,
-        text: `Retina XDR Display 2532 x 1170 pixels, 19.5:9 ratio, 457 PPI 60Hz`,
-      },
-      {
-        title: `Sound`,
-        text: `Custom Tempest Engine 3D Audio, Dolby Atmos & DTS:X (Blu-ray video & UHD Blu-ray video)`,
-      },
-      {
-        title: `Memory`,
-        text: `16 GB/256-bit GDDR6 SDRAM 512 MB DDR4 RAM (for background tasks)`,
-      },
-      {
-        title: `Connectivity`,
-        text: `Wi-Fi IEEE 802.11ax; Bluetooth 5.1; Gigabit Ethernet; 2× USB 3.2 Gen 2×1; 1× USB 2.0; 1× USB-C with USB 3.2 Gen 2×1; 1× HDMI 2.1`,
-      },
-    ],
-  },
-  {
-    slug: 'fifa-23-157',
-    name: 'FIFA 23',
-    brand: 'EA Sports',
-    coverImage: fifa,
-    currentPrice: 585,
-    previousPrice: 628,
-    category: 'Геймінг',
-    rating: generateRandomRating(),
-    reviews: generateRandomReviews(),
-    pieces_sold: 600,
-    onSale: false,
-    shots: [fifa],
-    sku: '',
-    overview:
-      "Experience FIFA 23 and bring The World's Game to the pitch, with HyperMotion2 Technology.",
-    characterData: [
-      {
-        title: `Display Resolutions`,
-        text: `Retina XDR Display 2532 x 1170 pixels, 19.5:9 ratio, 457 PPI 60Hz`,
-      },
-      {
-        title: `Sound`,
-        text: `Custom Tempest Engine 3D Audio, Dolby Atmos & DTS:X (Blu-ray video & UHD Blu-ray video)`,
-      },
-      {
-        title: `Memory`,
-        text: `16 GB/256-bit GDDR6 SDRAM 512 MB DDR4 RAM (for background tasks)`,
-      },
-      {
-        title: `Connectivity`,
-        text: `Wi-Fi IEEE 802.11ax; Bluetooth 5.1; Gigabit Ethernet; 2× USB 3.2 Gen 2×1; 1× USB 2.0; 1× USB-C with USB 3.2 Gen 2×1; 1× HDMI 2.1`,
-      },
-    ],
-  },
   {
     slug: 'harman-kardon-luna-652',
     name: 'Kardon Luna',
     brand: 'Harman',
     coverImage: harman,
-    currentPrice: 489,
-    previousPrice: 552,
+    currentPrice: 5999,
+    previousPrice: 6999,
     category: 'Колонки',
     rating: generateRandomRating(),
     reviews: generateRandomReviews(),
-    pieces_sold: 600,
+    pieces_sold: 6999,
     onSale: true,
     shots: [harman],
     sku: '',
-    overview: `Introducing the Harman/Kardon Luna – the ultimate way to enjoy and appreciate your favorite tunes. Packing HARMAN KARDON SUPERIOR SOUND in a stylish and quality design, the Harman/Kardon Luna is the ideal speaker for your home or on-the-go. With advanced two-way drivers, you can hear every detail of your favorite music with crystal clear and balanced audio. `,
+    overview:
+      '### Кришталева чистота звуку\n' +
+      "Harman/Kardon Luna Black пропонує вам звук вищого класу з кришталевою чистотою. Кожна нота, кожен акорд відтворюється з вражаючою деталізацією, заповнюючи простір потужним та глибоким звучанням. Захопіться естетикою Luna Black. Її елегантний чорний дизайн з інноваційним підсвічуванням надає акустиці вишуканості та стилю, які доповнюють будь-який інтер'єр.\n" +
+      '### Бездротова свобода\n' +
+      "Забудьте про непотрібні кабелі. Акустика оснащена технологією бездротового з'єднання, що робить процес слухання музики максимально комфортним та зручним. Легко керуйте акустикою за допомогою сенсорного управління. Просто доторкніться до панелі, щоб змінити трек, регулювати гучність або призупиняти відтворення.\n" +
+      '### Портативність та автономія\n' +
+      'Luna Black — це не тільки стильна, але і практична акустика. Портативна конструкція дозволяє вам брати її з собою, а довгий час автономної роботи гарантує неймовірні музичні подорожі. З Luna Black ви отримаєте не просто акустику, але й мистецтво звучання. Зробіть своє середовище наповненим музичним насолодженням завдяки цій вражаючій портативній аудіосистемі.',
     characterData: [
       {
-        title: `Display Resolutions`,
-        text: `Retina XDR Display 2532 x 1170 pixels, 19.5:9 ratio, 457 PPI 60Hz`,
+        title: `Живлення та акумулятор`,
+        text: `Від аккумулятора, повна зарядка за 2,5 години, до 12 годин роботи від одного заряду`,
       },
       {
-        title: `Sound`,
-        text: `Custom Tempest Engine 3D Audio, Dolby Atmos & DTS:X (Blu-ray video & UHD Blu-ray video)`,
+        title: `Бездротові технології`,
+        text: `Bluetooth 5.3`,
       },
       {
-        title: `Memory`,
-        text: `16 GB/256-bit GDDR6 SDRAM 512 MB DDR4 RAM (for background tasks)`,
+        title: `Потужність`,
+        text: `40 Вт`,
       },
       {
-        title: `Connectivity`,
-        text: `Wi-Fi IEEE 802.11ax; Bluetooth 5.1; Gigabit Ethernet; 2× USB 3.2 Gen 2×1; 1× USB 2.0; 1× USB-C with USB 3.2 Gen 2×1; 1× HDMI 2.1`,
+        title: `Матеріал корпусу`,
+        text: `алюмінієвий сплав, тканина`,
+      },
+      {
+        title: `Порти та роз'єми`,
+        text: `USB Type C`,
       },
     ],
   },
+  // !Колонки
+
+  // ~~~ Геймінг
+  // Playstation DualSense Controller
+  {
+    slug: 'playstation-dualsense-controller-146',
+    name: 'Playstation DualSense Controller',
+    brand: 'Sony',
+    coverImage: dualsense1,
+    currentPrice: 2599,
+    previousPrice: 3299,
+    category: 'Геймінг',
+    rating: generateRandomRating(),
+    reviews: generateRandomReviews(),
+    pieces_sold: 3299,
+    onSale: true,
+    shots: [dualsense1, dualsense2, dualsense3],
+    sku: '',
+    overview:
+      '### Повний контроль над грою\n' +
+      'Бездротовий контролер DualSense подарує вам відчуття занурення в геймінг. Завдяки переробленому дизайну і інноваційним функціям ви зможете пережити неймовірні ігрові пригоди і поділитися реалістичними враженнями в прямому ефірі.\n' +
+      '### Нове відчуття ігрової реальності\n' +
+      'Реалістична тактильна віддача і динамічні тригери дозволять вам відчути себе в епіцентрі ігрових подій. Парні приводи замість вібромоторчиків забезпечують реальну фізичну віддачу у відповідь на дії. Тригери демонструють різну ступінь зусилля і опору в залежності від подій, що відбуваються: чи натягаєте ви тятиву, ведете перехресний вогонь або тиснете на гальма.\n' +
+      '### Мікрофон для спілкування\n' +
+      "Вбудований мікрофон дасть можливість спілкуватися з друзями по команді і обговорювати стратегію в реальному часі. Ви також зможете скористатися роз'ємом 3.5 мм для підключення гарнітури. Натисніть на кнопку, щоб вимкнути звук, обмежити спілкування і зосередитися на грі.\n" +
+      '### Створення контенту\n' +
+      'Спеціальна кнопка створення дозволяє вести стріми і записувати найгостріші моменти гри. Кнопка створення дасть можливість проводити прямі трансляції для фанатів і розбирати гру прямо «з місця подій».\n' +
+      '### Чудова ергономіка\n' +
+      'Бездротовий контролер DualSense поєднує в дизайні вдалі моменти попередніх напрацювань з удосконаленою ергономікою і харизматичним стилем. Знайоме розташування кнопок і допрацьовані джойстики забезпечують комфорт і повний контроль над ігровим процесом.\n' +
+      '### Динамік для більшої реалістичності\n' +
+      'Вбудований динамік розширює межі сприйняття, додаючи в геймінг звукові ефекти. Ви зможете чітко почути кожен шерех і шелест, щоб миттєво зорієнтуватися і відбити небезпеку.\n' +
+      '### Датчики рухів\n' +
+      'Вбудований акселерометр і гіроскоп дозволяють більш точно управляти рухами вашого персонажа і краще орієнтуватися в ігровому світі.\n' +
+      '### Проста підзарядка\n' +
+      "Скористайтеся універсальним роз'ємом USB Type-C, щоб швидко зарядити батарею контролера і продовжити пригоди.",
+    characterData: [
+      {
+        title: `Тип`,
+        text: `Геймпад`,
+      },
+      {
+        title: `Призначення`,
+        text: `Для ігрової приставки, Для PC, Для ноутбуків`,
+      },
+      {
+        title: `Сумісні платформи`,
+        text: `PlayStation 5, Windows, Android, Apple iOS, Apple Mac OS`,
+      },
+      {
+        title: `Загальна кількість кнопок`,
+        text: `18`,
+      },
+      {
+        title: `Підключення`,
+        text: `Комбіноване`,
+      },
+      {
+        title: `Інтерфейс приєднання`,
+        text: `Bluetooth та дротове`,
+      },
+      {
+        title: `Роз'єми`,
+        text: `Jack 3.5 mm, USB Type-C`,
+      },
+      {
+        title: `Живлення`,
+        text: `Акумулятор`,
+      },
+    ],
+  },
+  // FIFA 23
+  {
+    slug: 'fifa-23-157',
+    name: 'FIFA 23',
+    brand: 'EA Sports',
+    coverImage: fifa,
+    currentPrice: 999,
+    previousPrice: 1499,
+    category: 'Геймінг',
+    rating: generateRandomRating(),
+    reviews: generateRandomReviews(),
+    pieces_sold: 1499,
+    onSale: false,
+    shots: [fifa],
+    sku: '',
+    overview:
+      'FIFA 23 - гра, яка ознаменує кінець епохи для EA. FIFA 23 стане останньою грою в серії, що зветься FIFA. Надалі серія називатиметься EA Sports FC. Тому розробники зробили все можливе щоб нова і остання гра серії була в рази кращою за попередню.',
+    characterData: [
+      {
+        title: `Тип`,
+        text: `Гра`,
+      },
+      {
+        title: `Виробник`,
+        text: `Sony`,
+      },
+      {
+        title: `Платформа`,
+        text: `PlayStation 5`,
+      },
+      {
+        title: `Видання`,
+        text: `Standart`,
+      },
+      {
+        title: `Вік`,
+        text: `3+`,
+      },
+      {
+        title: `Макс. Кількість Гравців`,
+        text: `4`,
+      },
+      {
+        title: `Дата Виходу`,
+        text: `01.10.2022`,
+      },
+      {
+        title: `Рік випуску`,
+        text: `2022`,
+      },
+      {
+        title: `Видавець`,
+        text: `Electronic Arts`,
+      },
+      {
+        title: `Носій`,
+        text: `Blu-ray`,
+      },
+      {
+        title: `Комплектація`,
+        text: `Диск, Коробка`,
+      },
+    ],
+  },
+  // !Геймінг
+
+  // ~~~ Навушники
+  // Samsung Type-C AKG Earphones
   {
     slug: 'samsung-type-c-akg-earphones-112',
     name: 'Samsung Type-C AKG Earphones',
     brand: 'Samsung',
     coverImage: ear,
-    currentPrice: 342,
-    previousPrice: 411,
+    currentPrice: 579,
+    previousPrice: 712,
     category: 'Навушники',
     rating: generateRandomRating(),
     reviews: generateRandomReviews(),
-    pieces_sold: 600,
+    pieces_sold: 712,
     onSale: true,
-    shots: [ear],
+    shots: [ear, ear2, ear3],
     sku: '',
-    overview: `The Samsung TypeC AKG Earphones offer undistorted studio-quality audio, convenient control features, and compatibility with a wide range of Samsung phones.`,
+    overview:
+      '### Відчуття від прослуховування на новому рівні\n' +
+      "Насолоджуйтесь звуком із винятковою якістю, без спотворень. Навушники Samsung USB Type-C створені таким чином, що розділяють звук на правий та лівий канали вдесятеро ефективніше, ніж звичайні навушники з роз'ємом 3.5 мм. А вбудований ЦАП підвищує якість звучання так, що можливо навіть давно відомий трек заграє для вас по-новому.\n" +
+      '### Музика для ваших вух\n' +
+      'Створені за участю світових фахівців AKG в галузі аудіотехніки, дротові навушники з двосмуговими динаміками Samsung USB Type-C забезпечують чітке, природне та збалансоване звучання.\n' +
+      '### Розроблено для вашого комфорту\n' +
+      'Зручна посадка забезпечується завдяки легкій вазі та ергономічній формі навушників, а також можливості підібрати вушні вкладиші відповідного розміру з комплекту. Обплетення з тканини не дозволить дроту перегинатися або сплутуватися в сумці чи кишені.\n' +
+      '*інформація про товар може змінюватися або доповнюватися виробником без попередження.',
     characterData: [
       {
-        title: `Display Resolutions`,
-        text: `Retina XDR Display 2532 x 1170 pixels, 19.5:9 ratio, 457 PPI 60Hz`,
+        title: `Матеріал корпусу`,
+        text: `Пластик`,
       },
       {
-        title: `Sound`,
-        text: `Custom Tempest Engine 3D Audio, Dolby Atmos & DTS:X (Blu-ray video & UHD Blu-ray video)`,
+        title: `Матеріал амбушур`,
+        text: `Силікон`,
       },
       {
-        title: `Memory`,
-        text: `16 GB/256-bit GDDR6 SDRAM 512 MB DDR4 RAM (for background tasks)`,
+        title: `Виробник`,
+        text: `Samsung`,
       },
       {
-        title: `Connectivity`,
-        text: `Wi-Fi IEEE 802.11ax; Bluetooth 5.1; Gigabit Ethernet; 2× USB 3.2 Gen 2×1; 1× USB 2.0; 1× USB-C with USB 3.2 Gen 2×1; 1× HDMI 2.1`,
+        title: `Тип навушників`,
+        text: `Вкладиші`,
+      },
+      {
+        title: `Тип підключення`,
+        text: `Дротове`,
+      },
+      {
+        title: `Мікрофон`,
+        text: `Так`,
+      },
+      {
+        title: `Шумозаглушення`,
+        text: `Так`,
+      },
+      {
+        title: `Опір`,
+        text: `32 Ом`,
       },
     ],
   },
+  // Anker Life 2 Neo
   {
     slug: 'anker-life-2-neo-54',
     name: 'Anker Life 2 Neo',
     brand: 'Anker',
-    coverImage: head,
-    currentPrice: 123,
-    previousPrice: 236,
+    coverImage: ankerSoundcore1,
+    currentPrice: 2094,
+    previousPrice: 2159,
     category: 'Навушники',
     rating: generateRandomRating(),
     reviews: generateRandomReviews(),
-    pieces_sold: 600,
+    pieces_sold: 52,
     onSale: false,
-    shots: [head],
+    shots: [ankerSoundcore1, ankerSoundcore2, ankerSoundcore3],
     sku: '',
-    overview: `Anker Soundcore Life 2 Neo is a Wireless Bluetooth Over-Ear Headphones with a USB-C Fast Charging gives you 60-Hour Playtime and 40mm Driver, also Bass-up and AUX Input – Bluetooth Headphones Comes in a nice Black Color`,
+    overview: `Anker Soundcore Life 2 Neo — це бездротові накладні навушники Bluetooth із швидкою зарядкою через USB-C, які забезпечують 60-годинний час відтворення та 40-міліметровий драйвер, а також підсилення низьких частот і вхід AUX — навушники Bluetooth гарного чорного кольору`,
     characterData: [
       {
-        title: `Display Resolutions`,
-        text: `Retina XDR Display 2532 x 1170 pixels, 19.5:9 ratio, 457 PPI 60Hz`,
+        title: `Тип навушників`,
+        text: `Повнорозмірні (повний обхват вуха)`,
       },
       {
-        title: `Sound`,
-        text: `Custom Tempest Engine 3D Audio, Dolby Atmos & DTS:X (Blu-ray video & UHD Blu-ray video)`,
+        title: `Тип підключення`,
+        text: `Бездротові`,
       },
       {
-        title: `Memory`,
-        text: `16 GB/256-bit GDDR6 SDRAM 512 MB DDR4 RAM (for background tasks)`,
+        title: `Регульоване наголов'я`,
+        text: `Так`,
       },
       {
-        title: `Connectivity`,
-        text: `Wi-Fi IEEE 802.11ax; Bluetooth 5.1; Gigabit Ethernet; 2× USB 3.2 Gen 2×1; 1× USB 2.0; 1× USB-C with USB 3.2 Gen 2×1; 1× HDMI 2.1`,
+        title: `Поворотні чашки`,
+        text: `Так`,
+      },
+      {
+        title: `Aкустичне оформлення`,
+        text: `Закриті`,
+      },
+      {
+        title: `Конструкція випромінювача`,
+        text: `Динамічні`,
+      },
+      {
+        title: `Матеріал амбушур`,
+        text: `Штучна шкіра`,
+      },
+      {
+        title: `Форма роз'єму навушника`,
+        text: `Прямий`,
+      },
+      {
+        title: `Типи роз'ємів`,
+        text: `3.5 мм`,
+      },
+      {
+        title: `Довжина кабелю`,
+        text: `1,2 м`,
+      },
+      {
+        title: `Підвід кабелю`,
+        text: `Одностороннє`,
+      },
+      {
+        title: `З'єднання кабелю`,
+        text: `Від'єднуваний`,
+      },
+      {
+        title: `Регулювання гучності`,
+        text: `Так`,
+      },
+      {
+        title: `Діапазон частот`,
+        text: `20 - 20000 Гц`,
+      },
+      {
+        title: `Опір`,
+        text: `16 Ом`,
+      },
+      {
+        title: `Час автономної роботи`,
+        text: `До 60 годин`,
+      },
+      {
+        title: `Bluetooth`,
+        text: `Так`,
+      },
+      {
+        title: `Радіус дії бездротового зв'язку`,
+        text: `До 15 м`,
+      },
+      {
+        title: `Мікрофон`,
+        text: `Так`,
+      },
+      {
+        title: `Конструкція мікрофона`,
+        text: `Вбудований в корпус навушників`,
+      },
+      {
+        title: `Спрямованість мікрофона`,
+        text: `Всеспрямований`,
       },
     ],
   },
+  // !Навушники
+
+  // ~~~ Смарт годинники
+  // Apple Watch Series 9 45MM
   {
     slug: 'apple-watch-series-9-45mm-616',
     name: 'Apple Watch Series 9 45MM',
     brand: 'Apple',
-    coverImage: applwwatch1,
-    currentPrice: 495,
-    previousPrice: 689,
+    coverImage: applewatch1,
+    currentPrice: 18399,
+    previousPrice: 20999,
     category: 'Смарт годинники',
     rating: generateRandomRating(),
     reviews: generateRandomReviews(),
-    pieces_sold: 600,
+    pieces_sold: 252,
+    inStock: 0,
     onSale: true,
-    shots: [applwwatch1],
+    shots: [applewatch1, applewatch2, applewatch3],
     sku: '',
-    overview: `The Apple Watch Series 9 45MM is a powerful smartwatch designed to impress Apple fans. It boasts a sleek design, Retina LTPO OLED display, 64GB of storage, dual loud speakers, and various features like GPS, Wi-Fi, and Bluetooth 5.3.`,
+    overview:
+      '### Міцніший. Розумніший. Яскравіший.\n' +
+      'Apple Watch Series 9 допомагає залишатися на зв’язку, підтримувати здоров’я, безпеку й активний спосіб життя. Подвійний дотик — магічний спосіб взаємодії з Apple Watch, який оснащено ще яскравішим дисплеєм.\n' +
+      '### ЧОМУ APPLE WATCH SERIES 9\n' +
+      'Ваш незамінний помічник для здорового способу життя став іще потужнішим. Завдяки чипу S9 у цього годинника надяскравий дисплей і новий магічний спосіб швидко та легко взаємодіяти з Apple Watch, не торкаючись екрана. Удосконалені функції моніторингу показників здоров’я, безпеки та активності забезпечують потужну аналітику та допомогу в потрібний момент. А оновлені додатки у watchOS дають змогу отримувати більше інформації одночасно.\n' +
+      '### ВУГЛЕЦЕВА НЕЙТРАЛЬНІСТЬ\n' +
+      'Алюмінієвий корпус Apple Watch Series 9 у парі з найновішим спортивним ремінцем роблять годинник вуглецевонейтральним. Детальніше про Apple і довкілля на apple.com/2030.',
     characterData: [
       {
-        title: `Display Resolutions`,
-        text: `Retina XDR Display 2532 x 1170 pixels, 19.5:9 ratio, 457 PPI 60Hz`,
+        title: `Функціональність`,
+        text: `для дорослих`,
       },
       {
-        title: `Sound`,
-        text: `Custom Tempest Engine 3D Audio, Dolby Atmos & DTS:X (Blu-ray video & UHD Blu-ray video)`,
+        title: `Операційна система`,
+        text: `Watch OS`,
       },
       {
-        title: `Memory`,
-        text: `16 GB/256-bit GDDR6 SDRAM 512 MB DDR4 RAM (for background tasks)`,
+        title: `Сумісність`,
+        text: `iOS (Apple)`,
       },
       {
-        title: `Connectivity`,
-        text: `Wi-Fi IEEE 802.11ax; Bluetooth 5.1; Gigabit Ethernet; 2× USB 3.2 Gen 2×1; 1× USB 2.0; 1× USB-C with USB 3.2 Gen 2×1; 1× HDMI 2.1`,
+        title: `Вид діяльності`,
+        text: `плавання; велоспорт; біг`,
+      },
+      {
+        title: `Дизайн`,
+        text: `спортивний`,
+      },
+      {
+        title: `Форма корпусу`,
+        text: `прямокутна`,
+      },
+      {
+        title: `Розмір корпусу`,
+        text: `45`,
+      },
+      {
+        title: `Тип індикації`,
+        text: `стрілочно-цифровий`,
+      },
+      {
+        title: `Особливості корпусу`,
+        text: `захист від води (можливість занурення)`,
+      },
+      {
+        title: `Керування`,
+        text: `кнопки сенсорний екран`,
+      },
+      {
+        title: `Датчики та модулі`,
+        text: `крокомір; альтиметр; компас; гіроскоп акселерометр; ЕКГ; оксиметр;`,
+      },
+      {
+        title: `Корисні функції`,
+        text: `виявлення автомобільної аварії, режим енергозбереження, виявлення падіння, швидка зарядка`,
+      },
+      {
+        title: `Джерело живлення`,
+        text: `акумулятор`,
+      },
+      {
+        title: `Процесор`,
+        text: `S9`,
       },
     ],
   },
+  // Amazfit Pop 3R
   {
     slug: 'amazfit-pop-3r-860',
     name: 'Amazfit Pop 3R',
     brand: 'Amazfit',
-    coverImage: watch2,
-    currentPrice: 207,
-    previousPrice: 118,
+    coverImage: amazfit_watch_1,
+    currentPrice: 2299,
+    previousPrice: 2799,
     category: 'Смарт годинники',
     rating: generateRandomRating(),
     reviews: generateRandomReviews(),
-    pieces_sold: 600,
+    pieces_sold: 124,
     onSale: false,
-    shots: [watch2],
+    shots: [amazfit_watch_1, amazfit_watch_2, amazfit_watch_3],
     sku: '',
     overview:
-      'When your workouts wade into the nitty gritty, the Nike Free Metcon 5 can meet you in the depths, help you dig deep to find that final ounce of force and come out of the other side on a high. It matches style with substance, forefoot flexibility with backend stability, perfect for flying through a cardio day or enhancing your agility. A revamped upper offers easier entry with a collar made just for your ankle.',
+      "### Стиль на вашому зап'ясті.\n" +
+      "Компактний розумний годинник Amazfit Pop 3R додасть елегантності у ваш повсякденний вигляд. Модель із циферблатом діаметром 45.5 мм важить всього 55.48 г – і це вже із силіконовим ремінцем шириною 22.2 мм. AMOLED-дисплей 1.43” дає вдосталь робочої площі для взаємодії, яскравий на сонці та в тіні, має доступ до бібліотеки з цифровими циферблатами. Девайс оснащений модулем Bluetooth та тримає заряд до 12 днів. Фітнес-функції та моніторинг показників здоров'я дозволить завжди тримати на контролі важливі фізичні параметри.\n" +
+      '### Вражаюча автономність\n' +
+      'Батарею спроєктовано так, щоб давати тривалий час роботи без необхідності частих підзарядок. При цьому вона зберігає компактний розмір, не збільшуючи девайс у габаритах. У середньому тривалість роботи з одного заряду становить до 12 днів, що робить цей годинник відмінним вибором для тих, хто живе в динамічному ритмі і не відволікається на дрібниці. Моніторинг активності, відстеження сну, сповіщення про дзвінки та повідомлення – все це доступно в режимі 24/7.\n' +
+      '### Персоналізуйте техніку під себе\n' +
+      'Модель надає користувачеві доступ до вражаючої бібліотеки цифрових циферблатів, що включає понад 100 варіантів. Змінюйте їх, дотримуючись конкретних потреб та поточного настрою. Деякі з них відображають додаткову інформацію, таку як дата, погода або рівень активності – ви можете вибрати ті віджети, які більш актуальні.\n' +
+      "### Bluetooth-дзвінки з зап'ястя\n" +
+      'Завдяки вбудованому в Amazfit Pop 3R мікрофону та динамікам ви можете відповідати на дзвінки безпосередньо на годиннику. Швидкий доступ до книги контактів, панелі набору та історії дзвінків робить цей процес максимально зручним. Тепер не потрібно діставати смартфон – ви можете поговорити на ходу.\n' +
+      "### Здоров'я насамперед\n" +
+      'Вбудований пульсометр дозволяє відстежувати ваше серцебиття в реальному часі. Моніторинг рівня кисню у крові здійснюється вбудованим датчиком, що дуже важливо під час контролю деяких станів. Годинник також може аналізувати якість вашого сну, включаючи його тривалість і фази. Визначення рівня стресу допоможе швидше впоратися з емоціями та приділити час відпочинку. Жіночий календар корисний для ведення звітності з менструального циклу.\n' +
+      '### Голосовий помічник\n' +
+      'Техніка підтримує функціонал голосового асистента, що дозволить вам легко керувати пристроєм та отримувати інформацію за допомогою голосових команд. Ця можливість реалізована як на платформі iOS, так і на Android. Досить лише озвучити свій запит, як підключений через Bluetooth до телефону смартгодинник швидко вирішить поставлені завдання.\n' +
+      '### Ваш персональний фітнес-тренер\n' +
+      'Модель адаптована під користувачів із різними уподобаннями. Любителі фізичної активності та професійні спортсмени знайдуть для себе досить корисного серед 100 спортивних режимів, лічильників кроків, калорій, пройденої відстані та інших корисних функцій.\n' +
+      '### Жодного дня без музики' +
+      'Зручне керування відтворенням музики робить життя меломана приємнішим. Більше не потрібно діставати смартфон, щоб переключити трек – цей функціонал доступний з екрану смартгодинника Amazfit Pop 3R. Усього пару кліків – і плейлист налаштований так, як це зручно вам.',
     characterData: [
       {
-        title: `Display Resolutions`,
-        text: `Retina XDR Display 2532 x 1170 pixels, 19.5:9 ratio, 457 PPI 60Hz`,
+        title: `Призначення`,
+        text: `Унісекс`,
       },
       {
-        title: `Sound`,
-        text: `Custom Tempest Engine 3D Audio, Dolby Atmos & DTS:X (Blu-ray video & UHD Blu-ray video)`,
+        title: `Тип матриці`,
+        text: `AMOLED`,
       },
       {
-        title: `Memory`,
-        text: `16 GB/256-bit GDDR6 SDRAM 512 MB DDR4 RAM (for background tasks)`,
+        title: `Матеріал дисплея`,
+        text: `Загартоване скло`,
       },
       {
-        title: `Connectivity`,
-        text: `Wi-Fi IEEE 802.11ax; Bluetooth 5.1; Gigabit Ethernet; 2× USB 3.2 Gen 2×1; 1× USB 2.0; 1× USB-C with USB 3.2 Gen 2×1; 1× HDMI 2.1`,
+        title: `Розмір дисплея`,
+        text: `1.43”`,
+      },
+      {
+        title: `Роздільна здатність дисплея`,
+        text: `466 x 466`,
+      },
+      {
+        title: `Щільність пікселів`,
+        text: `461 ppi`,
+      },
+      {
+        title: `Процесор`,
+        text: `A10 Fusion`,
+      },
+      {
+        title: `Пам'ять`,
+        text: `128 МБ`,
+      },
+      {
+        title: `Оперативна пам'ять`,
+        text: `4 МБ`,
+      },
+      {
+        title: `Сумісність`,
+        text: `iOS, Android`,
+      },
+      {
+        title: `Бездротові технології та роз'єми`,
+        text: `Bluetooth`,
+      },
+      {
+        title: `Спосіб зарядки`,
+        text: `Магнітний з'єднувач`,
+      },
+      {
+        title: `Ємність акумулятора`,
+        text: `320 mAh`,
+      },
+      {
+        title: `Час роботи (звичайний режим)`,
+        text: `12 днів`,
+      },
+      {
+        title: `Форма`,
+        text: `Круглі`,
+      },
+      {
+        title: `Матеріал корпуса`,
+        text: `Нержавіюча сталь`,
+      },
+      {
+        title: `Можливість заміни браслета/ремінця`,
+        text: `Є`,
+      },
+      {
+        title: `Вологозахист`,
+        text: `Плавання/Купання`,
+      },
+      {
+        title: `Стандарт захисту`,
+        text: `IP68`,
       },
     ],
   },
+  // !Смарт годинники
+
+  // ~~~ Кабелі та аксесуари
+  // Модуль TP-Link TL-SM311LM
   {
     slug: generateSlug('module_tp-link_tl-sm311lm'),
     name: 'Модуль TP-Link TL-SM311LM',
@@ -1139,6 +1447,186 @@ export const products = [
       },
     ],
   },
+  // Модуль SFP MikroTik S-85DLC05D
+  {
+    slug: generateSlug('SFP-MikroTik-S-85DLC05D'),
+    name: 'Модуль SFP MikroTik S-85DLC05D',
+    brand: 'MikroTik',
+    coverImage: SFPMikroTikS85DLC05D,
+    currentPrice: 685,
+    previousPrice: 118,
+    category: 'Кабелі та аксесуари',
+    rating: generateRandomRating(),
+    reviews: generateRandomReviews(),
+    pieces_sold: 600,
+    onSale: false,
+    shots: [SFPMikroTikS85DLC05D],
+    sku: '24530716',
+    overview: `**Модуль SFP MikroTik S-85DLC05D** — це приймач SFP, який підтримує швидкість до 1.25 Гбіт/с, має двоконтактний роз'єм, довжину хвилі 850 нм і призначений для оптоволоконного під'єднання до 550 м з DDM.nnВиріб сумісний з RB260GS, RB2011LS, RB2011LS-IN, RB2011UAS-IN, RB2011UAS-RM, RB2011UAS-2HnD, RB2011UAS-2HnD-IN і CCR1036-12G-4S, а також аналогічними пристроями SFP не **MikroTik**.`,
+    characterData: [
+      {
+        title: 'Тип конектора',
+        text: 'LC',
+      },
+      {
+        title: 'Країна-виробник',
+        text: 'Китай',
+      },
+      {
+        title: 'Швидкість передавання',
+        text: ' 1 Гбіт/сек',
+      },
+      {
+        title: 'Дальність передавання, км ',
+        text: '0.55',
+      },
+      {
+        title: 'Тип волокна',
+        text: 'Multimode',
+      },
+      {
+        title: 'Особливості',
+        text: 'Підтримка функції DDM',
+      },
+      {
+        title: 'Розміри (ДxШxВ), мм',
+        text: '60 х 10 х 15',
+      },
+    ],
+  },
+  // Оптичний модуль NSN FOSH SFP+ 6G OBSAI 300m TDM 850nm
+  {
+    slug: generateSlug('optical-module-472579A'),
+    name: 'Оптичний модуль NSN FOSH SFP+ 6G OBSAI 300m TDM 850nm',
+    brand: 'Nokia',
+    coverImage: opticalModule472579,
+    currentPrice: 120,
+    previousPrice: 118,
+    category: 'Кабелі та аксесуари',
+    rating: generateRandomRating(),
+    reviews: generateRandomReviews(),
+    pieces_sold: 600,
+    onSale: false,
+    shots: [opticalModule472579],
+    sku: '472579A',
+    overview: `**Високошвидкісне підключення**: Цей модуль Nokia SFP FOSH 472579A підтримує швидкість 6G, забезпечуючи швидку та надійну передачу даних на великі відстані, що ідеально підходить для мереж з високою пропускною здатністю.nn**Можливість дальньої дії**: Цей модуль з радіусом дії до 300 метрів підходить для додатків, де потрібне високошвидкісне з'єднання на великих відстанях.nn**Оптичні характеристики:** довжина хвилі 850 нм забезпечує оптимальну якість передачі та знижує погіршення сигналу, що робить його відмінним вибором для складних мережних середовищ.nn**Сумісність:** Цей модуль призначений для використання в OBSAI-сумісних системах, забезпечуючи плавну інтеграцію з наявною інфраструктурою.nn**Надійність бренду:** як справжній продукт Nokia, цей модуль має репутацію компанії за якість та продуктивність, надаючи користувачам душевний спокій та знижуючи витрати на технічне обслуговування.`,
+    characterData: [
+      {
+        title: 'Тип',
+        text: 'Волоконно-оптичні трансівери',
+      },
+      {
+        title: 'Модель',
+        text: 'Nokia SFP FOSH 472579A',
+      },
+      {
+        title: 'Країна виробництва',
+        text: 'Zhejiang, China',
+      },
+      {
+        title: 'Марка',
+        text: 'Nokia',
+      },
+      {
+        title: 'Використання',
+        text: 'Оптичний',
+      },
+    ],
+  },
+  // Модуль SFP MikroTik S-RJ01
+  {
+    slug: generateSlug('mikrotik-s-rj01'),
+    name: 'Модуль SFP MikroTik S-RJ01',
+    brand: 'MikroTik',
+    coverImage: mikrotikSRj01,
+    currentPrice: 1190,
+    previousPrice: 118,
+    category: 'Кабелі та аксесуари',
+    rating: generateRandomRating(),
+    reviews: generateRandomReviews(),
+    pieces_sold: 600,
+    onSale: false,
+    shots: [mikrotikSRj01],
+    sku: '24161536',
+    overview: `**MikroTik S-RJ01** — це мідний модуль RJ45 SFP 10/100/1000 Мб/с, сумісний із більшістю портів Gigabit SFP, доступних на різних мережних пристроях.`,
+    characterData: [
+      {
+        title: 'Тип конектора',
+        text: 'RJ45',
+      },
+      {
+        title: 'Країна-виробник',
+        text: 'Китай',
+      },
+      {
+        title: 'Швидкість передавання',
+        text: '1 Гбіт/сек',
+      },
+      {
+        title: 'Дальність передавання, км ',
+        text: '0.1',
+      },
+      {
+        title: 'Розміри (ДxШxВ), мм ',
+        text: '69 x 14 x 14',
+      },
+    ],
+  },
+  // Модуль SFP+ 2MM 10G-SR 300м LC 850nm (SFP+2MM-03L)
+  {
+    slug: generateSlug('modul-sfp-2mm-6921'),
+    name: 'Модуль SFP+ 2MM 10G-SR 300м LC 850nm (SFP+2MM-03L)',
+    brand: 'Raybridge',
+    coverImage: modulSfp2mm,
+    currentPrice: 804,
+    previousPrice: 118,
+    category: 'Кабелі та аксесуари',
+    rating: generateRandomRating(),
+    reviews: generateRandomReviews(),
+    pieces_sold: 600,
+    onSale: false,
+    shots: [modulSfp2mm],
+    sku: '6921',
+    overview: `Двоволоконний оптичний модуль Raybridge, SFP+ 10GBASE-SR/SW, роз'єм LC duplex, робоча довжина хвилі 850нм, дальність до 300м (5dB).nnДвухволоконний оптичний модуль з форм-фактором SFP+ для 10G Ethernet, відповідає стандарту 10GBASE-SR/SW. Призначений для роботи в багатомодовому оптичному волокні (Multi mode fiber, MMF), максимальна дальність 300м, оптичний бюджет 5дБnn100% сумісність модулів з Ethernet-обладнанням Mikrotik, Ubiquiti, Cisco, Extreme, Juniper, Dell, Force10, Huawei, Dlink та ін. виробників.`,
+    characterData: [
+      {
+        title: 'Режим роботи',
+        text: 'MM',
+      },
+      {
+        title: 'Формат',
+        text: 'SFP+',
+      },
+      {
+        title: 'Довжина хвилі',
+        text: '850nm',
+      },
+      {
+        title: 'Відстань передачі даних',
+        text: '300m',
+      },
+      {
+        title: 'Швидкість передачі даних',
+        text: '10 Gbps',
+      },
+      {
+        title: "Тип роз'єму (порту)",
+        text: 'LC',
+      },
+      {
+        title: 'Відносна вологість, % ',
+        text: 'від 10 до 90 (без конденсації)',
+      },
+      {
+        title: 'Вага в упаковці, м ',
+        text: '200',
+      },
+    ],
+  },
+  // !Кабелі та аксесуари
+
+  // ~~~ Антени
+  // Панельна антена Huawei ATR4518R7v07 790-2690 Мгц КП18
   {
     slug: generateSlug('antenna-huawei-atr4518r7v07'),
     name: 'Панельна антена Huawei ATR4518R7v07 790-2690 Мгц КП18',
@@ -1237,178 +1725,7 @@ export const products = [
       },
     ],
   },
-  {
-    slug: generateSlug('SFP-MikroTik-S-85DLC05D'),
-    name: 'Модуль SFP MikroTik S-85DLC05D',
-    brand: 'MikroTik',
-    coverImage: SFPMikroTikS85DLC05D,
-    currentPrice: 685,
-    previousPrice: 118,
-    category: 'Кабелі та аксесуари',
-    rating: generateRandomRating(),
-    reviews: generateRandomReviews(),
-    pieces_sold: 600,
-    onSale: false,
-    shots: [SFPMikroTikS85DLC05D],
-    sku: '24530716',
-    overview: `**Модуль SFP MikroTik S-85DLC05D** — це приймач SFP, який підтримує швидкість до 1.25 Гбіт/с, має двоконтактний роз'єм, довжину хвилі 850 нм і призначений для оптоволоконного під'єднання до 550 м з DDM.nnВиріб сумісний з RB260GS, RB2011LS, RB2011LS-IN, RB2011UAS-IN, RB2011UAS-RM, RB2011UAS-2HnD, RB2011UAS-2HnD-IN і CCR1036-12G-4S, а також аналогічними пристроями SFP не **MikroTik**.`,
-    characterData: [
-      {
-        title: 'Тип конектора',
-        text: 'LC',
-      },
-      {
-        title: 'Країна-виробник',
-        text: 'Китай',
-      },
-      {
-        title: 'Швидкість передавання',
-        text: ' 1 Гбіт/сек',
-      },
-      {
-        title: 'Дальність передавання, км ',
-        text: '0.55',
-      },
-      {
-        title: 'Тип волокна',
-        text: 'Multimode',
-      },
-      {
-        title: 'Особливості',
-        text: 'Підтримка функції DDM',
-      },
-      {
-        title: 'Розміри (ДxШxВ), мм',
-        text: '60 х 10 х 15',
-      },
-    ],
-  },
-  {
-    slug: generateSlug('optical-module-472579A'),
-    name: 'Оптичний модуль NSN FOSH SFP+ 6G OBSAI 300m TDM 850nm',
-    brand: 'Nokia',
-    coverImage: opticalModule472579,
-    currentPrice: 120,
-    previousPrice: 118,
-    category: 'Кабелі та аксесуари',
-    rating: generateRandomRating(),
-    reviews: generateRandomReviews(),
-    pieces_sold: 600,
-    onSale: false,
-    shots: [opticalModule472579],
-    sku: '472579A',
-    overview: `**Високошвидкісне підключення**: Цей модуль Nokia SFP FOSH 472579A підтримує швидкість 6G, забезпечуючи швидку та надійну передачу даних на великі відстані, що ідеально підходить для мереж з високою пропускною здатністю.nn**Можливість дальньої дії**: Цей модуль з радіусом дії до 300 метрів підходить для додатків, де потрібне високошвидкісне з'єднання на великих відстанях.nn**Оптичні характеристики:** довжина хвилі 850 нм забезпечує оптимальну якість передачі та знижує погіршення сигналу, що робить його відмінним вибором для складних мережних середовищ.nn**Сумісність:** Цей модуль призначений для використання в OBSAI-сумісних системах, забезпечуючи плавну інтеграцію з наявною інфраструктурою.nn**Надійність бренду:** як справжній продукт Nokia, цей модуль має репутацію компанії за якість та продуктивність, надаючи користувачам душевний спокій та знижуючи витрати на технічне обслуговування.`,
-    characterData: [
-      {
-        title: 'Тип',
-        text: 'Волоконно-оптичні трансівери',
-      },
-      {
-        title: 'Модель',
-        text: 'Nokia SFP FOSH 472579A',
-      },
-      {
-        title: 'Країна виробництва',
-        text: 'Zhejiang, China',
-      },
-      {
-        title: 'Марка',
-        text: 'Nokia',
-      },
-      {
-        title: 'Використання',
-        text: 'Оптичний',
-      },
-    ],
-  },
-  {
-    slug: generateSlug('mikrotik-s-rj01'),
-    name: 'Модуль SFP MikroTik S-RJ01',
-    brand: 'MikroTik',
-    coverImage: mikrotikSRj01,
-    currentPrice: 1190,
-    previousPrice: 118,
-    category: 'Кабелі та аксесуари',
-    rating: generateRandomRating(),
-    reviews: generateRandomReviews(),
-    pieces_sold: 600,
-    onSale: false,
-    shots: [mikrotikSRj01],
-    sku: '24161536',
-    overview: `**MikroTik S-RJ01** — це мідний модуль RJ45 SFP 10/100/1000 Мб/с, сумісний із більшістю портів Gigabit SFP, доступних на різних мережних пристроях.`,
-    characterData: [
-      {
-        title: 'Тип конектора',
-        text: 'RJ45',
-      },
-      {
-        title: 'Країна-виробник',
-        text: 'Китай',
-      },
-      {
-        title: 'Швидкість передавання',
-        text: '1 Гбіт/сек',
-      },
-      {
-        title: 'Дальність передавання, км ',
-        text: '0.1',
-      },
-      {
-        title: 'Розміри (ДxШxВ), мм ',
-        text: '69 x 14 x 14',
-      },
-    ],
-  },
-  {
-    slug: generateSlug('modul-sfp-2mm-6921'),
-    name: 'Модуль SFP+ 2MM 10G-SR 300м LC 850nm (SFP+2MM-03L)',
-    brand: 'Raybridge',
-    coverImage: modulSfp2mm,
-    currentPrice: 804,
-    previousPrice: 118,
-    category: 'Кабелі та аксесуари',
-    rating: generateRandomRating(),
-    reviews: generateRandomReviews(),
-    pieces_sold: 600,
-    onSale: false,
-    shots: [modulSfp2mm],
-    sku: '6921',
-    overview: `Двоволоконний оптичний модуль Raybridge, SFP+ 10GBASE-SR/SW, роз'єм LC duplex, робоча довжина хвилі 850нм, дальність до 300м (5dB).nnДвухволоконний оптичний модуль з форм-фактором SFP+ для 10G Ethernet, відповідає стандарту 10GBASE-SR/SW. Призначений для роботи в багатомодовому оптичному волокні (Multi mode fiber, MMF), максимальна дальність 300м, оптичний бюджет 5дБnn100% сумісність модулів з Ethernet-обладнанням Mikrotik, Ubiquiti, Cisco, Extreme, Juniper, Dell, Force10, Huawei, Dlink та ін. виробників.`,
-    characterData: [
-      {
-        title: 'Режим роботи',
-        text: 'MM',
-      },
-      {
-        title: 'Формат',
-        text: 'SFP+',
-      },
-      {
-        title: 'Довжина хвилі',
-        text: '850nm',
-      },
-      {
-        title: 'Відстань передачі даних',
-        text: '300m',
-      },
-      {
-        title: 'Швидкість передачі даних',
-        text: '10 Gbps',
-      },
-      {
-        title: "Тип роз'єму (порту)",
-        text: 'LC',
-      },
-      {
-        title: 'Відносна вологість, % ',
-        text: 'від 10 до 90 (без конденсації)',
-      },
-      {
-        title: 'Вага в упаковці, м ',
-        text: '200',
-      },
-    ],
-  },
+  // Кругова антена АШ-5 GSM 900/1800
   {
     slug: generateSlug('krugova-antenna-5db-900-1800-indoor'),
     name: 'Кругова антенна АШ-5 GSM 900/1800',
@@ -1487,6 +1804,7 @@ export const products = [
       },
     ],
   },
+  // 3G антена Rnet 21 дБ с кабелем та перехідником
   {
     slug: generateSlug('3g-antena-umts-21-db'),
     name: '3G антена Rnet 21 дБ с кабелем та перехідником',
@@ -1565,6 +1883,7 @@ export const products = [
       },
     ],
   },
+  // !Антени
 ];
 
 export const productsSection = {
