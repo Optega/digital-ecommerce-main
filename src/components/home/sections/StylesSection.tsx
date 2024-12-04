@@ -30,7 +30,9 @@ const StylesSection = () => {
                 </p>
                 <div className="mt-10 flex items-center gap-10">
                   <div>
-                    <ButtonPrimary showPointer>Замовити</ButtonPrimary>
+                    <ButtonPrimary showPointer href="/collections/gaming">
+                      Переглянути
+                    </ButtonPrimary>
                   </div>
                   <p>
                     <span>Від </span>
@@ -59,8 +61,12 @@ const StylesSection = () => {
                   настроюваних циферблатів годинників і брендів, ідеальних для
                   будь-якого випадку
                 </p>
-                <ButtonPrimary showPointer className="mt-6">
-                  Замовити
+                <ButtonPrimary
+                  showPointer
+                  className="mt-6"
+                  href="/collections/smart-watches"
+                >
+                  Переглянути
                 </ButtonPrimary>
               </div>
             </div>

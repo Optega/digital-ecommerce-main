@@ -235,42 +235,42 @@ export const catalogNavLinks: NavItemType[] = [
   {
     id: 'ee46t',
     name: 'Телефони',
-    href: `/${generateSlug('Phones')}`,
+    href: `/collections/${generateSlug('Phones')}`,
   },
   {
     id: 'eerrrt',
     name: 'Ноутбуки',
-    href: `/${generateSlug('Laptops')}`,
+    href: `/collections/${generateSlug('Laptops')}`,
   },
   {
     id: 'eexct',
     name: 'Навушники',
-    href: `/${generateSlug('Headphones')}`,
+    href: `/collections/${generateSlug('Headphones')}`,
   },
   {
     id: 'h6ii8g',
     name: 'Колонки',
-    href: `/${generateSlug('Speakers')}`,
+    href: `/collections/${generateSlug('Speakers')}`,
   },
   {
     id: 'h678ty',
     name: 'Смарт годинники',
-    href: `/${generateSlug('Smart Watches')}`,
+    href: `/collections/${generateSlug('Smart Watches')}`,
   },
   {
     id: 'h6i78g',
     name: 'Геймінг',
-    href: `/${generateSlug('Gaming')}`,
+    href: `/collections/${generateSlug('Gaming')}`,
   },
   {
     id: 'f578ty',
     name: 'Кабелі та аксесуари',
-    href: `/${generateSlug('Cables and accessories')}`,
+    href: `/collections/${generateSlug('Cables and accessories')}`,
   },
   {
     id: 'f548ty',
     name: 'Антени',
-    href: `/${generateSlug('Antennas')}`,
+    href: `/collections/${generateSlug('Antennas')}`,
   },
 ];
 
