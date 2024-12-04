@@ -42,7 +42,7 @@ const ImageShowCase: FC<ImageShowCaseProps> = ({ shots }) => {
         </div>
       </div>
       <div className="order-1 col-span-6 lg:order-2 lg:col-span-5">
-        <div className="relative overflow-hidden rounded-2xl lg:h-[520px] xl:h-auto xl:w-full">
+        <div className="relative h-[520px] overflow-hidden rounded-2xl">
           <Image
             src={pathOr('', [activeImageIndex], shots)}
             alt="shoe image"
