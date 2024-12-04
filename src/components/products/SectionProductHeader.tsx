@@ -68,10 +68,13 @@ const SectionProduct: FC<SectionProductHeaderProps> = ({
             <BsLightningCharge />
           </div>
           <div>
+            {/* eslint-disable-next-line no-nested-ternary */}
             {product.inStock ? (
               <h3 className="text-sm text-green-600">
                 {product.inStock} в наявності
               </h3>
+            ) : product.inStock === 0 ? (
+              <h3 className="text-sm text-red-600">Немає в наявності</h3>
             ) : (
               <h3 className="text-sm text-red-600">Очікується поставка</h3>
             )}
