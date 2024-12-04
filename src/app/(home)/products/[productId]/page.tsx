@@ -5,7 +5,7 @@ import React from 'react';
 
 import Breadcrumbs from '@/components/Breadcrumbs';
 import SectionProduct from '@/components/products/SectionProductHeader';
-import { products } from '@/data/content';
+import { categoriesData, products } from '@/data/content';
 import type { ProductType } from '@/data/types';
 import ButtonLink from '@/shared/Button/ButtonLink';
 import { useCartStore } from '@/stores/useCartStore';
@@ -19,6 +19,10 @@ const getProductData = (slug: string) => {
   return products.find((item) => item.slug === slug);
 };
 
+const getCategoryData = (title: string) => {
+  return categoriesData.find((item) => item.title === title);
+};
+
 const page = (props: Props) => {
   const { addItem } = useCartStore();
 
@@ -26,12 +30,16 @@ const page = (props: Props) => {
     pathOr('', ['params', 'productId'], props),
   ) as ProductType;
 
+  const selectedCategory = getCategoryData(
+    pathOr('', ['category'], selectedProduct),
+  );
+
   const breadcrumbItems = [
     { title: <ButtonLink href="/">Головна</ButtonLink> },
     {
       title: (
         <ButtonLink
-          href={`/collections/${pathOr('', ['category'], selectedProduct)}`}
+          href={`/collections/${pathOr('', ['slug'], selectedCategory)}`}
         >
           {pathOr('', ['category'], selectedProduct)}
         </ButtonLink>
