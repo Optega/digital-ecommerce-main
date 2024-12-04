@@ -17,7 +17,9 @@ const SidebarFilters = ({
   productsList: ProductType[];
   onChangeAnyFilter?: (products: ProductType[]) => void;
 }) => {
-  const existingBrands = productsList.map((product) => product.brand);
+  const existingBrands = Array.from(
+    new Set(productsList.map((product) => product.brand)),
+  );
   const existingCategories = Array.from(
     new Set(productsList.map((product) => product.category)),
   );
@@ -38,7 +40,7 @@ const SidebarFilters = ({
   const [rangePrices, setRangePrices] = useState(PRICE_RANGE);
   const [activeBrands, setActiveBrands] = useState<string[]>([]);
   const [activeStock, setActiveStock] = useState<string[]>([]);
-  const [activeCategory, setActiveCategory] = useState<string[]>(
+  const [activeCategory] = useState<string[]>(
     existingCategories[0] ? [existingCategories[0]] : [],
   );
 
@@ -119,7 +121,7 @@ const SidebarFilters = ({
           className={`space-y-2 overflow-hidden  ${activeTab ? 'h-auto p-2 pt-4' : 'h-0'}`}
         >
           {existingBrands.map((brand) => (
-            <li key={brand} className="flex items-center gap-2 ">
+            <li key={brand} className="flex items-center gap-2">
               <input
                 type="checkbox"
                 id={brand}
@@ -131,9 +133,9 @@ const SidebarFilters = ({
                     setValueArray: setActiveBrands,
                   })
                 }
-                className="size-6 appearance-none rounded-sm border-2 border-neutral-300 checked:bg-primary dark:border-neutral-600 dark:bg-neutral-800"
+                className="size-6 cursor-pointer appearance-none rounded-sm border-2 border-neutral-300 checked:bg-primary dark:border-neutral-600 dark:bg-neutral-800"
               />
-              <label htmlFor={brand} className="capitalize">
+              <label htmlFor={brand} className="cursor-pointer capitalize">
                 {brand}
               </label>
             </li>
@@ -145,50 +147,52 @@ const SidebarFilters = ({
 
   // OK
   const renderTabsCategories = () => {
-    const [activeTab, setActiveTab] = useState(true);
+    // const [activeTab, setActiveTab] = useState(true);
     return (
-      <div className="relative flex flex-col p-5">
-        <div className="flex justify-between">
-          <button
-            type="button"
-            className="font-medium"
-            onClick={() => setActiveTab((prev) => !prev)}
-          >
-            Категорія
-          </button>
-          <span>
-            <Button
-              className="text-neutral-500 underline dark:text-neutral-300"
-              onClick={() => setActiveCategory([])}
+      <div>
+        {/* <div className="relative flex flex-col p-5">
+          <div className="flex justify-between">
+            <button
+              type="button"
+              className="font-medium"
+              onClick={() => setActiveTab((prev) => !prev)}
             >
-              Скинути
-            </Button>
-          </span>
-        </div>
-        <ul
-          className={`space-y-2 overflow-hidden  ${activeTab ? 'h-auto p-2 pt-4' : 'h-0'}`}
-        >
-          {existingCategories.map((product) => (
-            <li key={product} className="flex items-center gap-2 ">
-              <input
-                type="checkbox"
-                id={product}
-                checked={activeCategory.includes(product)}
-                onChange={() =>
-                  handleToggleFilter({
-                    value: product,
-                    valueArray: activeCategory,
-                    setValueArray: setActiveCategory,
-                  })
-                }
-                className="size-6 appearance-none rounded-sm border-2 border-neutral-300 checked:bg-primary dark:border-neutral-600 dark:bg-neutral-800"
-              />
-              <label htmlFor={product} className="capitalize">
-                {product}
-              </label>
-            </li>
-          ))}
-        </ul>
+              Категорія
+            </button>
+            <span>
+              <Button
+                className="text-neutral-500 underline dark:text-neutral-300"
+                onClick={() => setActiveCategory([])}
+              >
+                Скинути
+              </Button>
+            </span>
+          </div>
+          <ul
+            className={`space-y-2 overflow-hidden  ${activeTab ? 'h-auto p-2 pt-4' : 'h-0'}`}
+          >
+            {existingCategories.map((product) => (
+              <li key={product} className="flex items-center gap-2 ">
+                <input
+                  type="checkbox"
+                  id={product}
+                  checked={activeCategory.includes(product)}
+                  onChange={() =>
+                    handleToggleFilter({
+                      value: product,
+                      valueArray: activeCategory,
+                      setValueArray: setActiveCategory,
+                    })
+                  }
+                  className="size-6 cursor-pointer appearance-none rounded-sm border-2 border-neutral-300 checked:bg-primary dark:border-neutral-600 dark:bg-neutral-800"
+                />
+                <label htmlFor={product} className="cursor-pointer capitalize">
+                  {product}
+                </label>
+              </li>
+            ))}
+          </ul>
+        </div> */}
       </div>
     );
   };
@@ -232,9 +236,11 @@ const SidebarFilters = ({
                       setValueArray: setActiveStock,
                     })
                   }
-                  className="size-6 appearance-none rounded-sm border-2 border-neutral-300 checked:bg-primary dark:border-neutral-600 dark:bg-neutral-800"
+                  className="size-6 cursor-pointer appearance-none rounded-sm border-2 border-neutral-300 checked:bg-primary dark:border-neutral-600 dark:bg-neutral-800"
                 />
-                <label htmlFor={item}>{item}</label>
+                <label htmlFor={item} className="cursor-pointer">
+                  {item}
+                </label>
               </li>
             );
           })}

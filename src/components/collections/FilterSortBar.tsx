@@ -35,7 +35,9 @@ const FilterSortBar = ({
 }) => {
   const [isVisable, setIsVisable] = useState(false);
 
-  const existingBrands = productsList.map((product) => product.brand);
+  const existingBrands = Array.from(
+    new Set(productsList.map((product) => product.brand)),
+  );
   const existingCategories = Array.from(
     new Set(productsList.map((product) => product.category)),
   );
@@ -116,7 +118,7 @@ const FilterSortBar = ({
 
   // OK
   const renderTabsBrands = () => {
-    const [activeTab, setActiveTab] = useState(false);
+    const [activeTab, setActiveTab] = useState(true);
     return (
       <div className="relative flex flex-col p-5">
         <div className="flex justify-between">
@@ -166,57 +168,59 @@ const FilterSortBar = ({
 
   // OK
   const renderTabsCategories = () => {
-    const [activeTab, setActiveTab] = useState(false);
+    // const [activeTab, setActiveTab] = useState(true);
     return (
-      <div className="relative flex flex-col p-5">
-        <div className="flex justify-between">
-          <button
-            type="button"
-            className="font-medium"
-            onClick={() => setActiveTab((prev) => !prev)}
-          >
-            Категорія
-          </button>
-          <span>
-            <Button
-              className="text-neutral-500 underline dark:text-neutral-300"
-              onClick={() => setActiveCategory([])}
+      <div>
+        {/* <div className="relative flex flex-col p-5">
+          <div className="flex justify-between">
+            <button
+              type="button"
+              className="font-medium"
+              onClick={() => setActiveTab((prev) => !prev)}
             >
-              Скинути
-            </Button>
-          </span>
-        </div>
-        <ul
-          className={`space-y-2 overflow-hidden  ${activeTab ? 'h-auto p-2 pt-4' : 'h-0'}`}
-        >
-          {existingCategories.map((product) => (
-            <li key={product} className="flex items-center gap-2 ">
-              <input
-                type="checkbox"
-                id={product}
-                checked={activeCategory.includes(product)}
-                onChange={() =>
-                  handleToggleFilter({
-                    value: product,
-                    valueArray: activeCategory,
-                    setValueArray: setActiveCategory,
-                  })
-                }
-                className="size-6 appearance-none rounded-sm border-2 border-neutral-300 checked:bg-primary dark:border-neutral-600 dark:bg-neutral-800"
-              />
-              <label htmlFor={product} className="capitalize">
-                {product}
-              </label>
-            </li>
-          ))}
-        </ul>
+              Категорія
+            </button>
+            <span>
+              <Button
+                className="text-neutral-500 underline dark:text-neutral-300"
+                onClick={() => setActiveCategory([])}
+              >
+                Скинути
+              </Button>
+            </span>
+          </div>
+          <ul
+            className={`space-y-2 overflow-hidden  ${activeTab ? 'h-auto p-2 pt-4' : 'h-0'}`}
+          >
+            {existingCategories.map((product) => (
+              <li key={product} className="flex items-center gap-2 ">
+                <input
+                  type="checkbox"
+                  id={product}
+                  checked={activeCategory.includes(product)}
+                  onChange={() =>
+                    handleToggleFilter({
+                      value: product,
+                      valueArray: activeCategory,
+                      setValueArray: setActiveCategory,
+                    })
+                  }
+                  className="size-6 appearance-none rounded-sm border-2 border-neutral-300 checked:bg-primary dark:border-neutral-600 dark:bg-neutral-800"
+                />
+                <label htmlFor={product} className="capitalize">
+                  {product}
+                </label>
+              </li>
+            ))}
+          </ul>
+        </div> */}
       </div>
     );
   };
 
   // OK
   const renderTabsAvaiability = () => {
-    const [activeTab, setActiveTab] = useState(false);
+    const [activeTab, setActiveTab] = useState(true);
     return (
       <div className="relative flex flex-col p-5">
         <div className="flex justify-between">
@@ -268,7 +272,7 @@ const FilterSortBar = ({
 
   // OK
   const renderTabsPriceRage = () => {
-    const [activeTab, setActiveTab] = useState(false);
+    const [activeTab, setActiveTab] = useState(true);
 
     return (
       <div className="relative flex flex-col space-y-5 p-5 pb-2">

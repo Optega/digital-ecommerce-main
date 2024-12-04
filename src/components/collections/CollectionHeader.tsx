@@ -31,7 +31,7 @@ const CollectionHeader: FC<{
       <div className="relative overflow-hidden rounded-md p-6 lg:px-20 lg:py-10">
         <div className="">
           <Breadcrumbs Items={breadcrumbItems} />
-          <h1 className="mb-4 text-4xl font-semibold capitalize dark:text-neutral-900">
+          <h1 className="mb-4 text-4xl font-semibold dark:text-neutral-900">
             {title}
           </h1>
         </div>

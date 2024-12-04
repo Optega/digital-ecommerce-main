@@ -42,7 +42,7 @@ const ProductCard: FC<ProductCardProps> = ({
               sizes="100%"
             />
           </div>
-          <div className="absolute bottom-2 w-full px-4 text-center transition-all duration-300 group-hover:bottom-2 lg:-bottom-full">
+          <div className="bottom-2 w-full px-4 pt-4 text-center transition-all duration-300 group-hover:bottom-2 lg:-bottom-full">
             <ButtonPrimary className="w-full text-sm">
               Переглянути
             </ButtonPrimary>
