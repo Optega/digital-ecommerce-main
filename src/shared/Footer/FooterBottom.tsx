@@ -13,7 +13,7 @@ const FooterBottom = () => {
   return (
     <div className="py-10 lg:py-16">
       <div className="flex flex-col flex-wrap gap-y-6 lg:flex-row lg:items-center lg:justify-between xl:flex-nowrap">
-        <div className="order-2 flex w-full flex-row items-center justify-between gap-y-4 lg:order-1 lg:flex-col xl:w-fit">
+        <div className="order-2 flex w-full flex-col items-center justify-between gap-y-4 lg:order-1 xl:w-fit">
           <div className="col-span-12 text-sm lg:col-span-3">
             <Logo className="block" />
             <p className="text-sm">
