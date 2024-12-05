@@ -24,6 +24,10 @@ import pp from 'src/images/payments/paypal-svgrepo-com.svg';
 import visa from 'src/images/payments/visa-logo-svgrepo-com.svg';
 
 import type { NavItemType } from '@/components/NavItem';
+import antennaBanner from '@/images/categories/antenna-banner.png';
+import antennaCat from '@/images/categories/antennaCat.png';
+import cableBanner from '@/images/categories/cable-banner.png';
+import cableCat from '@/images/categories/cableCat.png';
 import gamingCat from '@/images/categories/gaming.webp';
 import gamingBanner from '@/images/categories/gaming-banner.webp';
 import headphonesCat from '@/images/categories/headphones.webp';
@@ -45,6 +49,9 @@ import johnson_dark from '@/images/companies/Johnson_Berg-white.svg';
 import stela from '@/images/companies/Stela.svg';
 import stela_dark from '@/images/companies/Stela-white.svg';
 import antena3gUmts21db from '@/images/products/3g-antena-umts-21-db.jpg';
+import jumper_3m_cable_43_10_male_male_1 from '@/images/products/3m-jumper-cable-43-10-male-male-1.webp';
+import jumper_3m_cable_43_10_male_male_2 from '@/images/products/3m-jumper-cable-43-10-male-male-2.webp';
+import jumper_3m_cable_43_10_male_male_3 from '@/images/products/3m-jumper-cable-43-10-male-male-3.webp';
 import amazfit_watch_1 from '@/images/products/amazfit_watch_1.png';
 import amazfit_watch_2 from '@/images/products/amazfit_watch_2.jpg';
 import amazfit_watch_3 from '@/images/products/amazfit_watch_3.jpg';
@@ -63,6 +70,9 @@ import ear3 from '@/images/products/ear3.jpeg';
 import ear from '@/images/products/earphones.jpg';
 import fifa from '@/images/products/fifa.jpg';
 import harman from '@/images/products/Harman-Kardon.jpg';
+import hf_adapter_nf_ericsson_rnt1565_1 from '@/images/products/hf-adapter-nf-ericsson-rnt1565-1.jpg';
+import hf_adapter_nf_ericsson_rnt1565_2 from '@/images/products/hf-adapter-nf-ericsson-rnt1565-2.webp';
+import hf_adapter_nf_ericsson_rnt1565_3 from '@/images/products/hf-adapter-nf-ericsson-rnt1565-3.webp';
 import iphone1 from '@/images/products/iphone_14_1.jpg';
 import iphone2 from '@/images/products/iphone_14_2.jpg';
 import iphone3 from '@/images/products/iphone_14_3.jpg';
@@ -79,11 +89,17 @@ import modulSfp2mm from '@/images/products/modul-sfp-2mm.jpg';
 import mouse1 from '@/images/products/mouse1.png';
 import mouse2 from '@/images/products/mouse2.jpg';
 import mouse3 from '@/images/products/mouse3.jpg';
+import nokia_fosh_472579a_sfp_850nm_1 from '@/images/products/nokia-fosh-472579a-sfp-850nm-1.jpg';
+import nokia_fosh_472579a_sfp_850nm_2 from '@/images/products/nokia-fosh-472579a-sfp-850nm-2.jpg';
+import nokia_fosh_472579a_sfp_850nm_3 from '@/images/products/nokia-fosh-472579a-sfp-850nm-3.jpg';
 import opticalModule472579 from '@/images/products/optical-module-472579.jpg';
 import pixel1 from '@/images/products/pixel1.png';
 import pixel2 from '@/images/products/pixel2.jpg';
 import pixel3 from '@/images/products/pixel3.jpg';
 import SFPMikroTikS85DLC05D from '@/images/products/SFP-MikroTik-S-85DLC05D.jpg';
+import tzc_500_ericsson1 from '@/images/products/tzc-500-ericsson1.jpg';
+import tzc_500_ericsson2 from '@/images/products/tzc-500-ericsson2.jpg';
+import tzc_500_ericsson3 from '@/images/products/tzc-500-ericsson3.jpg';
 import {
   generateRandomRating,
   generateRandomReviews,
@@ -371,15 +387,15 @@ export const categoriesData = [
   {
     title: 'Кабелі та аксесуари',
     slug: generateSlug('Cables and accessories'),
-    imgUrl: laptopCat,
-    bannerUrl: laptopBanner,
+    imgUrl: cableCat,
+    bannerUrl: cableBanner,
     href: `/collections/${generateSlug('Cables and accessories')}`,
   },
   {
     title: 'Антени',
     slug: generateSlug('Antennas'),
-    imgUrl: laptopCat,
-    bannerUrl: laptopBanner,
+    imgUrl: antennaCat,
+    bannerUrl: antennaBanner,
     href: `/collections/${generateSlug('Antennas')}`,
   },
 ];
@@ -1462,7 +1478,7 @@ export const products = [
     onSale: false,
     shots: [SFPMikroTikS85DLC05D],
     sku: '24530716',
-    overview: `**Модуль SFP MikroTik S-85DLC05D** — це приймач SFP, який підтримує швидкість до 1.25 Гбіт/с, має двоконтактний роз'єм, довжину хвилі 850 нм і призначений для оптоволоконного під'єднання до 550 м з DDM.nnВиріб сумісний з RB260GS, RB2011LS, RB2011LS-IN, RB2011UAS-IN, RB2011UAS-RM, RB2011UAS-2HnD, RB2011UAS-2HnD-IN і CCR1036-12G-4S, а також аналогічними пристроями SFP не **MikroTik**.`,
+    overview: `**Модуль SFP MikroTik S-85DLC05D** — це приймач SFP, який підтримує швидкість до 1.25 Гбіт/с, має двоконтактний роз'єм, довжину хвилі 850nm і призначений для оптоволоконного під'єднання до 550 м з DDM.nnВиріб сумісний з RB260GS, RB2011LS, RB2011LS-IN, RB2011UAS-IN, RB2011UAS-RM, RB2011UAS-2HnD, RB2011UAS-2HnD-IN і CCR1036-12G-4S, а також аналогічними пристроями SFP не **MikroTik**.`,
     characterData: [
       {
         title: 'Тип конектора',
@@ -1500,16 +1516,16 @@ export const products = [
     name: 'Оптичний модуль NSN FOSH SFP+ 6G OBSAI 300m TDM 850nm',
     brand: 'Nokia',
     coverImage: opticalModule472579,
-    currentPrice: 120,
-    previousPrice: 118,
+    currentPrice: 300,
+    previousPrice: 450,
     category: 'Кабелі та аксесуари',
     rating: generateRandomRating(),
     reviews: generateRandomReviews(),
-    pieces_sold: 600,
+    pieces_sold: 52,
     onSale: false,
     shots: [opticalModule472579],
     sku: '472579A',
-    overview: `**Високошвидкісне підключення**: Цей модуль Nokia SFP FOSH 472579A підтримує швидкість 6G, забезпечуючи швидку та надійну передачу даних на великі відстані, що ідеально підходить для мереж з високою пропускною здатністю.nn**Можливість дальньої дії**: Цей модуль з радіусом дії до 300 метрів підходить для додатків, де потрібне високошвидкісне з'єднання на великих відстанях.nn**Оптичні характеристики:** довжина хвилі 850 нм забезпечує оптимальну якість передачі та знижує погіршення сигналу, що робить його відмінним вибором для складних мережних середовищ.nn**Сумісність:** Цей модуль призначений для використання в OBSAI-сумісних системах, забезпечуючи плавну інтеграцію з наявною інфраструктурою.nn**Надійність бренду:** як справжній продукт Nokia, цей модуль має репутацію компанії за якість та продуктивність, надаючи користувачам душевний спокій та знижуючи витрати на технічне обслуговування.`,
+    overview: `**Високошвидкісне підключення**: Цей модуль Nokia SFP FOSH 472579A підтримує швидкість 6G, забезпечуючи швидку та надійну передачу даних на великі відстані, що ідеально підходить для мереж з високою пропускною здатністю.nn**Можливість дальньої дії**: Цей модуль з радіусом дії до 300 метрів підходить для додатків, де потрібне високошвидкісне з'єднання на великих відстанях.nn**Оптичні характеристики:** довжина хвилі 850nm забезпечує оптимальну якість передачі та знижує погіршення сигналу, що робить його відмінним вибором для складних мережних середовищ.nn**Сумісність:** Цей модуль призначений для використання в OBSAI-сумісних системах, забезпечуючи плавну інтеграцію з наявною інфраструктурою.nn**Надійність бренду:** як справжній продукт Nokia, цей модуль має репутацію компанії за якість та продуктивність, надаючи користувачам душевний спокій та знижуючи витрати на технічне обслуговування.`,
     characterData: [
       {
         title: 'Тип',
@@ -1530,6 +1546,60 @@ export const products = [
       {
         title: 'Використання',
         text: 'Оптичний',
+      },
+    ],
+  },
+  // Nokia Fosh Optical SFP H 850nm 6g 300m Mm
+  {
+    slug: generateSlug('nokia-fosh-472579a-sfp-850nm'),
+    name: 'Nokia Fosh Optical SFP H 850nm 6g 300m Mm',
+    brand: 'Nokia',
+    coverImage: nokia_fosh_472579a_sfp_850nm_1,
+    currentPrice: 300,
+    previousPrice: 450,
+    category: 'Кабелі та аксесуари',
+    rating: generateRandomRating(),
+    reviews: generateRandomReviews(),
+    pieces_sold: 83,
+    onSale: false,
+    shots: [
+      nokia_fosh_472579a_sfp_850nm_1,
+      nokia_fosh_472579a_sfp_850nm_2,
+      nokia_fosh_472579a_sfp_850nm_3,
+    ],
+    sku: '9024995209',
+    overview:
+      'Трансивер Nokia 472579A.101 SFP розроблений для швидкості до 6,25 ГБ на довжині хвилі 850nm на багатомодових оптоволоконних кабелях (MMF), що робить його ідеальним для передачі даних на короткі відстані в мережевих середовищах.\n' +
+      'Компактний форм-фактор дозволяє легко інтегрувати його в існуючі налаштування без шкоди для підключення або продуктивності. Завдяки радіусу дії до 300 м цей трансивер є надійним і економічно ефективним при розширенні або модернізації мереж, які вимагають високошвидкісної передачі даних у складних налаштуваннях.\n' +
+      'Приймач-передавач Nokia 472579A.101 6,25 ГБ 300 м 850nm MMF SFP',
+    characterData: [
+      {
+        title: 'Форм-фактор',
+        text: 'трансивер SFP',
+      },
+      {
+        title: 'Швидкість',
+        text: '6,25 ГБ',
+      },
+      {
+        title: 'Довжина хвилі',
+        text: '850nm',
+      },
+      {
+        title: 'Тип кабелю',
+        text: 'MMF',
+      },
+      {
+        title: 'Тип підключення',
+        text: 'Дуплекс LC',
+      },
+      {
+        title: 'Відстань кабелю',
+        text: '300 м',
+      },
+      {
+        title: 'Номер моделі',
+        text: '472579A.101',
       },
     ],
   },
@@ -1620,6 +1690,184 @@ export const products = [
       {
         title: 'Вага в упаковці, м ',
         text: '200',
+      },
+    ],
+  },
+  // Ericsson кабель ВЧ 50 Ом TZC 500 32 RG-8
+  {
+    slug: generateSlug('Ericsson cable 50 om TZC 500'),
+    name: 'Ericsson кабель ВЧ 50 Ом TZC 500 32 RG-8',
+    brand: 'Ericsson',
+    coverImage: tzc_500_ericsson1,
+    currentPrice: 95,
+    previousPrice: 120,
+    category: 'Кабелі та аксесуари',
+    rating: generateRandomRating(),
+    reviews: generateRandomReviews(),
+    pieces_sold: 1540,
+    onSale: false,
+    shots: [tzc_500_ericsson1, tzc_500_ericsson2, tzc_500_ericsson3],
+    sku: '117',
+    overview:
+      '### Кабель RG-8 Ericsson TZC 500 32\n' +
+      "Ericsson кабель ВЧ 50 Ом TZC 500 32 - **RG 8** - радіорелейний кабель, який знайшов своє широке застосування в побудовах систем GSM зв'язку. Конструктивно, кабель має центральну жилу з діаметром 2,74 мм і виготовлений з обмідненого алюмінію.\n" +
+      'Дана модель кабелю є аналогом за розміром інших виробників кабелю ВЧ: belden LMR 400, MRC 400, RG213-RT5, WBC-400, WCX 400, SPEEDFOAM 400.\n' +
+      'В якості діелектрика використовується спінений поліетилен. Обшивка в TZC 500 32 кабелі - 85% заповнення з і складається вона з лудженої міді. Хвильовий опір - 50 Ом. Кабель використовується в частотному діапазоні від 140 МГц до 1,9 Ггц. Ericsson кабель ВЧ 50 Ом **TZC 500 32** - RG 8 може бути використаний при температурному режимі від -40 С до +80 С, що дає можливість використання його як всередині приміщень так і зовні. Зовнішній діаметр - 10,16 мм.\n' +
+      "Для побудови повноцінної системи використовуються спеціальні роз'єми.",
+    characterData: [
+      {
+        title: 'Для Дронів',
+        text: 'Рекомендовано для Дронів',
+      },
+      {
+        title: 'Зовнішньої діаметр кабелю',
+        text: '10.16 мм',
+      },
+      {
+        title: 'Обплетення',
+        text: 'обплетення з 85% заповненням матеріалу, луджена мідь',
+      },
+      {
+        title: 'Діелектрик',
+        text: 'спінений поліетилен діаметром - 7.25 мм, матеріал - алюмінієва фольга',
+      },
+      {
+        title: 'Центральна жила',
+        text: 'діаметр 2,74 мм, алюміній',
+      },
+      {
+        title: 'Тип кабелю',
+        text: 'RG8',
+      },
+      {
+        title: 'Затухання на 100 м',
+        text: '140 Мгц - 6.0 дБ; 350 Мгц - 9.0 дБ; 900 Мгц - 15.0 дБ; 1800 Мгц - 21.0 дБ; 1900 Мгц - 22.0 дБ.',
+      },
+      {
+        title: 'Діапазон робочих температур',
+        text: 'від -40 до +80 °C',
+      },
+    ],
+  },
+  // Адаптер ВЧ N female - N female Ericsson RNT1565
+  {
+    slug: generateSlug('hf-adapter-nf-ericsson-rnt1565'),
+    name: 'Адаптер ВЧ N female - N female Ericsson RNT1565',
+    brand: 'Rosenberger',
+    coverImage: hf_adapter_nf_ericsson_rnt1565_1,
+    currentPrice: 490,
+    previousPrice: 550,
+    category: 'Кабелі та аксесуари',
+    rating: generateRandomRating(),
+    reviews: generateRandomReviews(),
+    pieces_sold: 234,
+    onSale: false,
+    shots: [
+      hf_adapter_nf_ericsson_rnt1565_1,
+      hf_adapter_nf_ericsson_rnt1565_2,
+      hf_adapter_nf_ericsson_rnt1565_3,
+    ],
+    sku: '1099',
+    overview:
+      '### N female - N female адаптер Ericsson RNT1565 Rosenberger\n' +
+      'Високоякісний адаптер ВЧ N female – N female типу N-322 – високочастотний адаптер з хвильовим опором 50 Ом.\n' +
+      'Виробник - Rosenberger (Німеччина).\n',
+    characterData: [
+      {
+        title: 'Адаптер',
+        text: 'Так',
+      },
+      {
+        title: "Серія СВЧ роз'ємів",
+        text: 'N серія',
+      },
+      {
+        title: 'Конструктивне використання',
+        text: 'прямий',
+      },
+      {
+        title: 'Тип центрального контакту',
+        text: 'гніздо - гніздо',
+      },
+      {
+        title: "Тип роз'єму",
+        text: 'N female-N female',
+      },
+      {
+        title: 'Діапазон робочих температур',
+        text: 'від -40 до +80 °C',
+      },
+    ],
+  },
+  // Кабельная збірка 4,3-10 м -9х3 м
+  {
+    slug: generateSlug('3m-jumper-cable-43-10-male-male'),
+    name: 'Кабельная збірка 4,3-10 м -9х3 м',
+    brand: 'Jiangsu',
+    coverImage: jumper_3m_cable_43_10_male_male_1,
+    currentPrice: 580,
+    previousPrice: 700,
+    category: 'Кабелі та аксесуари',
+    rating: generateRandomRating(),
+    reviews: generateRandomReviews(),
+    pieces_sold: 234,
+    onSale: false,
+    shots: [
+      jumper_3m_cable_43_10_male_male_1,
+      jumper_3m_cable_43_10_male_male_2,
+      jumper_3m_cable_43_10_male_male_3,
+    ],
+    sku: '4310М',
+    overview:
+      'Кабель складається із коаксіального фідеру 1/2" superflexible довжиною 3м. З обох сторін встановлений конектор 4.3-10(штекер). Конектори встановлені методом пайки. Стики фідера з конекторами загерметизовані.\n' +
+      '**Тип кабелю:** HRCAY-50-9(1/2"Super Flexible)\n' +
+      '**Довжина кабелю:** 3м\n' +
+      '**Конструкція кабелю:** 3м\n' +
+      '- внутрішній провідник: алюміній покритий міддю\n' +
+      '- діелектрик: вспіненний поліетилен\n' +
+      '- зовнішній провідник: мідна трубка із спіральним профілем\n' +
+      '- оболочка: поліетилен чорного кольору\n' +
+      'Конектора: 4.3-10 (штекер) з обох сторін\n' +
+      'Центральний контакт - Латунь / Покриття Сріблом\n' +
+      'Ізолятор - PTFE\n' +
+      'Корпус та Зовнішній Контакт - Латунь / Trimetal Plating\n' +
+      'Ущільнювач - Силікон\n' +
+      'Гайка - Латунь / Нікильована\n' +
+      '**Електричні характеристики:**\n' +
+      '- Хвильовий опір - 50±1 Ом\n' +
+      '- Частотний діапазон DC~6 ГГц\n' +
+      '- Опір ізоляції ≥5000MΩ\n' +
+      '- Допустима напруга між внутрішнім та зовнішнім контактом 2500 В rms（DC, на протязі 1 хв.\n' +
+      '- Вносимі Втрати Потужності (Insertion Loss) @DC~3.0ГГц ≤0.23*3+0.2 дБ\n' +
+      '- КСХ (VSWR) @DC~3.0ГГц ≤1.15\n' +
+      '- Інтермодуляція 3-го порядку PIM3 ≤-160 дБс\n' +
+      '**Механічні характеристики:**\n' +
+      '- Кількість циклів монтажу  ≥500 циклов\n' +
+      '- Випробування на мехнічну стійкість згідно  MIL-STD-202, Method 213, Test Condition D\n' +
+      '- Вібрациійні випробування згідно MIL-STD-202, Meth. 204, Cond. A\n' +
+      '- Діапазон Температур -50°C to +85°C\n' +
+      '- Відповідність RoHS\n' +
+      '- Ступінь Захисту - IP68\n',
+    characterData: [
+      {
+        title: 'Застосування',
+        text: 'Для зовнішніх робіт',
+      },
+      {
+        title: 'Виробник',
+        text: 'Jiangsu Xixia Communication Technology',
+      },
+      {
+        title: 'Конструкція кабелю',
+        text: 'Гнучка',
+      },
+      {
+        title: 'Призначення',
+        text: "Для систем зв'язку",
+      },
+      {
+        title: 'Тип кабеля',
+        text: 'Коаксіальний',
       },
     ],
   },
