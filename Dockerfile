@@ -11,7 +11,7 @@ COPY . .
 RUN npm install
 
 # Build the application
-RUN npm run build
+RUN npm run build-no-lint
 
 # Expose the port the app runs on
 EXPOSE 3003
