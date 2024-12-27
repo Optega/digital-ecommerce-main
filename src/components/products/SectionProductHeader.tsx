@@ -97,7 +97,7 @@ const SectionProduct: FC<SectionProductHeaderProps> = ({
         )}
 
         <div className="">
-          <h4 className="text-sm">Кількість:</h4>
+          <h4 className="text-sm">{product.unit ?? 'Кількість'}:</h4>
           <div className="flex gap-2">
             <InputNumber
               defaultValue={quantity}

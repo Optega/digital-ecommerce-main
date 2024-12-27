@@ -23,6 +23,7 @@ export type ProductType = {
   inStock?: number;
   shots: StaticImageData[];
   sku: string;
+  unit: string;
   overview: string;
   characterData: ProductCharacteristics[];
 };
