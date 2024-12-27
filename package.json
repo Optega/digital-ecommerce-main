@@ -4,7 +4,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "build-no-lint": "NEXT_TYPESCRIPT_IGNORE=true next build --no-lint",
+    "build-no-lint": "tsc --noEmit && NEXT_TYPESCRIPT_IGNORE=true next build --no-lint",
     "start": "next start",
     "build-stats": "cross-env ANALYZE=true npm run build",
     "clean": "rimraf .next .swc out coverage",
