@@ -11,8 +11,7 @@ COPY . .
 RUN npm install
 
 # Build the application
-# FIXME: use `npm run build` instead of `npm run build-no-lint` and deploy in production from image
-RUN npm run build-no-lint
+RUN npm run build
 
 # Expose the port the app runs on
 EXPOSE 3003

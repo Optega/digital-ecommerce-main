@@ -65,7 +65,7 @@ import applewatch3 from '@/images/products/applewatch3.webp';
 import dualsense1 from '@/images/products/dualsense1.jpg';
 import dualsense2 from '@/images/products/dualsense2.jpg';
 import dualsense3 from '@/images/products/dualsense3.jpg';
-import ear2 from '@/images/products/ear2.avif';
+import ear2 from '@/images/products/ear2.jpg';
 import ear3 from '@/images/products/ear3.jpeg';
 import ear from '@/images/products/earphones.jpg';
 import fifa from '@/images/products/fifa.jpg';
@@ -89,6 +89,9 @@ import modulSfp2mm from '@/images/products/modul-sfp-2mm.jpg';
 import mouse1 from '@/images/products/mouse1.png';
 import mouse2 from '@/images/products/mouse2.jpg';
 import mouse3 from '@/images/products/mouse3.jpg';
+import nokia_472181A_1 from '@/images/products/nokia-472181A-1.jpg';
+import nokia_472181A_2 from '@/images/products/nokia-472181A-2.jpg';
+import nokia_472181A_3 from '@/images/products/nokia-472181A-3.jpg';
 import nokia_fosh_472579a_sfp_850nm_1 from '@/images/products/nokia-fosh-472579a-sfp-850nm-1.jpg';
 import nokia_fosh_472579a_sfp_850nm_2 from '@/images/products/nokia-fosh-472579a-sfp-850nm-2.jpg';
 import nokia_fosh_472579a_sfp_850nm_3 from '@/images/products/nokia-fosh-472579a-sfp-850nm-3.jpg';
@@ -1708,6 +1711,50 @@ export const products = [
       {
         title: 'Вага в упаковці, м ',
         text: '200',
+      },
+    ],
+  },
+  // Системний модуль FSMF BTS WCDMA 2100
+  {
+    slug: generateSlug('nokia-fsmf-472181a'),
+    name: 'Системний модуль FSMF BTS WCDMA 2100',
+    brand: 'Nokia',
+    coverImage: nokia_472181A_1,
+    currentPrice: 8999,
+    previousPrice: 9999,
+    category: 'Кабелі та аксесуари',
+    rating: generateRandomRating(),
+    reviews: generateRandomReviews(),
+    pieces_sold: 600,
+    onSale: false,
+    shots: [nokia_472181A_1, nokia_472181A_2, nokia_472181A_3],
+    sku: '472181A.103',
+    unit: 'Штук',
+    overview:
+      '### Nokia FSMF 472181A  System Module\n' +
+      'Системний модуль **Nokia FSMF 472181A** є критично важливим компонентом сімейства базових станцій Nokia AirScale. Це сучасний системний модуль із розширеними можливостями обробки, які дозволяють легко та ефективно керувати кількома потоками мережевого трафіку. Цей системний модуль спеціально розроблений для бездоганної роботи з іншими продуктами Nokia AirScale, забезпечуючи високу продуктивність і надійність мережі.\n' +
+      "Системний модуль FSMF 472181A розроблений для підтримки ряду бездротових технологій, включаючи 2G, 3G, 4G і 5G, що дозволяє мережевим операторам пропонувати своїм клієнтам широкий спектр послуг бездротового зв'язку. Він розроблений для забезпечення високошвидкісної обробки даних, розширених можливостей підключення антени та ряду розширених функцій.\n" +
+      'Системний модуль також розроблений для роботи з базовими модулями Nokia, забезпечуючи вдосконалене перетворення протоколів, автентифікацію та шифрування для покращеної безпеки даних. Він включає в себе розширені функції, такі як периферійні обчислення, нарізка мережі та власна хмарна архітектура, що забезпечує гнучке керування та роботу мережі.\n',
+    characterData: [
+      {
+        title: 'Номер моделі',
+        text: 'FSMF',
+      },
+      {
+        title: 'Тип',
+        text: 'BBU',
+      },
+      {
+        title: 'Місце походження',
+        text: 'China',
+      },
+      {
+        title: 'Торгова марка',
+        text: 'NOKIA',
+      },
+      {
+        title: 'Використання',
+        text: 'Базова станція',
       },
     ],
   },
