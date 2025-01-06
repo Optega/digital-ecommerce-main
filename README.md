@@ -1,6 +1,6 @@
 # Stockmart Template for Next JS 14+, Tailwind CSS 3.3 and TypeScript
 
-🚀 Stockmart Template for Next JS 14+ with App Router support, Tailwind CSS and TypeScript ⚡️ Made with developer 
+🚀 Stockmart Template for Next JS 14+ with App Router support, Tailwind CSS and TypeScript ⚡️ Made with developer
 experience first: Next.js, TypeScript, ESLint, Prettier, Husky, Lint-Staged, Commitlint, Netlify, PostCSS, Tailwind CSS
 
 ### Features
@@ -9,7 +9,7 @@ experience first: Next.js, TypeScript, ESLint, Prettier, Husky, Lint-Staged, Com
 - 🔥 Type checking [TypeScript](https://www.typescriptlang.org)
 - 💎 Integrate with [Tailwind CSS](https://tailwindcss.com)
 - ✅ Strict Mode for TypeScript and React 18
-- 🌈 Light and Dark Mode 
+- 🌈 Light and Dark Mode
 - ♻️ Type-safe environment variables with T3 Env
 - ⌨️ Form with React Hook From
 - 📏 Linter with [ESLint](https://eslint.org) (default NextJS, NextJS Core Web Vitals, Tailwind CSS and Airbnb configuration)
@@ -27,6 +27,7 @@ experience first: Next.js, TypeScript, ESLint, Prettier, Husky, Lint-Staged, Com
 - 🖱️ One click deployment with Vercel or Netlify (or manual deployment to any hosting services)
 
 Built-in feature from Next.js:
+
 - ☕ Minify HTML & CSS
 - 💨 Live reload
 - ✅ Cache busting
@@ -130,4 +131,41 @@ Pro tips: if you need a project wide type checking with TypeScript, you can run 
 Feel free to open an issue if you have question or found a bug. Totally open to any suggestions and improvements.
 
 ---
+
 Made with ♥ by [Devspherelabs | Themealchemy](https://www.themealchemy.com)
+
+## Docker
+
+### Local
+
+#### Build image for linux/amd64
+
+```bash
+docker buildx build --platform linux/amd64 -t techmart-app:latest .
+```
+
+#### Save image to file
+
+```bash
+docker save -o techmart-app.tar techmart-app:latest
+```
+
+#### Copy file to server
+
+```bash
+scp techmart-app.tar techmart:~/
+```
+
+### Server
+
+#### Load image from file
+
+```bash
+sudo docker load -i techmart-app.tar
+```
+
+#### Run container
+
+```bash
+sudo docker run -d -p 3003:3000 --name techmart-app.tar techmart-app.tar
+```
