@@ -3,6 +3,9 @@ import { create } from 'zustand';
 import type { ProductCartType, ProductType } from '@/data/types';
 
 interface CartState {
+  openSide: boolean;
+  setOpenSide: (open: boolean) => void;
+  toggleSide: () => void;
   items: ProductCartType[];
   changeQuantity: (slug: string, quantity: number) => void;
   addItem: (item: ProductType, quantity?: number) => void;
@@ -11,7 +14,10 @@ interface CartState {
 }
 
 export const useCartStore = create<CartState>((set) => ({
+  openSide: false,
   items: [],
+  setOpenSide: (open) => set({ openSide: open }),
+  toggleSide: () => set((state) => ({ openSide: !state.openSide })),
   changeQuantity: (slug, quantity) =>
     set((state) => ({
       items: state.items.map((i) =>

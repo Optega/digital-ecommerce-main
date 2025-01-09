@@ -24,7 +24,7 @@ const getCategoryData = (title: string) => {
 };
 
 const page = (props: Props) => {
-  const { addItem } = useCartStore();
+  const { toggleSide, addItem } = useCartStore();
 
   const selectedProduct = getProductData(
     pathOr('', ['params', 'productId'], props),
@@ -51,6 +51,7 @@ const page = (props: Props) => {
   const handleAddToCart = (quantity: number) => {
     if (selectedProduct) {
       addItem(selectedProduct, quantity);
+      toggleSide();
     }
   };
 

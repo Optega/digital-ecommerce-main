@@ -3,7 +3,7 @@
 import { Dialog, Transition } from '@headlessui/react';
 import Image from 'next/image';
 import Link from 'next/link';
-import React, { Fragment, useState } from 'react';
+import React, { Fragment } from 'react';
 import { CiShoppingCart } from 'react-icons/ci';
 import { MdClose } from 'react-icons/md';
 
@@ -17,12 +17,11 @@ import { useCartStore } from '@/stores/useCartStore';
 
 export interface CartSideBarProps {}
 const CartSideBar: React.FC<CartSideBarProps> = () => {
-  const { items, changeQuantity, removeItem } = useCartStore();
+  const { openSide, setOpenSide, items, changeQuantity, removeItem } =
+    useCartStore();
 
-  const [isVisable, setIsVisable] = useState(false);
-
-  const handleOpenMenu = () => setIsVisable(true);
-  const handleCloseMenu = () => setIsVisable(false);
+  const handleOpenMenu = () => setOpenSide(true);
+  const handleCloseMenu = () => setOpenSide(false);
 
   const getSubTotal = () => {
     return items.reduce(
@@ -44,7 +43,7 @@ const CartSideBar: React.FC<CartSideBarProps> = () => {
   };
 
   const renderProduct = (item: ProductCartType) => {
-    const { name, coverImage, currentPrice, slug } = item.product;
+    const { name, coverImage, currentPrice, slug, sku } = item.product;
 
     return (
       <div key={name} className="flex gap-5 py-5 last:pb-0">
@@ -70,7 +69,9 @@ const CartSideBar: React.FC<CartSideBarProps> = () => {
                   {name}
                 </Link>
               </h3>
-              <span className=" font-medium">₴{currentPrice}</span>
+              <span className=" font-medium">
+                ₴{currentPrice * item.quantity}
+              </span>
             </div>
             <div>
               <InputNumber
@@ -84,7 +85,7 @@ const CartSideBar: React.FC<CartSideBarProps> = () => {
           </div>
           <div className="flex w-full items-end justify-between text-sm">
             <div>
-              <span className="text-gray">storage: 128GB</span>
+              <span className="text-gray">SKU: {sku}</span>
             </div>
             <div className="flex items-center gap-3">
               <ButtonLink onClick={() => handleRemoveItem(slug)}>
@@ -99,7 +100,7 @@ const CartSideBar: React.FC<CartSideBarProps> = () => {
 
   const renderContent = () => {
     return (
-      <Transition appear show={isVisable} as={Fragment}>
+      <Transition appear show={openSide} as={Fragment}>
         <Dialog
           as="div"
           className="fixed inset-0 z-50 overflow-y-auto"

@@ -103,6 +103,13 @@ const SectionProduct: FC<SectionProductHeaderProps> = ({
               defaultValue={quantity}
               onChange={(q) => setQuantity(q)}
             />
+            {/* Cума = Ціна * кількість */}
+            <div className="flex w-36 flex-col items-center justify-center">
+              <span className="text-sm">Сума:</span>{' '}
+              <span className="text-lg font-semibold">
+                ₴{product.currentPrice * quantity}
+              </span>
+            </div>
             <ButtonSecondary
               className="w-full"
               onClick={() => {

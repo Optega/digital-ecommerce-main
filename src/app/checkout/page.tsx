@@ -34,7 +34,7 @@ const CheckoutPage = () => {
   };
 
   const renderProduct = (item: ProductCartType) => {
-    const { name, coverImage, currentPrice, slug, category } = item.product;
+    const { name, coverImage, currentPrice, slug, sku } = item.product;
 
     return (
       <div key={name} className="flex gap-2">
@@ -51,12 +51,14 @@ const CheckoutPage = () => {
         <div className="flex grow items-center justify-between">
           <div>
             <h3 className="text-sm font-medium leading-tight">
-              <Link href={`/products/${slug}`}>{name}</Link>
+              <Link href={`/products/${slug}`}>
+                {name} x <b>{item.quantity}</b>
+              </Link>
             </h3>
-            <span className="text-xs text-neutral-500">{category}</span>
+            <span className="text-xs text-neutral-500">SKU: {sku}</span>
           </div>
           <div>
-            <span className="text-sm">₴{currentPrice}</span>
+            <span className="text-sm">₴{currentPrice * item.quantity}</span>
           </div>
         </div>
       </div>
