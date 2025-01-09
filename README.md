@@ -153,7 +153,7 @@ docker save -o techmart-app.tar techmart-app:latest
 #### Copy file to server
 
 ```bash
-scp techmart-app.tar techmart:~/
+scp techmart-app.tar shops:~/
 ```
 
 ### Server
