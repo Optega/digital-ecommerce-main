@@ -158,6 +158,12 @@ scp techmart-app.tar techmart:~/
 
 ### Server
 
+#### Stop and remove container and image
+
+```bash
+sudo docker stop techmart-app && sudo docker rm techmart-app && sudo docker rmi techmart-app
+```
+
 #### Load image from file
 
 ```bash
@@ -167,5 +173,5 @@ sudo docker load -i techmart-app.tar
 #### Run container
 
 ```bash
-sudo docker run -d -p 3003:3000 --name techmart-app.tar techmart-app.tar
+sudo docker run -d -p 3003:3000 --name techmart-app techmart-app
 ```
