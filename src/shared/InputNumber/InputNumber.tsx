@@ -16,8 +16,8 @@ export interface InputNumberProps {
 const InputNumber: FC<InputNumberProps> = ({
   className = 'w-fit',
   defaultValue = 1,
-  min = 1,
-  max = 99,
+  min = 0,
+  max = 999,
   onChange,
   label,
   desc,
@@ -41,6 +41,32 @@ const InputNumber: FC<InputNumberProps> = ({
       return state + 1;
     });
     onChange && onChange(value + 1);
+  };
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
+    let value = e.target.value;
+
+    if (value === '') {
+      setValue(min);
+      onChange?.(min);
+    }
+
+    let newValue = Number(value);
+
+    if (newValue < min) {
+      setValue(min);
+      onChange?.(min);
+      return;
+    }
+
+    if (max && newValue > max) {
+      setValue(max);
+      onChange?.(max);
+      return;
+    }
+
+    setValue(newValue);
+    onChange?.(newValue);
   };
 
   const renderLabel = () => {
@@ -69,9 +95,12 @@ const InputNumber: FC<InputNumberProps> = ({
         >
           -
         </button>
-        <span className="block w-6 select-none text-center leading-none">
-          {value}
-        </span>
+        <input
+          type="text"
+          value={value}
+          className="w-10 p-0 m-0 text-center leading-none appearance-none bg-transparent border-none focus:outline-none text-primary dark:text-neutral-100 cursor-default"
+          onChange={handleInputChange}
+        />
         <button
           className="flex h-8 w-8 items-center justify-center text-xl focus:outline-none disabled:cursor-default disabled:opacity-50 disabled:hover:border-neutral-400"
           type="button"

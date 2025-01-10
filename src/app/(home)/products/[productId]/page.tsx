@@ -49,6 +49,7 @@ const page = (props: Props) => {
   ];
 
   const handleAddToCart = (quantity: number) => {
+    if (quantity < 1) return;
     if (selectedProduct) {
       addItem(selectedProduct, quantity);
       toggleSide();

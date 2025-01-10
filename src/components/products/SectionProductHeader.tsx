@@ -70,9 +70,7 @@ const SectionProduct: FC<SectionProductHeaderProps> = ({
           <div>
             {/* eslint-disable-next-line no-nested-ternary */}
             {product.inStock ? (
-              <h3 className="text-sm text-green-600">
-                {product.inStock} в наявності
-              </h3>
+              <h3 className="text-sm text-green-600">В наявності</h3>
             ) : product.inStock === 0 ? (
               <h3 className="text-sm text-red-600">Немає в наявності</h3>
             ) : (
@@ -111,7 +109,8 @@ const SectionProduct: FC<SectionProductHeaderProps> = ({
               </span>
             </div>
             <ButtonSecondary
-              className="w-full"
+              className={`w-full${quantity < 1 ? ' cursor-not-allowed text-slate-400 hover:border-slate-200 hover:text-slate-400' : ''}`}
+              disabled={quantity < 1}
               onClick={() => {
                 handleAddToCart(quantity);
               }}
@@ -124,7 +123,8 @@ const SectionProduct: FC<SectionProductHeaderProps> = ({
         <div className="mb-5 mt-2 flex items-center gap-5">
           <Link className="w-full" href="/checkout">
             <ButtonPrimary
-              className="w-full"
+              className={`w-full${quantity < 1 ? ' cursor-not-allowed bg-slate-400 hover:bg-slate-400' : ''}`}
+              disabled={quantity < 1}
               onClick={() => {
                 handleAddToCart(quantity);
               }}
