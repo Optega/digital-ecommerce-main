@@ -152,7 +152,9 @@ const SectionProduct: FC<SectionProductHeaderProps> = ({
             </div>
             <div>
               <h3 className="flex items-start gap-2 text-sm font-semibold">
-                <span className="inline-block">Відправка наступного дня</span>{' '}
+                <span className="inline-block">
+                  Відправка наступного дня
+                </span>{' '}
               </h3>
               <p className="text-neutral-500  dark:text-neutral-300">
                 Блискавична доставка, гарантована.

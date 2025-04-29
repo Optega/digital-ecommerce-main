@@ -99,6 +99,8 @@ import opticalModule472579 from '@/images/products/optical-module-472579.jpg';
 import pixel1 from '@/images/products/pixel1.png';
 import pixel2 from '@/images/products/pixel2.jpg';
 import pixel3 from '@/images/products/pixel3.jpg';
+import rfsApxvll13sCA20_1 from '@/images/products/rfs-APXVLL13S-C-A20-1.jpg';
+import rfsApxvll13sCA20_2 from '@/images/products/rfs-APXVLL13S-C-A20-2.jpeg';
 import SFPMikroTikS85DLC05D from '@/images/products/SFP-MikroTik-S-85DLC05D.jpg';
 import tzc_500_ericsson1 from '@/images/products/tzc-500-ericsson1.jpg';
 import tzc_500_ericsson2 from '@/images/products/tzc-500-ericsson2.jpg';
@@ -886,6 +888,7 @@ export const products = [
       },
     ],
   },
+  // Kardon Luna
   {
     slug: 'harman-kardon-luna-652',
     name: 'Kardon Luna',
@@ -2212,6 +2215,65 @@ export const products = [
       {
         title: "Стандарт зв'язкуt",
         text: '3G UMTS 2000',
+      },
+    ],
+  },
+
+  {
+    slug: generateSlug('rfs-APXVLL13S-C-A20'),
+    name: 'Секторна антена RFS APXVLL13S-C-A20',
+    brand: 'RFS',
+    coverImage: rfsApxvll13sCA20_1,
+    currentPrice: 9600,
+    previousPrice: 10999,
+    category: 'Антени',
+    rating: generateRandomRating(),
+    reviews: generateRandomReviews(),
+    pieces_sold: 600,
+    onSale: false,
+    inStock: 7,
+    shots: [rfsApxvll13sCA20_1, rfsApxvll13sCA20_2],
+    sku: '1320',
+    unit: 'Штук',
+    overview:
+      '## Cекторні антени фірми RFS APXVLL13S-C-A20.\n' +
+      '**Антени APXVLL13S-C-A20** мають 4 роз’єми для підключення фідеру 1/2 для приєднання їх до блоків RRU, така конфігурація дозволить одночасно використовувати одну секторну антенну для роботи у режимах DCS-1800 та LTE-1800. Також дані антени мають вмонтований блок регулювання електричного куту нахилу.',
+    characterData: [
+      {
+        title: 'Робочий діапазон частот, МГц',
+        text: '1710-1880/1850-1990/1900-2200/2200-2700',
+      },
+      {
+        title: 'Підсилення, дБt',
+        text: '16.7 (14.6)/16.9 (14.8)/16.9 (14.8)/17.5 (15.4)',
+      },
+      {
+        title: 'Поляризація',
+        text: 'Dual pol +/-45°',
+      },
+      {
+        title: 'Вхідний опір (Ом)',
+        text: '50',
+      },
+      {
+        title: 'Тип кріпленняt',
+        text: 'на кронштейн/мачту',
+      },
+      {
+        title: 'Допустима потужність (Вт)',
+        text: '300/300/300/270',
+      },
+      {
+        title: 'Габарити',
+        text: '1290x288x118 мм',
+      },
+      {
+        title: 'КСХ',
+        text: 'до 1.5',
+      },
+      {
+        title: 'Діапазон робочих температурt',
+        text: 'от -40 до +60 °C',
       },
     ],
   },
